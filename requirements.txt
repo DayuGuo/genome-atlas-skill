@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy
+scipy
+pyarrow
+duckdb
+requests
+pyyaml
+pyliftover
+matplotlib
+git+https://github.com/23andMe/yhaplo.git

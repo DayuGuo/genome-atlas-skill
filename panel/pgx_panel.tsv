@@ -1,0 +1,15 @@
+gene	rsids	allele_map	star_allele_coverage	source
+NUDT15	rs116855232	T=c.415C>T (*3, *2)	*3 (R139C) tested; other rare alleles untested	CPIC TPMT/NUDT15 2018
+TPMT	rs1800462;rs1800460;rs1142345	G=*2;T=*3B;C=*3C (*3A = *3B+*3C)	*2,*3A,*3B,*3C	CPIC 2018
+VKORC1	rs9923231	T=-1639A	single defining SNP	CPIC warfarin 2017
+CYP2C19	rs4244285;rs4986893;rs12248560	A=*2;A=*3;T=*17	*2,*3 (+*17 if on array)	CPIC CYP2C19 2022
+CYP2C9	rs1799853;rs1057910	T=*2;C=*3	*2,*3	CPIC CYP2C9 2020
+CYP2D6	rs1065852	A=*10 marker	one marker only; no CNV	CPIC CYP2D6
+CYP4F2	rs2108622	T=*3 (V433M)	single SNP	CPIC warfarin 2017
+SLCO1B1	rs4149056	C=c.521T>C (*5/*15)	one decreased-function allele	CPIC SLCO1B1 2022
+HLA-B*58:01	rs9263726	A=tag	tag SNP, not HLA typing	Tohkin 2013
+HLA-B*15:02	rs2844682;rs3909184	tag;tag	tag SNPs, orientation to verify	—
+DPYD	rs3918290;rs67376798;rs75017182;rs1801159;rs55886062	T=*2A;A=D949V;A=HapB3;C=*5 (normal function);A=*13	actionable: *2A, *13, D949V, HapB3	CPIC DPYD 2017
+UGT1A1	rs4148323;rs887829;rs10929302	A=*6;T=tag for *28;A=promoter	*6 direct; *28 via tag	CPIC UGT1A1 2016
+ALDH2	rs671	A=*2	single defining SNP	PharmGKB
+G6PD	rs5030868;rs72554664;rs137852328	A=Canton;T=Kaiping;A=Union	common southern-Chinese alleles only	—

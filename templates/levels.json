@@ -1,0 +1,20 @@
+{
+ "LEVEL_ZH": {
+  "A": "A 直接测出，意义明确",
+  "B": "B 几个位点或标签推断",
+  "C": "C 人群统计",
+  "D": "D 研究提过，个人看不出",
+  "A(allele)": "A 等位基因直接分型（表型不可指定）",
+  "A(allele) / phenotype not assignable": "A 等位基因直接分型（表型不可指定）",
+  "—": "未覆盖"
+ },
+ "LEVEL_EN": {
+  "A": "A direct genotype + established reading",
+  "B": "B multi-marker / haplotype / strong tag",
+  "C": "C polygenic / population inference",
+  "D": "D exploratory association",
+  "A(allele)": "A allele directly typed (phenotype not assignable)",
+  "A(allele) / phenotype not assignable": "A allele directly typed (phenotype not assignable)",
+  "—": "not covered"
+ }
+}

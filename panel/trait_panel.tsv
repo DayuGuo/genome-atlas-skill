@@ -1,0 +1,77 @@
+rsid	gene	category	trait	effect_allele	interp_0	interp_1	interp_2
+rs671	ALDH2	代谢	乙醛脱氢酶 (酒精脸红/饮酒风险)	A	ALDH2*1/*1: 乙醛代谢正常，不易脸红	ALDH2*1/*2: 乙醛代谢能力显著下降，饮酒易脸红；饮酒相关食管癌风险升高	ALDH2*2/*2: 几乎无法代谢乙醛，饮酒强烈不适；应尽量避免饮酒
+rs1229984	ADH1B	代谢	乙醇脱氢酶 (酒精→乙醛速度)	T	ADH1B*1/*1: 乙醇代谢较慢	ADH1B*1/*2: 乙醇代谢较快 (东亚常见)	ADH1B*2/*2: 乙醇代谢很快，乙醛迅速累积 (东亚最常见)
+rs3827760	EDAR	外貌	EDAR V370A (头发粗直、铲形门齿、汗腺密度)	G	祖先型: 头发较细	杂合: 中等	东亚典型型 (370A/370A): 头发粗直、铲形门齿概率高
+rs17822931	ABCC11	外貌	耳垢类型 / 腋下体味	T	湿耳垢，体味较明显	湿耳垢 (T 隐性)	干耳垢，腋下体味弱 (东亚典型)
+rs4988235	MCM6/LCT	代谢	乳糖酶持续性 (欧洲型 -13910)	A	乳糖酶不持续 (成年后乳糖不耐受概率高，东亚典型)	乳糖酶持续	乳糖酶持续
+rs182549	MCM6/LCT	代谢	乳糖酶持续性 (-22018)	T	乳糖酶不持续	乳糖酶持续	乳糖酶持续
+rs429358	APOE	疾病风险	APOE ε4 决定位点 (与 rs7412 联合判断)	C	非 ε4	一个 ε4	两个 ε4
+rs7412	APOE	疾病风险	APOE ε2 决定位点 (与 rs429358 联合判断)	T	非 ε2	一个 ε2	两个 ε2
+rs1815739	ACTN3	运动	ACTN3 R577X (快肌纤维)	T	RR: 具备完整 α-actinin-3，偏爆发力	RX: 中间	XX: 缺乏 α-actinin-3，偏耐力 (约 1/5 东亚人)
+rs1801133	MTHFR	代谢	MTHFR C677T (叶酸代谢)	A	CC: 酶活性正常	CT: 酶活性约 65%	TT: 酶活性约 30%，同型半胱氨酸偏高，注意叶酸摄入 (东亚常见)
+rs1801131	MTHFR	代谢	MTHFR A1298C	G	AA: 正常	AC: 轻度下降	CC: 中度下降
+rs762551	CYP1A2	代谢	咖啡因代谢速度 (CYP1A2*1F)	A	CC: 慢代谢	AC: 慢代谢	AA: 快代谢
+rs5751876	ADORA2A	代谢	咖啡因引起焦虑倾向	T	CC: 咖啡因焦虑倾向低	CT: 中等	TT: 咖啡因更易引起焦虑/影响睡眠
+rs4680	COMT	神经	COMT Val158Met (多巴胺降解)	A	Val/Val: 多巴胺降解快，"warrior" 型	Val/Met: 中间	Met/Met: 多巴胺降解慢，"worrier" 型
+rs6265	BDNF	神经	BDNF Val66Met	T	Val/Val	Val/Met (东亚常见)	Met/Met (东亚常见)
+rs53576	OXTR	神经	OXTR (社交/共情相关，效应微弱)	A	GG	AG	AA (东亚常见)
+rs1800497	ANKK1/DRD2	神经	DRD2 Taq1A	A	A2/A2	A1/A2	A1/A1: 多巴胺 D2 受体密度较低
+rs4244285	CYP2C19	药物	CYP2C19*2 (氯吡格雷、PPI、部分抗抑郁药代谢)	A	无 *2	*2 杂合: 中间代谢	*2 纯合: 慢代谢
+rs4986893	CYP2C19	药物	CYP2C19*3 (东亚特有慢代谢等位基因)	A	无 *3	*3 杂合	*3 纯合
+rs12248560	CYP2C19	药物	CYP2C19*17 (超快代谢)	T	无 *17	*17 杂合	*17 纯合
+rs1799853	CYP2C9	药物	CYP2C9*2 (华法林/NSAID 代谢)	T	无 *2	*2 杂合	*2 纯合
+rs1057910	CYP2C9	药物	CYP2C9*3	C	无 *3	*3 杂合: 代谢降低	*3 纯合: 代谢显著降低
+rs9923231	VKORC1	药物	VKORC1 -1639G>A (华法林敏感性)	T	GG: 华法林需求剂量高	GA: 中等	AA: 华法林敏感，需低剂量 (东亚约 80%)
+rs4149056	SLCO1B1	药物	SLCO1B1*5 (他汀类肌病风险)	C	TT: 正常	TC: 他汀肌病风险升高	CC: 风险显著升高
+rs116855232	NUDT15	药物	NUDT15 R139C (硫嘌呤类骨髓抑制，东亚重要)	T	CC: 正常	CT: 硫嘌呤剂量需减少	TT: 硫嘌呤严重毒性风险
+rs1065852	CYP2D6	药物	CYP2D6*10 (东亚最常见的功能下降等位基因)	A	无 *10	*10 杂合	*10 纯合: 代谢降低 (影响多种抗抑郁药、β阻滞剂、他莫昔芬)
+rs9263726	PSORS1C1/HLA-B	药物	HLA-B*58:01 标签 (别嘌醇严重皮肤反应，汉族重要)	A	不携带 *58:01 标签	携带: 别嘌醇 SJS/TEN 风险显著升高	携带 (纯合)
+rs7903146	TCF7L2	疾病风险	2 型糖尿病 (最强常见位点)	T	CC: 平均风险	CT: 风险约 1.4 倍	TT: 风险约 2 倍
+rs9939609	FTO	疾病风险	肥胖倾向	A	TT: 平均	AT: BMI 略高	AA: BMI 更高倾向
+rs1801282	PPARG	疾病风险	PPARG Pro12Ala (胰岛素敏感性)	G	Pro/Pro: 平均	Pro/Ala: T2D 风险略低	Ala/Ala
+rs1333049	CDKN2B-AS1 (9p21)	疾病风险	冠心病	C	GG: 平均	CG: 略高	CC: 风险约 1.5 倍
+rs6983267	8q24 (POU5F1B)	疾病风险	结直肠癌/前列腺癌	G	TT	GT	GG: 风险略高
+rs2187668	HLA-DQA1	疾病风险	HLA-DQ2.5 标签 (乳糜泻主要风险)	T	不携带 DQ2.5	携带	携带
+rs7454108	HLA-DQB1	疾病风险	HLA-DQ8 标签 (乳糜泻/T1D)	C	不携带 DQ8	携带	携带
+rs2476601	PTPN22	疾病风险	自身免疫 (RA, T1D 等)	A	GG: 平均	AG: 风险升高	AA: 风险显著升高
+rs1800562	HFE	疾病风险	HFE C282Y (遗传性血色病)	A	不携带	携带者	纯合: 血色病风险高
+rs1799945	HFE	疾病风险	HFE H63D	G	不携带	携带者	纯合: 轻度铁负荷升高
+rs334	HBB	疾病风险	镰状细胞 HbS	A	不携带	携带者	纯合
+rs12913832	HERC2/OCA2	外貌	眼睛颜色	G	AA: 棕色眼	AG: 多为棕色	GG: 蓝/浅色眼概率高
+rs1426654	SLC24A5	外貌	肤色 (欧洲型浅肤色 A111T)	A	祖先型 (非欧洲型)	杂合	欧洲型浅肤色等位基因纯合
+rs16891982	SLC45A2	外貌	肤色 (欧洲型 L374F)	G	祖先型	杂合	欧洲型纯合
+rs885479	MC1R	外貌	MC1R R163Q (东亚常见)	A	不携带	杂合	纯合 (东亚常见)
+rs1805007	MC1R	外貌	MC1R R151C (红发/浅肤色)	T	不携带	携带	纯合
+rs713598	TAS2R38	感官	PTC 苦味感知 (A49P)	G	AVI/AVI: 不敏感	PAV/AVI: 中等	PAV/PAV: 敏感
+rs10427255	ZEB2	感官	光喷嚏反射 (ACHOO)	C	TT: 倾向低	CT: 中等	CC: 光喷嚏倾向高
+rs601338	FUT2	代谢	FUT2 分泌型 (欧洲型非分泌等位基因 W143X)	A	分泌型	分泌型 (携带)	非分泌型
+rs1047781	FUT2	代谢	FUT2 分泌型 (东亚型非分泌等位基因 I129F)	T	分泌型	分泌型 (携带)	非分泌型 (肠道菌群/诺如病毒抗性/B12 相关)
+rs8176719	ABO	血型	ABO O 等位基因 (261delG)	D	无 O 等位基因 (A/B 组合)	一个 O 等位基因	OO: O 型血
+rs8176746	ABO	血型	ABO B 等位基因标签 (M266)	T	无 B 等位基因	一个 B 等位基因	两个 B 等位基因
+rs2814778	ACKR1/DARC	血型	Duffy null (疟疾抗性, 非洲型)	C	Duffy 阳性	杂合	Duffy null
+rs1051730	CHRNA3	行为	尼古丁依赖/每日吸烟量	A	GG: 平均	AG	AA: 吸烟量倾向更高
+rs1800629	TNF	免疫	TNF-α -308G>A	A	GG	GA	AA
+rs11209026	IL23R	免疫	IL23R R381Q (克罗恩病保护性)	A	不携带	携带保护性等位基因	纯合
+rs2228570	VDR	代谢	VDR FokI	A	CC	CT	TT
+rs1042713	ADRB2	运动	ADRB2 G16R	A	GG	AG	AA
+rs2070744	NOS3	心血管	eNOS -786T>C	C	TT	TC	CC
+rs5030868	G6PD	疾病风险	G6PD Canton (G6PD 缺乏症, 华南常见)	A	正常	(X 连锁, 男性半合子)	半合子: G6PD 缺乏
+rs72554664	G6PD	疾病风险	G6PD Kaiping (华南常见)	T	正常	(X 连锁)	半合子: G6PD 缺乏
+rs137852328	G6PD	疾病风险	G6PD Union	A	正常	(X 连锁)	半合子: G6PD 缺乏
+rs1799964	TNF	免疫	TNF -1031T>C	C	TT	TC	CC
+rs2802292	FOXO3	长寿	FOXO3 长寿等位基因 (日本/中国百岁老人研究)	G	不携带	携带一个长寿相关等位基因	纯合
+rs2764264	FOXO3	长寿	FOXO3 第二个长寿相关位点	C	不携带	携带一个	纯合
+rs5882	CETP	长寿	CETP I405V (长寿/HDL 相关)	G	Ile/Ile	Ile/Val	Val/Val: 与长寿和更大 HDL 颗粒相关
+rs1801260	CLOCK	睡眠	CLOCK 3111T>C 昼夜节律	G	TT: 偏晨型	TC: 中间	CC: 偏夜型倾向
+rs73598374	ADA	睡眠	ADA 22G>A (深睡眠/慢波睡眠)	T	GG: 常见型	GA: 慢波睡眠更深，对咖啡因更敏感	AA
+rs4343	ACE	运动	ACE I/D 标签 (G≈D 等位基因)	G	II 型: 偏耐力	ID 型	DD 型: ACE 活性高，偏力量型；高血压风险略高
+rs17070145	KIBRA (WWC1)	神经	KIBRA 情景记忆	T	CC: 情景记忆表现平均偏低	CT: 携带 T	TT: 情景记忆表现更好 (效应小)
+rs6746030	SCN9A	感官	SCN9A R1150W 疼痛敏感性	A	GG: 平均	GA: 疼痛感知略强	AA: 疼痛感知更强
+rs4961	ADD1	心血管	ADD1 G460W 盐敏感性高血压	T	GG: 平均	GT: 盐敏感倾向	TT: 盐敏感型，限盐对血压更有效 (东亚约 25%)
+rs6152	AR	外貌	雄激素受体 (X 连锁) 雄激素性脱发	G	A: 脱发风险较低	(X 连锁)	G 半合子: 常见型，脱发风险常规
+rs1160312	PAX1/FOXA2 (20p11)	外貌	雄激素性脱发 20p11	A	GG: 平均	AG: 略高	AA: 脱发风险更高
+rs13266634	SLC30A8	疾病风险	SLC30A8 R325W (锌转运体, T2D)	C	TT: 保护型	CT	CC: 常见型 (T2D 风险常规)
+rs11591147	PCSK9	心血管	PCSK9 R46L (天然低 LDL)	T	不携带	携带: LDL 天然偏低约 15%	纯合
+rs4481887	OR2M7 附近	感官	芦笋尿味嗅觉	A	GG: 更可能闻不到	AG	AA: 更可能闻到
+rs12203592	IRF4	外貌	IRF4 雀斑/浅肤色 (欧洲型)	T	不携带	携带	纯合
+rs72921001	OR6A2	感官	香菜"肥皂味" (效应很弱)	C	AA	AC: 携带一个	CC

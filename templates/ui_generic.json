@@ -1,0 +1,294 @@
+{
+ "spine": [
+  "基因组图鉴",
+  "GENOME ATLAS"
+ ],
+ "sub_chrom": [
+  "一刻度 = 2,000 个位点 · 右侧圆点 = 该染色体的杂合率 · 浅色 = X / Y / 线粒体",
+  "one tick = 2,000 sites · dot on the right = heterozygosity · light = X / Y / mitochondria"
+ ],
+ "sub_mt": [
+  "线粒体 16,569 个位置展开 · 实心 = 支系定义位点 · 空心 = 你自己的私有变异 · PhyloTree 17.2",
+  "16,569 mitochondrial positions unrolled · filled = branch-defining · hollow = private to you · PhyloTree 17.2"
+ ],
+ "sub_pe": [
+  "东亚 504 人 · {n} 个位点 · CHB 北京汉 · CHS 南方汉 · CDX 傣 · JPT 日本 · KHV 越南京",
+  "504 East Asians · {n} sites · CHB Beijing Han · CHS southern Han · CDX Dai · JPT Japanese · KHV Kinh"
+ ],
+ "sub_h12": [
+  "HGDP 2019 东亚 223 人 · 18 个人群 · {n} 个位点 · 深蓝 = 汉族样本 · 浅蓝 = 日本",
+  "HGDP 2019, 223 East Asians · 18 groups · {n} sites · dark blue = Han samples · light blue = Japanese"
+ ],
+ "sub_hd": [
+  "到每个人群中心的距离 · 越短越近 · 深色 = 最近的三个",
+  "distance to each group's centre · shorter = closer · dark = nearest three"
+ ],
+ "sub_prs": [
+  "31 个评分 · 填补后基因型 · 实心 = 东亚 504 人中的百分位 · 空心 = 汉族 208 人 · 灰带 = 中间一半的人",
+  "31 scores · imputed genotypes · filled = percentile among 504 East Asians · hollow = 208 Han · band = middle half"
+ ],
+ "sub_prs_old": [
+  "同样 31 个评分 · 只用直接测到的位点 · 横线 = 实测误差范围 · 空心 = 汉族百分位",
+  "the same 31 scores · typed sites only · whisker = measured error · hollow = Han percentile"
+ ],
+ "sub_cv": [
+  "一刻度 = 100 个位点 · 按 ClinVar 分类 · 最深色 = 标为“致病”的两条旧记录",
+  "one tick = 100 sites · by ClinVar class · darkest = the two old 'pathogenic' entries"
+ ],
+ "sub_roh": [
+  "22 条常染色体 · 深色段 = 两份完全一样的长片段（≥1.5 Mb）· 小刻度 = 着丝粒",
+  "22 autosomes · dark = long identical stretch (≥1.5 Mb) · tick = centromere"
+ ],
+ "sub_ns": [
+  "22 条常染色体各算一次 · 0 = 南方汉族中心 · 1 = 北京汉族中心 · 菱形 = 全基因组",
+  "each of 22 autosomes scored alone · 0 = southern Han centre · 1 = Beijing Han centre · diamond = whole genome"
+ ],
+ "sub_x": [
+  "只用 X 染色体的 4,044 个位点 · 2,504 人 · 一点 = 一个人",
+  "X chromosome only, 4,044 sites · 2,504 people · one dot = one person"
+ ],
+ "src_ns": [
+  "东亚 PCA 第一主成分 · 按染色体投影 · results/fun_chrom_north_south.tsv",
+  "East Asian PC1 · projected per chromosome · results/fun_chrom_north_south.tsv"
+ ],
+ "src_x": [
+  "PCA projection · 1000G X 染色体 · 男性半合子按纯合处理",
+  "PCA projection · 1000G X chromosome · male hemizygous calls treated as homozygous"
+ ],
+ "src_chrom": [
+  "Tick rows · 25 条染色体 · results/summary_basic.tsv",
+  "Tick rows · 25 chromosomes · results/summary_basic.tsv"
+ ],
+ "spine_b": [
+  "DAYU · WEGENE ARRAY · GRCH37 · 2026-09",
+  "DAYU · WEGENE ARRAY · GRCH37 · 2026-09"
+ ],
+ "site": [
+  "the sample Genome",
+  "the sample Genome"
+ ],
+ "toggle": [
+  "EN",
+  "中文"
+ ],
+ "tier_h": [
+  "先看结论：哪些可信，哪些只是参考",
+  "The short version: what is solid and what is only a hint"
+ ],
+ "tier1": [
+  "很可靠",
+  "SOLID"
+ ],
+ "tier2": [
+  "比较可靠",
+  "FAIRLY SOLID"
+ ],
+ "tier3": [
+  "仅供参考",
+  "HINTS ONLY"
+ ],
+ "notdet": [
+  "注意：这张芯片只测了约 60 万个预先选好的常见位点。“没测到”只是“在测过的位点里没有”，不等于“没有”。罕见的致病变异、HLA 分型、基因拷贝数变化等大多不在检测范围内。",
+  "Note: this array tests only about 600,000 pre-selected common sites. 'Not found' means 'not among the sites tested', not 'absent'. Rare disease variants, HLA typing and copy-number changes are mostly outside its reach."
+ ],
+ "s0": [
+  "数据本身",
+  "THE DATA"
+ ],
+ "s1": [
+  "父系 与 母系",
+  "FATHER'S LINE & MOTHER'S LINE"
+ ],
+ "s2": [
+  "祖 源",
+  "ANCESTRY"
+ ],
+ "s3": [
+  "体质 与 代谢",
+  "TRAITS & METABOLISM"
+ ],
+ "s4": [
+  "用药相关基因",
+  "GENES & MEDICINES"
+ ],
+ "s5": [
+  "多基因评分",
+  "POLYGENIC SCORES"
+ ],
+ "s6": [
+  "疾病变异筛查 与 近亲检查",
+  "DISEASE-VARIANT SCREEN & RELATEDNESS"
+ ],
+ "s7": [
+  "趣味探索",
+  "CURIOSITIES"
+ ],
+ "s8": [
+  "方法 与 审计",
+  "METHODS & AUDIT"
+ ],
+ "k1r": [
+  "检测成功率 {cr}%",
+  "call rate {cr}%"
+ ],
+ "k1l": [
+  "array sites · GRCh37 · plus strand",
+  "array sites · GRCh37 · plus strand"
+ ],
+ "k2r": [
+  "常染色体杂合率（正常范围）",
+  "autosomal heterozygosity (normal range)"
+ ],
+ "k3r": [
+  "Y 染色体位点 {yshare}% 测出 · 判定为男性",
+  "{yshare}% of Y sites called · male"
+ ],
+ "k4l": [
+  "方向错误 / 冲突",
+  "strand errors / conflicts"
+ ],
+ "k4r": [
+  "数据格式校验：{n} 个位点与 1000 Genomes 逐一核对，0 处链方向错误、0 处等位基因冲突",
+  "format check: {n} sites compared one by one with 1000 Genomes, 0 strand errors, 0 allele conflicts"
+ ],
+ "c_chrom": [
+  "每条染色体测了多少位点、杂合比例是多少",
+  "Sites tested and heterozygosity on each chromosome"
+ ],
+ "n_chrom": [
+  "杂合率就是“父母给的两份不一样”的比例，常染色体都在正常范围。X 染色体全是纯合：男性只有一条 X，WeGene 把它写成两份一样的（连本该有两份的 PAR 区 {par} 个位点也是），所以判断性别主要靠 Y 染色体 {yc} 个位点被测出来。",
+  "Heterozygosity is the share of sites where the two parental copies differ; all autosomes are in the normal range. The X is entirely homozygous: a male has one X and WeGene writes it as two identical copies (even the {par} sites in the region that really is two-copy), so sex is inferred mainly from {yc} Y sites being called."
+ ],
+ "src_y": [
+  "每个圆 = 这一级有多少个位点支持 · ISOGG 2016 位点表 · 名称与 YFull 9.05 核对",
+  "each circle = sites supporting that step · ISOGG 2016 index · names checked against YFull 9.05"
+ ],
+ "src_mt": [
+  "线粒体 16,569 个位置展开 · 空心点 = 私有变异 · PhyloTree 17.2",
+  "mitochondrial genome unrolled · hollow = private · PhyloTree 17.2"
+ ],
+ "lg_eas": [
+  "东亚人",
+  "East Asians"
+ ],
+ "lg_other": [
+  "其他大洲的人",
+  "people from other continents"
+ ],
+ "src_pg": [
+  "1000 Genomes 项目 2,504 人 · 用 {n} 个位点计算 · 离你最近的人群 {near}",
+  "1000 Genomes, 2,504 people · {n} sites · nearest group {near}"
+ ],
+ "src_pe": [
+  "东亚 504 人 · {n} 个位点 · 最近的人群 {near} · 离你最近的 15 个人：{knn}",
+  "504 East Asians · {n} sites · nearest group {near} · your 15 nearest people: {knn}"
+ ],
+ "src_h12": [
+  "HGDP 2019 · {n} 个位点 · 你的数据先换算到 GRCh38 坐标（{lift} 个位点成功）",
+  "HGDP 2019 · {n} sites · your data lifted to GRCh38 ({lift} sites)"
+ ],
+ "src_hd": [
+  "到各人群中心的距离，越短越近 · 离你最近的 15 个人：{knn}",
+  "distance to each group's centre, shorter = closer · your 15 nearest: {knn}"
+ ],
+ "th_trait": [
+  "项目",
+  "Trait"
+ ],
+ "th_gene": [
+  "基因",
+  "Gene"
+ ],
+ "th_gt": [
+  "你的型",
+  "Your type"
+ ],
+ "th_int": [
+  "这意味着什么",
+  "What it means"
+ ],
+ "th_lvl": [
+  "等级",
+  "Grade"
+ ],
+ "n_tr": [
+  "等级：A = 直接测出且意义明确；B = 由几个位点或标签推断；C = 人群统计；D = 只是有研究提过，个人层面看不出差别。已删掉的位点（证据不足）：{removed}。",
+  "Grades: A = measured directly with a clear meaning; B = inferred from several sites or a tag; C = population statistics; D = mentioned in some studies, no visible effect on an individual. Removed sites (insufficient evidence): {removed}."
+ ],
+ "th_var": [
+  "位点",
+  "Sites"
+ ],
+ "th_cov": [
+  "测了哪些版本",
+  "Versions tested"
+ ],
+ "th_ph": [
+  "能判断代谢型吗",
+  "Metaboliser type?"
+ ],
+ "th_act": [
+  "指南",
+  "Guideline"
+ ],
+ "th_read": [
+  "这意味着什么",
+  "What it means"
+ ],
+ "src_prs": [
+  "实心点 = 在东亚 504 人里的百分位 · 空心点 = 在汉族 208 人里 · 灰带 = 中间一半的人 · 括号 = 覆盖率 / 权重保留 / 严格过滤后的结果",
+  "filled = percentile among 504 East Asians · hollow = among 208 Han · band = middle half · brackets = coverage / weight kept / strict-filter result"
+ ],
+ "src_prs_old": [
+  "第一版百分位 ± 实测误差（十分之一的人会超出的范围） · audit/04_prs_validation.tsv",
+  "first-version percentile ± measured error (exceeded by one in ten people) · audit/04_prs_validation.tsv"
+ ],
+ "src_cv": [
+  "按 ClinVar 的分类计数",
+  "counts by ClinVar classification"
+ ],
+ "src_roh": [
+  "深色段 = 两份完全一样的长片段 · 小刻度 = 着丝粒 · 父母是近亲时会出现很长的深色段",
+  "dark = long stretches where both copies are identical · tick = centromere · related parents produce very long dark stretches"
+ ],
+ "th_pos": [
+  "位置",
+  "Position"
+ ],
+ "th_al": [
+  "变异",
+  "Allele"
+ ],
+ "th_feas": [
+  "东亚频率",
+  "EAS freq."
+ ],
+ "th_fall": [
+  "全球频率",
+  "Global freq."
+ ],
+ "th_cons": [
+  "后果",
+  "Consequence"
+ ],
+ "c_meth": [
+  "用了什么数据和工具，审计文件在哪",
+  "Data, tools and where the audit files are"
+ ],
+ "meth": [
+  "<b>数据</b> WeGene 导出 {sites} 个位点（{nrs} 个 rsID + {nw} 个 WeGene 编号，{ind} 个插入缺失），GRCh37 坐标，正链（{n} 个位点与 1000 Genomes 比对零错位）。<b>参考数据</b> 1000 Genomes 第三期；HGDP 2019；ClinVar {cvd}；PGS Catalog；ISOGG 2016 与 YFull 9.05；PhyloTree 17.2；Ensembl。<b>工具</b> plink2、Beagle 5.4、haplogrep3、yhaplo、pyliftover。<b>审计</b> audit/00–08：执行摘要、流水线审计、逐条结论审计、用药基因、多基因评分、性状、再分析计划、修订报告、变更日志。",
+  "<b>Data</b> WeGene export, {sites} sites ({nrs} rsIDs + {nw} WeGene IDs, {ind} indels), GRCh37, plus strand ({n} sites checked against 1000 Genomes with zero mismatches). <b>References</b> 1000 Genomes phase 3; HGDP 2019; ClinVar {cvd}; PGS Catalog; ISOGG 2016 and YFull 9.05; PhyloTree 17.2; Ensembl. <b>Tools</b> plink2, Beagle 5.4, haplogrep3, yhaplo, pyliftover. <b>Audit</b> audit/00–08: executive summary, pipeline audit, claim audit, medicines, polygenic scores, traits, reanalysis plan, corrected report, change log."
+ ],
+ "disc": [
+  "本页来自消费级基因检测芯片和公开数据库，用于个人了解和学习，不是医学诊断，也不是用药建议。凡涉及用药或疾病的内容，行动前请找医生做正规检测确认。第一版报告和结果保留在 results/ 里没有改动。",
+  "This page comes from a consumer genotyping array and public databases, for personal interest and learning; it is neither a diagnosis nor medication advice. Anything about medicines or disease should be confirmed by a doctor with proper testing before acting. The first-version report and results are kept unchanged in results/."
+ ],
+ "foot1": [
+  "DAYU GENOME",
+  "DAYU GENOME"
+ ],
+ "foot2": [
+  "scripts/01–18 · audit/00–08 · results_v2/",
+  "scripts/01–18 · audit/00–08 · results_v2/"
+ ]
+}

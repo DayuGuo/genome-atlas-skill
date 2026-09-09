@@ -1,0 +1,437 @@
+<title>__TITLE__</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#F7F2EB; --ink:#081F5C; --muted:rgba(8,31,92,.60); --lab:rgba(8,31,92,.72); --faint:rgba(8,31,92,.32);
+    --quiet:rgba(8,31,92,.15); --grid:rgba(8,31,92,.16); --track:rgba(8,31,92,.10);
+    --data:#334EAC; --data2:#7096D1; --faintdata:#BAD6EB; --hero:#081F5C; --halo:rgba(247,242,235,.92);
+    --num:'Oswald','Noto Sans SC',sans-serif; --cn:'Noto Sans SC','Inter',sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#081F5C; --ink:#EDEFF1; --muted:rgba(237,239,241,.62); --lab:rgba(237,239,241,.74); --faint:rgba(237,239,241,.36);
+      --quiet:rgba(237,239,241,.16); --grid:rgba(237,239,241,.16); --track:rgba(237,239,241,.12);
+      --data:#809EC6; --data2:#4D82C6; --faintdata:#263E5E; --hero:#EDEFF1; --halo:rgba(8,31,92,.92);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#081F5C; --ink:#EDEFF1; --muted:rgba(237,239,241,.62); --lab:rgba(237,239,241,.74); --faint:rgba(237,239,241,.36);
+    --quiet:rgba(237,239,241,.16); --grid:rgba(237,239,241,.16); --track:rgba(237,239,241,.12);
+    --data:#809EC6; --data2:#4D82C6; --faintdata:#263E5E; --hero:#EDEFF1; --halo:rgba(8,31,92,.92);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans SC',sans-serif;
+    -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+    display:flex;justify-content:center;padding:56px 24px;line-height:1.5}
+  .sheet{width:1080px;max-width:100%;display:grid;grid-template-columns:110px 1fr}
+  .spine{position:relative;border-right:1px solid var(--ink)}
+  .spine .t{position:sticky;top:24px;writing-mode:vertical-rl;font-family:var(--cn);font-weight:900;font-size:52px;line-height:1.1;letter-spacing:.08em;white-space:nowrap;margin-left:14px}
+  html[lang="en"] .spine .t{font-family:'Oswald',sans-serif;font-weight:700;font-size:44px;letter-spacing:.18em}
+  .spine .b{position:absolute;bottom:0;left:48px;writing-mode:vertical-rl;font-size:9px;font-weight:700;letter-spacing:.26em;color:var(--muted)}
+  .content{padding-left:40px;min-width:0}
+  .tophead{display:flex;gap:18px;align-items:baseline;border-bottom:1px solid var(--ink);padding-bottom:10px;margin-bottom:34px;flex-wrap:wrap}
+  .tophead .site{font-family:var(--num);font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+  .tophead .sep{color:var(--faint)}
+  .tophead .tag{font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--muted);flex:1}
+  .lang{font-family:var(--num);font-size:11px;font-weight:600;letter-spacing:.14em;border:1px solid var(--ink);color:var(--ink);background:transparent;padding:3px 12px;border-radius:99px;cursor:pointer}
+  .lang:hover,.lang:focus-visible{background:var(--ink);color:var(--bg);outline:none}
+  .lede{font-size:13.5px;line-height:1.8;max-width:66ch;color:var(--lab);margin-bottom:8px}
+  .lede b{color:var(--ink)}
+  .secthead{display:flex;align-items:baseline;gap:14px;margin:48px 0 8px}
+  .secthead .line{flex:1;border-top:1px solid var(--ink)}
+  .secthead .t{font-family:var(--cn);font-weight:700;font-size:15px;letter-spacing:.2em}
+  html[lang="en"] .secthead .t{font-family:'Oswald',sans-serif;font-weight:600;font-size:14px;letter-spacing:.22em}
+  .secthead .k{font-family:var(--num);font-size:11px;letter-spacing:.14em;color:var(--muted)}
+  .claim{font-size:13px;font-weight:700;margin:4px 0 2px;text-wrap:balance}
+  .note{font-size:11.5px;line-height:1.75;color:var(--muted);max-width:72ch;margin:6px 0 10px}
+  .note b{color:var(--ink);font-weight:600}
+  .fig svg{width:100%;height:auto;display:block;overflow:visible}
+  svg text{font-family:'Inter','Noto Sans SC',sans-serif}
+  .sub{font-size:11.5px;color:var(--muted);margin:2px 0 12px}
+  .srcline{font-size:9px;font-weight:600;letter-spacing:.1em;color:var(--faint);margin-top:8px;text-transform:uppercase}
+  .note{margin-top:10px}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+  .duo.w{grid-template-columns:1.25fr 1fr}
+  .stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:14px;border-top:1px solid var(--ink)}
+  .stats>div{padding:22px 20px 6px;border-right:1px dotted var(--faint)}
+  .stats>div:first-child{padding-left:0}
+  .stats>div:last-child{border-right:0;padding-right:0}
+  .kpi .v{font-family:var(--num);font-weight:700;font-size:38px;line-height:1}
+  .kpi .v small{font-size:18px;font-weight:600;color:var(--muted);margin-left:2px}
+  .kpi .r{font-size:10.5px;font-weight:700;color:var(--muted);margin-top:6px}
+  .kpi .l{font-size:9.5px;font-weight:600;letter-spacing:.12em;color:var(--faint);margin-top:3px;text-transform:uppercase}
+  table{width:100%;border-collapse:collapse;font-size:11.5px}
+  th{font-size:9.5px;font-weight:700;letter-spacing:.12em;color:var(--muted);text-align:left;padding:6px 8px 6px 0;border-bottom:1px solid var(--ink);text-transform:uppercase}
+  td{padding:7px 8px 7px 0;border-bottom:1px dotted var(--faint);vertical-align:top;line-height:1.55}
+  tr:last-child td{border-bottom:0}
+  td.g{font-family:var(--num);font-weight:600;font-size:14px;letter-spacing:.06em;white-space:nowrap}
+  td.rs{color:var(--muted);white-space:nowrap;font-size:10.5px}
+  td.gene{font-weight:700;white-space:nowrap}
+  td.num{font-family:var(--num);font-weight:600;white-space:nowrap}
+  .pill{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.08em;padding:1px 7px;border:1px solid var(--data);color:var(--data);border-radius:99px;margin-left:6px;vertical-align:middle}
+  .pill.hi{background:var(--data);color:var(--bg)}
+  .tablewrap{overflow-x:auto}
+  .cat{font-family:var(--cn);font-weight:700;font-size:12px;letter-spacing:.14em;margin:18px 0 4px;color:var(--ink)}
+  html[lang="en"] .cat{font-family:'Oswald',sans-serif;letter-spacing:.16em;text-transform:uppercase}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;font-size:10.5px;color:var(--muted);margin:6px 0 4px}
+  .legend span{display:inline-flex;align-items:center;gap:6px}
+  .legend i{display:inline-block;width:9px;height:9px;border-radius:50%;background:var(--data)}
+  .legend i.d2{background:var(--data2)} .legend i.fd{background:var(--faintdata)} .legend i.me{background:var(--hero);width:11px;height:11px;transform:rotate(45deg);border-radius:0}
+  .disclaimer{margin-top:40px;padding:16px 0 0;border-top:1px dotted var(--faint);font-size:10.5px;line-height:1.75;color:var(--muted);max-width:80ch}
+  .foot{margin-top:40px;border-top:1px solid var(--ink);padding-top:12px;display:flex;justify-content:space-between;font-size:9px;font-weight:600;letter-spacing:.12em;color:var(--muted);flex-wrap:wrap;gap:8px}
+  .pop{transform-box:fill-box;transform-origin:center;animation:pop .5s cubic-bezier(.2,.7,.3,1.3) both}
+  @keyframes pop{from{transform:scale(0)}to{transform:none}}
+  .fade{animation:fade .9s ease both}
+  @keyframes fade{from{opacity:0}}
+  .draw{stroke-dasharray:1;stroke-dashoffset:1;animation:draw 1s cubic-bezier(.4,0,.2,1) both}
+  @keyframes draw{to{stroke-dashoffset:0}}
+  @media (prefers-reduced-motion:reduce){.pop,.fade{animation:none}.draw{animation:none;stroke-dasharray:none;stroke-dashoffset:0}}
+  @media(max-width:820px){.sheet{grid-template-columns:1fr}.spine{display:none}.content{padding-left:0}.duo,.duo.w{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.stats>div:nth-child(2){border-right:0}}
+</style>
+<style>
+  .tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;margin:18px 0 6px}
+  .tier h4{font-family:var(--num);font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--muted);border-bottom:1px solid var(--ink);padding-bottom:6px;margin-bottom:8px}
+  .tier.t1 h4{color:var(--ink)}
+  .tier p{font-size:11.5px;line-height:1.7;color:var(--lab)}
+  .tier.t1 p{color:var(--ink)}
+  .lvl{display:inline-block;font-family:var(--num);font-size:9px;font-weight:600;letter-spacing:.1em;padding:1px 6px;border:1px solid var(--faint);color:var(--muted);border-radius:3px;white-space:nowrap}
+  .lvl.A{border-color:var(--ink);color:var(--ink)} .lvl.B{border-color:var(--data);color:var(--data)}
+  .src-tag{font-size:8.5px;color:var(--faint);letter-spacing:.06em;display:block;margin-top:2px}
+  .callout{border-left:2px solid var(--ink);padding:6px 14px;margin:14px 0;font-size:11.5px;line-height:1.7;color:var(--lab);max-width:78ch}
+  @media(max-width:820px){.tiers{grid-template-columns:1fr}}
+</style>
+<div class="sheet">
+  <div class="spine"><div class="t" data-i18n="spine"></div><div class="b" data-i18n="spine_b"></div></div>
+  <div class="content">
+    <div class="tophead"><span class="site" data-i18n="site"></span><span class="sep">|</span><span class="tag" data-i18n="tag"></span><button class="lang" id="langbtn" type="button" aria-label="Switch language"></button></div>
+    <div class="claim" data-i18n="tier_h" style="font-size:14px"></div>
+    <div class="tiers">
+      <div class="tier t1"><h4 data-i18n="tier1"></h4><p data-i18n="tier1_b"></p></div>
+      <div class="tier"><h4 data-i18n="tier2"></h4><p data-i18n="tier2_b"></p></div>
+      <div class="tier"><h4 data-i18n="tier3"></h4><p data-i18n="tier3_b"></p></div>
+    </div>
+    <div class="callout" data-i18n="notdet"></div>
+
+    <div class="secthead"><span class="line"></span><span class="k">00</span><span class="t" data-i18n="s0"></span></div>
+    <div class="stats">
+      <div class="kpi"><div class="v" id="kpi_sites"></div><div class="r" data-i18n="k1r"></div><div class="l" data-i18n="k1l"></div></div>
+      <div class="kpi"><div class="v" id="kpi_het"></div><div class="r" data-i18n="k2r"></div><div class="l">autosomal heterozygosity</div></div>
+      <div class="kpi"><div class="v" id="kpi_x"></div><div class="r" data-i18n="k3r"></div><div class="l">sex-consistency checks</div></div>
+      <div class="kpi"><div class="v">0 / 0</div><div class="r" data-i18n="k4r"></div><div class="l" data-i18n="k4l"></div></div>
+    </div>
+    <div class="claim" style="margin-top:28px" data-i18n="c_chrom"></div>
+    <div class="sub" data-i18n="sub_chrom"></div><div class="fig"><svg id="chromrows" viewBox="0 0 900 330" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_chrom"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">01</span><span class="t" data-i18n="s1"></span></div>
+    <div class="duo w">
+      <div><div class="claim" data-i18n="c_y"></div><div class="sub" data-i18n="sub_y"></div><div class="fig"><svg id="ychain" viewBox="0 0 520 300" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_y"></div><p class="note" data-i18n="n_y"></p></div>
+      <div><div class="claim" data-i18n="c_mt"></div><div class="sub" data-i18n="sub_mt"></div><div class="fig"><svg id="mtstrip" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_mt"></div><p class="note" data-i18n="n_mt"></p></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">02</span><span class="t" data-i18n="s2"></span></div>
+    <div class="claim" data-i18n="c_pca"></div>
+    <div class="legend"><span><i></i><em data-i18n="lg_eas" style="font-style:normal"></em></span><span><i class="fd"></i><em data-i18n="lg_other" style="font-style:normal"></em></span><span><i class="me"></i><em class="nm" style="font-style:normal"></em></span></div>
+    <div class="duo">
+      <div><div class="sub" data-i18n="sub_pg"></div><div class="fig"><svg id="pcaglobal" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_pg"></div></div>
+      <div><div class="sub" data-i18n="sub_pe"></div><div class="fig"><svg id="pcaeas" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_pe"></div></div>
+    </div>
+    <div class="claim" style="margin-top:32px" data-i18n="c_hgdp"></div>
+    <div class="duo">
+      <div><div class="sub" data-i18n="sub_h12"></div><div class="fig"><svg id="hgdp12" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_h12"></div></div>
+      <div><div class="sub" data-i18n="sub_hd"></div><div class="fig"><svg id="hgdpdist" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_hd"></div></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">03</span><span class="t" data-i18n="s3"></span></div>
+    <div class="claim" data-i18n="c_tr"></div><div id="traits"></div>
+
+    <div class="secthead"><span class="line"></span><span class="k">04</span><span class="t" data-i18n="s4"></span></div>
+    <div class="claim" data-i18n="c_pgx"></div><div id="pgx"></div>
+
+    <div class="secthead"><span class="line"></span><span class="k">05</span><span class="t" data-i18n="s5"></span></div>
+    <div class="claim" data-i18n="c_prs"></div>
+    <div class="sub" data-i18n="sub_prs"></div><div class="fig"><svg id="prsimp" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_prs"></div><p class="note" data-i18n="n_prs"></p>
+    <div class="claim" style="margin-top:36px" data-i18n="c_prs_old"></div>
+    <div class="sub" data-i18n="sub_prs_old"></div><div class="fig"><svg id="prsold" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_prs_old"></div><p class="note" data-i18n="n_prs_old"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">06</span><span class="t" data-i18n="s6"></span></div>
+    <div class="duo w">
+      <div><div class="claim" data-i18n="c_cv"></div><div class="sub" data-i18n="sub_cv"></div><div class="fig"><svg id="clinvar" viewBox="0 0 520 300" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_cv"></div><p class="note" data-i18n="n_cv"></p></div>
+      <div><div class="claim" data-i18n="c_roh"></div><div class="sub" data-i18n="sub_roh"></div><div class="fig"><svg id="roh" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_roh"></div></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">07</span><span class="t" data-i18n="s7"></span></div>
+    <div class="claim" data-i18n="c_ns"></div>
+    <div class="sub" data-i18n="sub_ns"></div><div class="fig"><svg id="nsidx" viewBox="0 0 900 360" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_ns"></div><p class="note" data-i18n="n_ns"></p>
+    <div class="duo" style="margin-top:36px">
+      <div><div class="claim" data-i18n="c_x"></div><div class="sub" data-i18n="sub_x"></div><div class="fig"><svg id="xpca" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_x"></div><p class="note" data-i18n="n_x"></p></div>
+      <div><div class="claim" data-i18n="c_rare"></div><p class="note" data-i18n="n_rare"></p><div id="rare"></div></div>
+    </div>
+    <div class="claim" style="margin-top:36px" data-i18n="c_fun"></div><div id="fun"></div>
+
+    <div class="secthead"><span class="line"></span><span class="k">08</span><span class="t" data-i18n="s8"></span></div>
+    <div class="claim" data-i18n="c_meth"></div><p class="note" data-i18n="meth" style="max-width:88ch"></p>
+    <div class="disclaimer" data-i18n="disc"></div>
+    <div class="foot"><span data-i18n="foot1"></span><span data-i18n="foot2"></span><span>2026-09-08</span></div>
+  </div>
+</div>
+<script>
+const D = __DATA__; const PLAIN = __PLAIN__; const PGX_PLAIN = __PGX_PLAIN__; const PGX_COV = __PGX_COV__; const LEVEL_ZH = __LEVEL_ZH__; const LEVEL_EN = __LEVEL_EN__;
+const UI = __UI__;
+const TRAIT_EN = __TRAIT_EN__; const CAT_EN = __CAT_EN__; const PRS_EN = __PRS_EN__;
+let LANG = 'zh';
+try { LANG = localStorage.getItem('dayu-lang') || (navigator.language && !navigator.language.startsWith('zh') ? 'en' : 'zh'); } catch(e) {}
+const F = {}; // placeholder values, filled in fillVars()
+const t = k => ((UI[k] || [k,k])[LANG === 'zh' ? 0 : 1]).replace(/\{(\w+)(:\+)?\}/g, (m,v,plus)=>{const x=F[v]; if(x===undefined) return m; return (plus && x>0 ? '+' : '') + x;});
+const zh = () => LANG === 'zh';
+const NS='http://www.w3.org/2000/svg';
+const el=(p,tag,a)=>{const n=document.createElementNS(NS,tag);for(const k in a)n.setAttribute(k,a[k]);p.appendChild(n);return n};
+const txt=(p,a,s)=>{const n=el(p,'text',a);n.textContent=s;return n};
+const tip=(n,s)=>{const q=document.createElementNS(NS,'title');q.textContent=s;n.appendChild(q)};
+const V=name=>getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const C=()=>({ink:V('--ink'),muted:V('--muted'),lab:V('--lab'),faint:V('--faint'),grid:V('--grid'),track:V('--track'),data:V('--data'),data2:V('--data2'),fd:V('--faintdata'),hero:V('--hero'),bg:V('--bg')});
+const fmt=n=>n.toLocaleString('en-US');
+const CH = {};
+const HAIR=1.1, TRACK=1.1; // colored mode: hairline ×1.8 (mono .6 -> 1.1)
+const foot=(s,c,w,y,txt_)=>txt(s,{x:w/2,y,'text-anchor':'middle','font-size':7,'font-weight':600,fill:c.faint,'letter-spacing':'.12em',class:'fade',style:'animation-delay:.9s'},txt_.toUpperCase());
+const NUM={'font-weight':800};
+const reveal=(id,fn)=>{CH[id]=fn;const n=document.getElementById(id);n.style.cursor='pointer';n.addEventListener('click',()=>{n.innerHTML='';fn(n,C())})};
+const renderAll=()=>{document.documentElement.setAttribute('lang',LANG==='zh'?'zh-Hans':'en');
+  document.querySelectorAll('[data-i18n]').forEach(e=>{e.innerHTML=tt(e.getAttribute('data-i18n'))}); document.querySelectorAll('.nm').forEach(e=>e.textContent=zh()?D.name[0]:D.name[1]);
+  document.getElementById('langbtn').textContent=tt('toggle');
+  document.title = zh() ? D.name[0]+'基因组图鉴' : D.name[1]+' Genome Atlas';
+  for(const id in CH){const n=document.getElementById(id);n.innerHTML='';CH[id](n,C())}
+  renderTraits(); renderPgx(); renderRare(); renderFun(); renderKpi();};
+document.getElementById('langbtn').addEventListener('click',()=>{LANG=zh()?'en':'zh';try{localStorage.setItem('dayu-lang',LANG)}catch(e){};renderAll()});
+if(window.matchMedia){window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',renderAll)}
+const prsName=n=>zh()?n:(PRS_EN[n]||n);
+
+/* ── 00 chromosome tick rows (F5 Tick Rows: 1 tick = 2,000 sites) ── */
+reveal('chromrows',(s,c)=>{
+  const rows=D.chrom, x0=50, top=14, rh=12.2, PX=17, UNIT=2000, rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+  txt(s,{x:x0,y:6,'font-size':7,'font-weight':600,fill:c.faint,'letter-spacing':'.08em'},zh()?'位点数':'SITES');
+  txt(s,{x:640,y:6,'font-size':7,'font-weight':600,fill:c.faint,'letter-spacing':'.08em'},zh()?'杂合率 0–40%':'HETEROZYGOSITY 0–40%');
+  rows.forEach((r,i)=>{const y=top+i*rh+6, n=Math.round(r.n_sites/UNIT), sex=['X','Y','MT'].includes(r.chrom);
+    txt(s,{x:x0-8,y:y+3,'text-anchor':'end','font-size':8,'font-weight':700,fill:c.ink,'letter-spacing':'.06em',class:'fade',style:`animation-delay:${i*.04}s`},r.chrom);
+    el(s,'line',{x1:x0,y1:y+3,x2:x0+24*PX,y2:y+3,stroke:c.grid,'stroke-width':.6,class:'fade',style:`animation-delay:${i*.04}s`});
+    for(let k=0;k<n;k++){const x=x0+k*PX+PX/2,h=5+rnd(k+1,i+2)*4;
+      el(s,'line',{x1:x,y1:y+3,x2:x,y2:y+3-h,stroke:sex?c.data2:c.data,'stroke-width':1.6,opacity:.85+rnd(k+3,i+5)*.15,class:'fade',style:`animation-delay:${i*.04+k*.012}s`});
+      if(k%5===4)el(s,'circle',{cx:x,cy:y+6,r:.8,fill:c.faint,class:'fade',style:`animation-delay:${i*.04+k*.012}s`});}
+    const lab=txt(s,{x:x0+n*PX+8,y:y+3,'font-size':8.5,'font-weight':800,fill:c.ink,class:'fade',style:`animation-delay:${.3+i*.04}s`},fmt(r.n_sites)); tip(lab,`chr${r.chrom}: ${fmt(r.n_sites)} sites, ${r.n_missing} missing`);
+    const hx0=640,hw=250,hx=hx0+hw*Math.min(r.het_rate,.4)/.4;
+    el(s,'line',{x1:hx0,y1:y,x2:hx0+hw,y2:y,stroke:c.grid,'stroke-width':.6,class:'fade'});
+    const d=el(s,'circle',{cx:hx,cy:y,r:3.2,fill:r.het_rate>0?c.ink:c.bg,stroke:c.ink,'stroke-width':1,class:'pop',style:`animation-delay:${.2+i*.012}s`}); tip(d,`chr${r.chrom} het ${(r.het_rate*100).toFixed(1)}%`);
+    txt(s,{x:hx+8,y:y+3,'font-size':7.5,'font-weight':800,fill:c.muted,class:'fade'},(r.het_rate*100).toFixed(1)+'%');
+  });
+  [0,.1,.2,.3,.4].forEach(v=>{const x=640+250*v/.4,yb=top+rows.length*rh+8;el(s,'line',{x1:x,y1:yb,x2:x,y2:yb+4,stroke:c.faint,'stroke-width':.8});txt(s,{x,y:yb+13,'text-anchor':'middle','font-size':7,fill:c.faint},(v*100)+'%')});
+  foot(s,c,900,326,zh()?'一刻度 = 2,000 个位点 · 每五刻度一个点标 · 空心圆 = 杂合率为零':'one tick = 2,000 sites · dot marks every fifth · hollow = zero heterozygosity');
+});
+
+/* ── 01 Y chain ── */
+reveal('ychain',(s,c)=>{
+  const P=D.ypath, n=P.length, x0=40, x1=490, y=110;
+  el(s,'line',{x1:x0,y1:y,x2:x1,y2:y,stroke:c.ink,'stroke-width':1,class:'draw'});
+  P.forEach((p,i)=>{const x=x0+(x1-x0)*i/(n-1), r=4+Math.sqrt(p.n)*2.6, last=i===n-1;
+    const cir=el(s,'circle',{cx:x,cy:y,r,fill:last?c.hero:c.data,stroke:c.bg,'stroke-width':1.5,class:'pop'}); cir.style.animationDelay=(i*110)+'ms'; tip(cir,`${p.snp} · ${p.hg} · ${p.n} derived SNPs`);
+    txt(s,{x,y:y-r-10,'text-anchor':'middle','font-size':last?11:9.5,'font-weight':last?800:700,fill:c.ink,...NUM},p.snp);
+    txt(s,{x,y:y+r+14,'text-anchor':'middle','font-size':7,'font-weight':600,fill:c.muted},p.hg);
+    txt(s,{x,y:y+r+25,'text-anchor':'middle','font-size':7,fill:c.faint},p.n+' SNP');
+  });
+  txt(s,{x:x0,y:y+95,'font-size':8,'font-weight':600,fill:c.muted},zh()?'上游：A0-T → BT (644) → CT (431) → F (47) → K → K2 → NO → O (118) 全部衍生态':'Upstream: A0-T → BT (644) → CT (431) → F (47) → K → K2 → NO → O (118), all derived');
+  txt(s,{x:x0,y:y+112,'font-size':8,'font-weight':600,fill:c.muted},zh()?'兄弟支阴性：O1a/O1b 均祖先态 · C、D、N、Q、R 全部祖先态':'Sister branches negative: O1a/O1b ancestral · C, D, N, Q, R all ancestral');
+  txt(s,{x:x0,y:y+160,'font-size':22,'font-weight':700,fill:c.ink,...NUM},D.y_meta.isogg_name||D.y_meta.terminal);
+  foot(s,c,520,296,zh()?'圆面积 = 该级衍生态位点数 · 最深色 = 终端支系':'circle area = derived sites at that step · darkest = terminal branch');
+  txt(s,{x:x0+150,y:y+160,'font-size':10,'font-weight':600,fill:c.muted},(zh()?'ISOGG 2016 命名 · YFull ':'ISOGG 2016 name · YFull ')+D.y_meta.yfull_version+': '+D.y_meta.yfull_path.replace(/O-/g,''));
+});
+
+/* ── 01 mt strip ── */
+reveal('mtstrip',(s,c)=>{
+  const L=16569, x0=24, x1=376, y=120, priv=new Set(D.mt_private);
+  el(s,'line',{x1:x0,y1:y,x2:x1,y2:y,stroke:c.ink,'stroke-width':1});
+  [0,4000,8000,12000,16569].forEach(p=>{const x=x0+(x1-x0)*p/L;el(s,'line',{x1:x,y1:y+4,x2:x,y2:y+8,stroke:c.faint,'stroke-width':.8});txt(s,{x,y:y+18,'text-anchor':'middle','font-size':7,fill:c.faint},p===16569?'16,569':fmt(p))});
+  const hvs=x0+(x1-x0)*16024/L; el(s,'rect',{x:hvs,y:y-30,width:x1-hvs,height:26,fill:c.fd,opacity:.5}); txt(s,{x:x1,y:y-34,'text-anchor':'end','font-size':7,'font-weight':600,fill:c.muted},'HVS-I');
+  el(s,'rect',{x:x0,y:y-30,width:(x1-x0)*576/L,height:26,fill:c.fd,opacity:.5}); txt(s,{x:x0,y:y-34,'font-size':7,'font-weight':600,fill:c.muted},'D-loop');
+  D.mt_variants.forEach((v,i)=>{const pos=parseInt(v), x=x0+(x1-x0)*pos/L, ln=i%2===0?-22:22, isP=priv.has(v);
+    el(s,'line',{x1:x,y1:y,x2:x,y2:y+ln*.55,stroke:c.faint,'stroke-width':.7});
+    const d=el(s,'circle',{cx:x,cy:y+ln*.55,r:3.2,fill:isP?c.bg:c.data,stroke:isP?c.ink:c.data,'stroke-width':1,class:'pop'}); d.style.animationDelay=(i*20)+'ms'; tip(d,v+(isP?(zh()?' · 私有突变':' · private mutation'):(zh()?' · 定义位点':' · defining site')));
+  });
+  txt(s,{x:x0,y:y+62,'font-size':22,'font-weight':700,fill:c.ink,...NUM},D.mt.hg);
+  txt(s,{x:x0+70,y:y+62,'font-size':10,'font-weight':600,fill:c.muted},'PhyloTree 17.2 · '+D.mt.n_found+(zh()?' 个定义位点命中 · 质量 ':' defining sites · quality ')+D.mt.quality);
+  foot(s,c,400,296,zh()?'实心点 = 支系定义位点 · 空心点 = 私有变异 · 上下交错只为避让':'filled = branch-defining site · hollow = private · alternating sides for legibility');
+  const lines=zh()?D.mt_lines[0]:D.mt_lines[1];
+  lines.forEach((tx,i)=>txt(s,{x:x0,y:y+90+i*15,'font-size':8,'font-weight':500,fill:c.muted},tx));
+});
+
+/* ── scatter helper ── */
+function scatter(s,c,pts,me,opts){
+  const {x0=44,y0=14,W=360,H=290,xl='PC1',yl='PC2',color,labels}=opts;
+  const xs=pts.map(p=>p.x).concat(me.x), ys=pts.map(p=>p.y).concat(me.y);
+  let xmin=Math.min(...xs),xmax=Math.max(...xs),ymin=Math.min(...ys),ymax=Math.max(...ys);
+  const dx=(xmax-xmin)*.06,dy=(ymax-ymin)*.06; xmin-=dx;xmax+=dx;ymin-=dy;ymax+=dy;
+  const X=v=>x0+W*(v-xmin)/(xmax-xmin), Y=v=>y0+H*(1-(v-ymin)/(ymax-ymin));
+  el(s,'rect',{x:x0,y:y0,width:W,height:H,fill:'none',stroke:c.grid,'stroke-width':.6});
+  txt(s,{x:x0+W/2,y:y0+H+22,'text-anchor':'middle','font-size':8,'font-weight':700,fill:c.muted,'letter-spacing':'.1em'},xl);
+  txt(s,{x:x0-30,y:y0+H/2,'text-anchor':'middle','font-size':8,'font-weight':700,fill:c.muted,'letter-spacing':'.1em',transform:`rotate(-90 ${x0-30} ${y0+H/2})`},yl);
+  pts.forEach(p=>{const d=el(s,'circle',{cx:X(p.x).toFixed(1),cy:Y(p.y).toFixed(1),r:2.1,fill:color(p),opacity:.85});tip(d,p.t)});
+  if(labels){const groups={};pts.forEach(p=>{(groups[p.g]=groups[p.g]||[]).push(p)});
+    Object.entries(groups).forEach(([g,arr])=>{const mx=arr.reduce((a,p)=>a+p.x,0)/arr.length,my=arr.reduce((a,p)=>a+p.y,0)/arr.length;
+      txt(s,{x:X(mx),y:Y(my)-6,'text-anchor':'middle','font-size':7.5,'font-weight':700,fill:c.ink,stroke:c.bg,'stroke-width':2.5,'paint-order':'stroke','letter-spacing':'.06em'},g.toUpperCase())})}
+  const mx=X(me.x),my=Y(me.y);
+  el(s,'rect',{x:mx-5.5,y:my-5.5,width:11,height:11,fill:c.hero,stroke:c.bg,'stroke-width':1.5,transform:`rotate(45 ${mx} ${my})`,class:'pop'});
+  txt(s,{x:mx+9,y:my+3,'font-size':9,'font-weight':800,fill:c.ink,stroke:c.bg,'stroke-width':3,'paint-order':'stroke'},D.name[1]);
+  if(opts.foot) foot(s,c,420,336,opts.foot);
+}
+reveal('pcaglobal',(s,c)=>{const pts=D.pca_global.pts.map(p=>({g:p[0],x:p[2],y:p[3],t:`${p[1]} (${p[0]})`}));
+  scatter(s,c,pts,{x:D.pca_global.me[0],y:D.pca_global.me[1]},{color:p=>p.g===D.pop.superpop?c.data:c.fd,labels:true,foot:zh()?'一点 = 一个人 · 深蓝 = 参考超级人群 · 菱形 = '+D.name[0]:'one dot = one person · dark blue = reference super-population · diamond = '+D.name[1]})});
+reveal('pcaeas',(s,c)=>{const shade={}; shade[D.pop.axis[1]]=c.hero; shade[D.pop.axis[0]]=c.data; (D.pop.subpops||[]).forEach(p=>{if(!shade[p])shade[p]=c.data2});const pts=D.pca_eas.pts.map(p=>({g:p[0],x:p[1],y:p[2],t:p[0]}));
+  scatter(s,c,pts,{x:D.pca_eas.me[0],y:D.pca_eas.me[1]},{color:p=>shade[p.g]||c.fd,labels:true,foot:zh()?'一点 = 一个人 · 明度 = 人群 · 菱形 = '+D.name[0]:'one dot = one person · shade = population · diamond = '+D.name[1]})});
+reveal('hgdp12',(s,c)=>{const han=new Set(D.pop.hgdp_focus); const second=new Set(D.pop.hgdp_second);const pts=D.pca_hgdp.pts.map(p=>({g:p[0],x:p[1],y:p[2],t:p[0]}));
+  scatter(s,c,pts,{x:D.pca_hgdp.me[0],y:D.pca_hgdp.me[1]},{xl:`PC1 (${D.pve_hgdp[0]}%)`,yl:`PC2 (${D.pve_hgdp[1]}%)`,color:p=>han.has(p.g)?c.data:(second.has(p.g)?c.data2:c.fd),labels:true,foot:zh()?'一点 = 一个人 · 深蓝 = 重点人群 · 菱形 = '+D.name[0]:'one dot = one person · dark blue = focus groups · diamond = '+D.name[1]})});
+reveal('hgdpdist',(s,c)=>{
+  const w=D.pve_hgdp.map(v=>Math.sqrt(v)); const me=D.pca_hgdp.me; const groups={}; D.pca_hgdp.pts.forEach(p=>{(groups[p[0]]=groups[p[0]]||[]).push(p.slice(1,5))});
+  const rows=Object.entries(groups).map(([g,arr])=>{const cen=[0,1,2,3].map(k=>arr.reduce((a,p)=>a+p[k],0)/arr.length);return {g,n:arr.length,d:Math.sqrt(cen.reduce((a,v,k)=>a+((v-me[k])*w[k])**2,0))}}).sort((a,b)=>a.d-b.d);
+  const x0=92,x1=400,top=12,rh=17.5,max=rows[rows.length-1].d;
+  rows.forEach((r,i)=>{const y=top+i*rh+6,bw=(x1-x0)*r.d/max,near=i<3;
+    txt(s,{x:x0-8,y:y+3,'text-anchor':'end','font-size':8.5,'font-weight':near?800:600,fill:near?c.ink:c.muted},r.g);
+    el(s,'line',{x1:x0,y1:y,x2:x1,y2:y,stroke:c.grid,'stroke-width':.6});
+    const b=el(s,'rect',{x:x0,y:y-3,width:bw,height:6,rx:3,fill:near?c.data:c.fd,class:'fade'}); b.style.animationDelay=(i*90)+'ms'; tip(b,`${r.g} n=${r.n} d=${r.d.toFixed(3)}`);
+    txt(s,{x:x0+bw+5,y:y+3,'font-size':7.5,'font-weight':800,fill:c.muted},r.d.toFixed(2));
+  });
+  foot(s,c,420,336,zh()?'条长 = 到该人群中心的距离 · 深色 = 最近的三个':'bar = distance to group centre · dark = nearest three');
+});
+
+/* ── ClinVar tick rows (1 tick = 100 sites) ── */
+reveal('clinvar',(s,c)=>{
+  const map=zh()?{Benign:'良性',Likely_benign:'可能良性',unclassified:'未分类',other:'其他',drug_response:'药物反应',association:'关联',risk_factor:'风险因素',not_provided:'未提供',Conflicting_classifications_of_pathogenicity:'分类冲突',Uncertain_significance:'意义未明',Likely_pathogenic:'可能致病（无评审）',Pathogenic:'致病（无评审）'}
+    :{Benign:'BENIGN',Likely_benign:'LIKELY BENIGN',unclassified:'UNCLASSIFIED',other:'OTHER',drug_response:'DRUG RESPONSE',association:'ASSOCIATION',risk_factor:'RISK FACTOR',not_provided:'NOT PROVIDED',Conflicting_classifications_of_pathogenicity:'CONFLICTING',Uncertain_significance:'VUS',Likely_pathogenic:'LIKELY PATHOGENIC (NO CRITERIA)',Pathogenic:'PATHOGENIC (NO CRITERIA)'};
+  const keep=['Benign','unclassified','other','drug_response','association','risk_factor','Likely_benign','not_provided','Conflicting_classifications_of_pathogenicity','Uncertain_significance','Likely_pathogenic','Pathogenic'];
+  const rows=keep.map(k=>({k,l:map[k],n:D.clinvar[k]||0})); const x0=zh()?150:200,top=12,rh=22,PX=zh()?4.6:3.9,UNIT=100, rnd=(i,k)=>Math.abs(((i*73856093)^(k*19349663))%1000)/1000;
+  rows.forEach((r,i)=>{const y=top+i*rh+9,n=Math.ceil(r.n/UNIT),pl=/pathogenic/i.test(r.k)&&!/Conflicting/.test(r.k);
+    txt(s,{x:x0-8,y:y+3,'text-anchor':'end','font-size':7.5,'font-weight':pl?800:700,fill:pl?c.ink:c.muted,'letter-spacing':'.06em',class:'fade',style:`animation-delay:${i*.08}s`},r.l);
+    el(s,'line',{x1:x0,y1:y+4,x2:x0+67*PX,y2:y+4,stroke:c.grid,'stroke-width':.6,class:'fade',style:`animation-delay:${i*.08}s`});
+    for(let k=0;k<n;k++){const x=x0+k*PX+PX/2,h=6+rnd(k+1,i+2)*5;
+      el(s,'line',{x1:x,y1:y+4,x2:x,y2:y+4-h,stroke:pl?c.hero:(i===0?c.data:c.data2),'stroke-width':1.3,opacity:.85+rnd(k+3,i+5)*.15,class:'fade',style:`animation-delay:${i*.08+k*.012}s`});
+      if(k%5===4)el(s,'circle',{cx:x,cy:y+7,r:.7,fill:c.faint,class:'fade'});}
+    const lab=txt(s,{x:x0+n*PX+8,y:y+4,'font-size':9,'font-weight':800,fill:c.ink,class:'fade',style:`animation-delay:${.3+i*.08}s`},fmt(r.n)); tip(lab,`${r.l}: ${r.n}`);
+  });
+  foot(s,c,520,296,zh()?'一刻度 = 100 个位点（不足 100 按 1 刻度）· 最深色 = 致病记录':'one tick = 100 sites (rounded up) · darkest = pathogenic entries');
+});
+
+/* ── ROH ── */
+reveal('roh',(s,c)=>{
+  const chs=Object.keys(D.chrlen), x0=30,x1=390,top=8,rh=12.6,maxL=D.chrlen['1'];
+  chs.forEach((ch,i)=>{const y=top+i*rh+5,w=(x1-x0)*D.chrlen[ch]/maxL;
+    txt(s,{x:x0-6,y:y+3,'text-anchor':'end','font-size':7.5,'font-weight':700,fill:c.ink},ch);
+    el(s,'rect',{x:x0,y:y-2.5,width:w,height:5,rx:2.5,fill:c.fd,opacity:.7});
+    const cx=x0+(x1-x0)*D.cen[ch]*1e6/maxL; el(s,'line',{x1:cx,y1:y-5,x2:cx,y2:y+5,stroke:c.faint,'stroke-width':.8});
+    D.roh.filter(r=>r.chrom==ch).forEach((r,j)=>{const rx=x0+(x1-x0)*r.start/maxL,rw=Math.max(2,(x1-x0)*(r.end-r.start)/maxL);
+      const b=el(s,'rect',{x:rx,y:y-3.5,width:rw,height:7,rx:1.5,fill:c.data,class:'pop'}); b.style.animationDelay=(i*40+j*90)+'ms'; tip(b,`chr${ch}:${fmt(r.start)}-${fmt(r.end)} · ${r.length_mb} Mb · ${r.n_snps} SNP`);
+      txt(s,{x:rx+rw+3,y:y+2.5,'font-size':6.5,'font-weight':600,fill:c.muted},r.length_mb+' Mb');
+    });
+  });
+  foot(s,c,400,296,zh()?'深色段 = 两份完全一样的长片段 · 小刻度 = 着丝粒':'dark = long identical stretch · tick = centromere');
+});
+
+/* ── 07 north/south index ── */
+reveal('nsidx',(s,c)=>{
+  const rows=D.ns, x0=60,x1=860,top=26,rh=13.6, lo=-0.6, hi=2.2, X=v=>x0+(x1-x0)*(v-lo)/(hi-lo);
+  const mean=rows.reduce((a,r)=>a+r.ns_index,0)/rows.length;
+  el(s,'rect',{x:X(0),y:top-16,width:X(1)-X(0),height:rows.length*rh+14,fill:c.fd,opacity:.3});
+  [[0,D.pop.axis[0]],[1,D.pop.axis[1]]].forEach(([v,l])=>{el(s,'line',{x1:X(v),y1:top-16,x2:X(v),y2:top+rows.length*rh-2,stroke:c.ink,'stroke-width':.9});txt(s,{x:X(v),y:top-20,'text-anchor':'middle','font-size':8,'font-weight':700,fill:c.ink},l)});
+  [-0.5,0.5,1.5,2].forEach(v=>txt(s,{x:X(v),y:top-20,'text-anchor':'middle','font-size':7,fill:c.faint},v));
+  rows.forEach((r,i)=>{const y=top+i*rh,v=r.ns_index,south=v<0.5;
+    txt(s,{x:x0-10,y:y+3,'text-anchor':'end','font-size':8.5,'font-weight':700,fill:c.ink},'chr'+r.chrom);
+    el(s,'line',{x1:x0,y1:y,x2:x1,y2:y,stroke:c.grid,'stroke-width':.6});
+    el(s,'line',{x1:X(Math.min(v,mean)),y1:y,x2:X(Math.max(v,mean)),y2:y,stroke:c.data2,'stroke-width':1});
+    const d=el(s,'circle',{cx:X(v),cy:y,r:4.4,fill:south?c.bg:c.data,stroke:south?c.data:c.data,'stroke-width':1.3,class:'pop'}); d.style.animationDelay=(i*12)+'ms'; tip(d,`chr${r.chrom}: index ${v} · ${fmt(r.n_snps)} SNPs`);
+    txt(s,{x:X(v)+(v>1.9?-9:9),y:y+3,'text-anchor':v>1.9?'end':'start','font-size':7.5,'font-weight':700,fill:c.muted,...NUM},v.toFixed(2));
+  });
+  const my=top+rows.length*rh+6; el(s,'rect',{x:X(mean)-5,y:my-5,width:10,height:10,fill:c.hero,transform:`rotate(45 ${X(mean)} ${my})`});
+  txt(s,{x:X(mean)+10,y:my+3,'font-size':8.5,'font-weight':800,fill:c.ink},(zh()?'全基因组均值 ':'genome mean ')+mean.toFixed(2));
+  foot(s,c,900,352,zh()?'空心 = 偏南方 · 实心 = 偏北方 · 菱形 = 全基因组均值':'hollow = leans south · filled = leans north · diamond = genome mean');
+});
+
+/* ── 07 X PCA ── */
+reveal('xpca',(s,c)=>{const pts=D.xpca.pts.map(p=>({g:p[0],x:p[2],y:p[3],t:`${p[1]} (${p[0]})`}));
+  scatter(s,c,pts,{x:D.xpca.me[0],y:D.xpca.me[1]},{xl:'X · PC1',yl:'X · PC2',color:p=>p.g===D.pop.superpop?c.data:c.fd,labels:true,foot:zh()?'只用 X 染色体 · 一点 = 一个人 · 菱形 = '+D.name[0]:'X chromosome only · one dot = one person · diamond = '+D.name[1]})});
+
+
+
+/* ── variables for i18n placeholders ── */
+function fillVars(){
+  const k=D.kpi, q=D.qc, ns=D.ns_genome, pv=D.prs_validation_summary, pi=D.prs_imputed_summary, ic=D.impute_check_overall;
+  Object.assign(F,{sites:fmt(k.sites), cr:(k.call_rate*100).toFixed(2), yshare:(k.y_share*100).toFixed(1), n:fmt(q.harmonization_1000G.exact_match), par:k.x_par_sites, yc:fmt(k.y_called),
+    yv:D.y_meta.yfull_version, formed:fmt(D.y_meta.formed_years), yconf:Object.entries(D.y_conflicts).filter(([k,v])=>v.anc>0).map(([k,v])=>k+' '+v.anc+'/'+(v.anc+v.der)).join(', ')||'0',
+    mts:fmt(D.mt.sites), mtq:D.mt.quality, mtcov:D.mt.coverage_pct, nf:D.mt.n_found, npv:D.mt.n_private,
+    near:D.near_global[0][0], knn:Object.entries(D.knn_eas).map(([p,n])=>p+' '+n).join(' · '), nnh:D.hgdp_n.NorthernHan, lift:fmt(D.lifted_sites),
+    removed:D.traits_removed.join(', '), inp:fmt(D.impute_input_sites), hq:fmt(D.imputed_variants_hq), conc:(ic.conc_all*100).toFixed(1), hconc:(ic.het_conc_all*100).toFixed(1),
+    c1:pi.cov_min, c2:pi.cov_max, w1:pi.w_min, w2:pi.w_max, r1:pv.rho_min.toFixed(2), r2:pv.rho_max.toFixed(2), dm:pv.dev_median_median.toFixed(1), d90:pv.dev_p90_median.toFixed(1), d90m:pv.dev_p90_max.toFixed(1),
+    cvd:D.clinvar_date, idx:ns.index, sd:ns.sd_from_chb, mx:D.roh_stats.max_mb, nrs:fmt(k.n_rsid), nw:fmt(k.n_wid), ind:fmt(k.indels), abs:D.rare_absent});
+  // section-specific overrides
+  F.n_cv = D.clinvar_total;
+}
+function renderKpi(){const k=D.kpi; document.getElementById('kpi_sites').textContent=fmt(k.sites); document.getElementById('kpi_het').innerHTML=(k.het_auto*100).toFixed(1)+'<small>%</small>'; document.getElementById('kpi_x').textContent='XY';}
+// per-key placeholder overrides (some keys reuse {n})
+const _t = t; const NKEY = {c_cv:()=>D.clinvar_total, n_cv:()=>D.clinvar_total, src_pg:()=>fmt(D.n_pruned_global), src_pe:()=>fmt(D.n_pruned_eas), src_h12:()=>fmt(D.n_pruned_hgdp), sub_pg:()=>fmt(D.n_pruned_global), sub_pe:()=>fmt(D.n_pruned_eas), sub_h12:()=>fmt(D.n_pruned_hgdp), c_roh:()=>D.roh_stats.n, c_rare:()=>D.rare_n, n_prs_old:()=>null};
+const NEAR = {src_pe:()=>D.near_eas[0][0], src_pg:()=>D.near_global[0][0]}; const KNN = {src_hd:()=>Object.entries(D.knn_hgdp).map(([p,n])=>p+' '+n).join(' · ')};
+const CV = {n_prs_old:[D.prs_validation_summary.cov_min, D.prs_validation_summary.cov_max]};
+function tt(k){ const saveN=F.n, saveNear=F.near, saveK=F.knn, c1=F.c1, c2=F.c2; if(NKEY[k]&&NKEY[k]()!==null) F.n=NKEY[k](); if(NEAR[k]) F.near=NEAR[k](); if(KNN[k]) F.knn=KNN[k](); if(CV[k]){F.c1=CV[k][0];F.c2=CV[k][1]}
+  const s=_t(k); F.n=saveN; F.near=saveNear; F.knn=saveK; F.c1=c1; F.c2=c2; return s; }
+
+/* ── trait tables ── */
+const trName=r=>zh()?r.phenotype:(TRAIT_EN[r.rsid]||[r.phenotype])[0];
+const trRead=r=>{const p=PLAIN[r.rsid]; if(p) return zh()?p[0]:p[1]; return zh()?(D.traits_zh_orig[r.rsid]||''):((TRAIT_EN[r.rsid]||[])[1]||'')};
+const lvlTxt=l=>zh()?(LEVEL_ZH[l]||l):(LEVEL_EN[l]||l);
+function traitTable(rows){
+  let h=`<div class="tablewrap"><table><thead><tr><th style="width:24%">${tt('th_trait')}</th><th style="width:10%">${tt('th_gene')}</th><th style="width:10%">${tt('th_gt')}</th><th style="width:9%">${tt('th_lvl')}</th><th>${tt('th_int')}</th></tr></thead><tbody>`;
+  rows.forEach(r=>{const lv=(r.evidence_level||'').charAt(0);
+    h+=`<tr><td>${trName(r)}<div style="color:var(--faint);font-size:9.5px">${r.rsid}</div></td><td class="gene">${r.gene}</td><td class="g">${r.genotype||'—'}</td><td><span class="lvl ${lv}">${lv||'—'}</span><span class="src-tag">${(r.direct_or_proxy||'').replace(/_/g,' ')}</span></td><td>${trRead(r)}</td></tr>`});
+  return h+'</tbody></table></div>';
+}
+const EXPL = new Set(D.traits_v2.filter(r=>(r.evidence_level||'').startsWith('D')).map(r=>r.rsid));
+function renderTraits(){
+  const order=['代谢','外貌','感官','运动','神经','血型','疾病风险','免疫','心血管','行为','长寿','睡眠'];
+  const T=D.traits_v2.filter(r=>r.category!=='药物'&&!EXPL.has(r.rsid)); const by={}; T.forEach(r=>{(by[r.category]=by[r.category]||[]).push(r)});
+  let h=''; order.filter(k=>by[k]).forEach(k=>{h+=`<div class="cat">${zh()?k:(CAT_EN[k]||k)}</div>`+traitTable(by[k])});
+  h+=`<p class="note" style="margin-top:12px">${tt('n_tr')}</p>`; document.getElementById('traits').innerHTML=h;
+}
+function renderFun(){ document.getElementById('fun').innerHTML=traitTable(D.traits_v2.filter(r=>EXPL.has(r.rsid))); }
+function renderPgx(){
+  let h=`<div class="tablewrap"><table><thead><tr><th style="width:11%">${tt('th_gene')}</th><th style="width:16%">${tt('th_var')}</th><th style="width:10%">${tt('th_gt')}</th><th style="width:13%">${tt('th_cov')}</th><th style="width:12%">${tt('th_ph')}</th><th>${tt('th_read')}</th></tr></thead><tbody>`;
+  D.pgx_v2.forEach(r=>{h+=`<tr><td class="gene">${r.gene}<span class="src-tag">${r.direct_or_tag}</span></td><td class="rs">${r.variants}</td><td class="g" style="font-size:12px">${r.genotype}</td><td style="color:var(--muted)">${(PGX_COV[r.gene]||[r.star_allele_coverage,r.star_allele_coverage])[zh()?0:1]}</td><td>${/NOT|not|REQUIRES/.test(r.phenotype_assignable)?(zh()?'不能':'no'):(zh()?'能':'yes')}</td><td>${(PGX_PLAIN[r.gene]||[r.effect_alleles_carried||'',r.effect_alleles_carried||''])[zh()?0:1]}</td></tr>`});
+  document.getElementById('pgx').innerHTML=h+'</tbody></table></div>';
+}
+function renderRare(){
+  let h=`<div class="tablewrap"><table><thead><tr><th>rsID</th><th>${tt('th_pos')}</th><th>${tt('th_al')}</th><th>${tt('th_gt')}</th><th>${tt('th_feas')}</th><th>${tt('th_fall')}</th><th>${tt('th_gene')}</th></tr></thead><tbody>`;
+  D.rare.slice(0,10).forEach(r=>{h+=`<tr><td class="rs">${r.rsid}</td><td class="num">chr${r.chrom}:${fmt(r.pos)}</td><td class="g">${r.allele}</td><td class="g">${r.geno.replace('/','')}</td><td class="num">${(r.freq_eas*100).toFixed(1)}%</td><td class="num">${(r.freq_all*100).toFixed(1)}%</td><td class="gene">${r.gene||'—'}</td></tr>`});
+  document.getElementById('rare').innerHTML=h+'</tbody></table></div>';
+}
+
+/* ── PRS rows (imputed) and old subset rows with measured whiskers ── */
+function prsRowsV2(s,c,data,opts){
+  const rows=[...data].sort((a,b)=>b.pct_EAS-a.pct_EAS); const x0=250,x1=800,top=30,rh=26.5,W=x1-x0,X=v=>x0+W*Math.max(0,Math.min(100,v))/100;
+  el(s,'rect',{x:X(25),y:top-14,width:X(75)-X(25),height:rows.length*rh+8,fill:c.fd,opacity:.35});
+  el(s,'line',{x1:X(50),y1:top-14,x2:X(50),y2:top+rows.length*rh-6,stroke:c.faint,'stroke-width':.8,'stroke-dasharray':'2 3'});
+  [0,25,50,75,100].forEach(v=>txt(s,{x:X(v),y:top-20,'text-anchor':'middle','font-size':7.5,'font-weight':600,fill:c.faint},v+'%'));
+  txt(s,{x:x1+8,y:top-20,'font-size':7,'font-weight':600,fill:c.faint,'letter-spacing':'.08em'},D.pop.subpops.join('+'));
+  foot(s,c,900,top+rows.length*rh+14,opts.foot);
+  rows.forEach((r,i)=>{const y=top+i*rh,p=r.pct_EAS;
+    txt(s,{x:x0-12,y:y+3.5,'text-anchor':'end','font-size':10,'font-weight':600,fill:c.ink},zh()?r.trait:(PRS_EN[r.trait]||r.trait));
+    txt(s,{x:x0-12,y:y+14,'text-anchor':'end','font-size':7,fill:c.faint},opts.sub(r));
+    el(s,'line',{x1:x0,y1:y,x2:x1,y2:y,stroke:c.grid,'stroke-width':.6});
+    if(opts.whisker){const w=opts.whisker(r); el(s,'line',{x1:X(p-w),y1:y,x2:X(p+w),y2:y,stroke:c.data2,'stroke-width':1.4}); [p-w,p+w].forEach(v=>el(s,'line',{x1:X(v),y1:y-4,x2:X(v),y2:y+4,stroke:c.data2,'stroke-width':1.2}));}
+    if(r.pct_Han!==undefined){el(s,'circle',{cx:X(r.pct_Han),cy:y,r:2.6,fill:c.bg,stroke:c.data2,'stroke-width':1.2});}
+    const d=el(s,'circle',{cx:X(p),cy:y,r:5,fill:c.data,stroke:c.bg,'stroke-width':1.5,class:'pop'}); d.style.animationDelay=(i*12)+'ms'; tip(d,`${r.trait} · EAS ${p}% · z=${r.z_vs_EAS}`);
+    txt(s,{x:X(p)+(p>88?-10:10),y:y+3.5,'text-anchor':p>88?'end':'start','font-size':9,'font-weight':800,fill:c.ink,...NUM},p.toFixed(0)+'%');
+    if(r.pct_Han!==undefined) txt(s,{x:x1+8,y:y+3.5,'font-size':8,'font-weight':600,fill:c.muted,...NUM},r.pct_Han.toFixed(0)+'%');
+  });
+}
+reveal('prsimp',(s,c)=>prsRowsV2(s,c,D.prs_imputed,{foot:zh()?'实心 = 在参考人群 '+D.pop.superpop+' 中的百分位 · 空心 = '+D.pop.subpops.join('+')+' · 灰带 = 中间一半':'filled = percentile within '+D.pop.superpop+' · hollow = '+D.pop.subpops.join('+')+' · band = middle half',sub:r=>`${r.pgs} · ${r.coverage_of_score_pct}% / ${r.weight_retained_pct}% · GP≥0.9: ${r.gp90_pct_EAS}%`}));
+reveal('prsold',(s,c)=>{const pv={}; D.prs_validation.forEach(v=>pv[v.pgs]=v); const rows=D.prs.concat(D.prs_bio).map(r=>({...r}));
+  prsRowsV2(s,c,rows,{foot:zh()?'横线 = 实测误差范围（十分之一的人会超出）· 第一版只用直接测到的位点':'whisker = measured error (exceeded by one in ten) · first version, typed sites only',sub:r=>`${r.pgs} · ${r.coverage_pct}% · ρ=${(pv[r.pgs]||{}).spearman_full_vs_subset??'—'}`, whisker:r=>(pv[r.pgs]||{}).pct_dev_p90||0})});
+
+fillVars(); renderAll();
+</script>

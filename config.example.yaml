@@ -1,0 +1,17 @@
+# Copy to config.yaml and edit. Nothing here is committed; work_dir is git-ignored.
+sample_id: SAMPLE          # internal ID written into VCF / plink files (ASCII, no spaces)
+name_zh: 样本              # display name in the Chinese report
+name_en: Sample            # display name in the English report
+sex: male                  # male | female (affects X handling and the sex-consistency check)
+input: work/data/input.txt # WeGene / 23andMe-style export: rsid, chromosome, position, genotype (GRCh37)
+work_dir: work             # all outputs; keep it out of git
+ref_dir: work/data/ref     # reference data (setup/download_references.sh)
+tools_dir: work/tools      # plink2, haplogrep3
+threads: 8
+# Reference populations (1000 Genomes / HGDP labels). Defaults suit East Asian samples.
+ref_superpop: EAS
+ref_subpops: [CHB, CHS]
+axis_pops: [CHS, CHB]        # per-chromosome axis: 0 = first, 1 = second
+hgdp_region: EAST_ASIA
+hgdp_focus: [Han, NorthernHan]
+hgdp_second: [Japanese]

@@ -1,0 +1,11 @@
+work/
+config.yaml
+*.pgen
+*.pvar
+*.psam
+*.vcf
+*.vcf.gz
+*.parquet
+*.duckdb
+__pycache__/
+work/config.local.yaml

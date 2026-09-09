@@ -1,0 +1,424 @@
+_comment: Narrative text for the report. Written by the analyst/agent AFTER reading the result files. Each value is [Chinese, English]. Placeholders in {braces} are filled from report_data.json.
+name_zh: 大宇
+name_en: Dayu
+y:
+  terminal: O-F438
+  isogg_name: O2a2b1a1a1
+  yfull_path: O-M122 > O-M324 > O-P201 > O-P164 > O-M134 > O-PAGE23 > O-M1706 (F5/F8) > O-A9459 > O-F438
+  yfull_version: 9.05.0
+  formed_years: 7000
+  path_nodes:
+  - 'NO'
+  - O
+  - O2
+  - O2a
+  - O2a2
+  - O2a2b
+  - O2a2b1
+  - O2a2b1a
+  - O2a2b1a1
+  - O2a2b1a1a
+  - O2a2b1a1a1
+mt:
+  lines_zh:
+  - 关键定义位点：5178A (D)、3010A (D4)、8414T、14668T (D4)、3644C、9540C (D4h)、16174T (D4h1)
+  - 私有突变：146C、3308C、7673G、9300A、16093C、16172C（3308C 在文献中与 D4h1 部分支系相关）
+  lines_en:
+  - 'Key defining sites: 5178A (D), 3010A (D4), 8414T, 14668T (D4), 3644C, 9540C (D4h), 16174T (D4h1)'
+  - 'Private: 146C, 3308C, 7673G, 9300A, 16093C, 16172C (3308C is reported in some D4h1 sub-branches)'
+text:
+  tag:
+  - 男 · 1994 年生 · WeGene 基因检测芯片 · 修订版 2026-09-08
+  - Male · born 1994 · WeGene genotyping array · revised 2026-09-08
+  tier1_b:
+  - 检测数据质量好（{sites} 个位点，成功率 {cr}%）。是男性。祖源是东亚人，在汉族里偏北方。带一个“喝酒脸红”基因（ALDH2）。带一个影响硫嘌呤类药物剂量的基因变异（NUDT15），将来用这类药前要告诉医生。APOE 基因型是 ε3/ε4。
+  - Good data quality ({sites} sites, {cr}% call rate). Male. East Asian ancestry, on the northern side of the Han spectrum. One 'alcohol flush' variant (ALDH2). One NUDT15 variant that affects thiopurine
+    drug dosing; tell a doctor before using such drugs. APOE type ε3/ε4.
+  tier2_b:
+  - 父系（Y 染色体）属于 O-F438 这一支；母系（线粒体）属于 D4h1，这两个都是东亚常见支系。血型推测为 A 型。PTC 苦味“不敏感”型。没有看到父母近亲的迹象。华法林“敏感型”。
+  - Paternal line (Y) belongs to branch O-F438; maternal line (mitochondria) to D4h1, both common in East Asia. Predicted blood group A. PTC bitter 'non-taster'. No sign of parental relatedness. Warfarin-'sensitive'
+    type.
+  tier3_b:
+  - 各种“多基因风险评分”（几十万个小效应位点加总的分数）；性格、记忆、运动、长寿、睡眠、盐敏感这类位点；在东亚人里少见的变异；染色体逐条的南北倾向；母亲那边的 X 染色体祖源。这些都只是趋势或统计，不能预测个人。
+  - The 'polygenic scores' (sums of hundreds of thousands of tiny effects); sites for personality, memory, athletics, longevity, sleep, salt sensitivity; variants rare in East Asians; chromosome-by-chromosome
+    north/south leaning; the maternal X chromosome. All are tendencies or statistics, not predictions about you.
+  c_y:
+  - 父系：Y 染色体属于 O-F438 支（旧命名 O2a2b1a1a1）
+  - 'Father''s line: Y chromosome in branch O-F438 (older name O2a2b1a1a1)'
+  n_y:
+  - Y 染色体只从父亲传给儿子，所以它记录的是你的父系一条线。O-F438 是 O-M117 下面的一支，在汉族尤其北方汉族里很常见，YFull 数据库估计这一支大约形成于 {formed} 年前。芯片在这条支上最末一级只测了 1 个位点，再往下分不了。它说明不了你的籍贯或民族，只说明父系属于一个很大的东亚人群。
+  - The Y chromosome passes only from father to son, so it records one paternal line. O-F438 sits under O-M117 and is common among Han Chinese, especially in the north; the YFull database dates the branch
+    to roughly {formed} years ago. The array has only one site at the last step, so nothing finer can be resolved. It says nothing about hometown or ethnicity, only that the paternal line belongs to a large
+    East Asian group.
+  c_mt:
+  - 母系：线粒体属于 D4h1 支（芯片测到 {mts} 个线粒体位点，可信度 {mtq}）
+  - 'Mother''s line: mitochondria in branch D4h1 ({mts} mitochondrial sites tested, confidence {mtq})'
+  n_mt:
+  - 线粒体只从母亲传下来，记录的是母系一条线。D4 是东亚最常见的母系支系之一。芯片只测了线粒体约 {mtcov}% 的位置，36 个和参考序列不同的位点里 {nf} 个正好落在 D4h1 这条支的定义上，另外 {npv} 个是你自己的私有变异。这不是完整的线粒体测序，D4h1 再往下分不了。
+  - Mitochondria pass only from the mother, so this is one maternal line. D4 is among the commonest maternal branches in East Asia. The array covers about {mtcov}% of the mitochondrial genome; of 36 differences
+    from the reference, {nf} fall exactly on the D4h1 branch and {npv} are private to you. This is not full mitochondrial sequencing; nothing below D4h1 can be resolved.
+  c_pca:
+  - 和全世界 2,504 个人放在一起看：你落在东亚人群里
+  - 'Placed among 2,504 people from around the world: you fall inside the East Asian group'
+  c_hgdp:
+  - 在 HGDP 项目的 18 个东亚人群里，离你最近的是北方汉族样本；这只是在现有样本里的相对位置，不是籍贯
+  - Among 18 East Asian groups in the HGDP panel, the nearest is the Northern Han sample; a position among available samples, not a hometown
+  c_tr:
+  - 直接测出来的位点，每条标了可信度等级
+  - Directly measured sites, each with a confidence grade
+  c_pgx:
+  - 用药相关：只说测到或没测到什么，不下芯片支撑不了的结论
+  - 'Medicines: only what was found or not found, no conclusions the array cannot support'
+  c_cv:
+  - 和 ClinVar 疾病变异库（{cvd} 版）比对：{n} 个位点有记录，绝大多数是“良性”，没有确认的致病变异
+  - 'Checked against the ClinVar disease-variant database ({cvd}): {n} sites have entries, almost all ''benign'', no confirmed disease-causing variant'
+  n_cv:
+  - 这里回答的问题是“芯片测到的位点里，有没有和已知疾病变异重合的”，不是“我有没有遗传病”。两条标为“致病”的记录（疟疾易感、CDKN2B）都是没有评审依据的旧条目，属于“易感性”而不是疾病。芯片没测的罕见变异无法排除。
+  - The question answered here is 'do any tested sites match known disease variants', not 'do I have a genetic disease'. The two entries labelled 'pathogenic' (malaria susceptibility, CDKN2B) are old, unreviewed
+    'susceptibility' notes, not diseases. Rare variants the array does not test cannot be excluded.
+  c_roh:
+  - 近亲检查：{n} 段较长的纯合区，最长 {mx} Mb，没有特别长的；没有父母近亲的迹象
+  - 'Relatedness check: {n} longer homozygous stretches, longest {mx} Mb, none very long; no sign of parental relatedness'
+  c_ns:
+  - 逐条染色体看南北倾向（0 = 南方汉族中心，1 = 北京汉族中心）
+  - North/south leaning chromosome by chromosome (0 = southern Han centre, 1 = Beijing Han centre)
+  n_ns:
+  - 整体坐标 {idx}，落在北京汉族样本的分布范围之内（偏离其中心 {sd:+} 个标准差）。它不是“百分之多少北方”，只是在一条坐标轴上的位置。单条染色体位点少，数值抖动大，看个热闹就好。
+  - Overall coordinate {idx}, inside the spread of the Beijing Han samples ({sd:+} standard deviations from their centre). It is not 'x% northern', just a position on one axis. Single chromosomes have few
+    sites and jump around; enjoy, but do not over-read.
+  c_x:
+  - 母亲那边的 X 染色体：也是东亚人，再细分不了
+  - 'The X chromosome from your mother: also East Asian, cannot be split finer'
+  n_x:
+  - 男性的 X 染色体全部来自母亲。用 4,044 个位点只够回答“哪个大洲”，北京汉、南方汉、日本人分不开。
+  - A man's X comes entirely from his mother. With 4,044 sites it can only answer 'which continent'; Beijing Han, southern Han and Japanese cannot be told apart.
+  c_rare:
+  - 在 504 个东亚人里少见的变异：{n} 个，其中 {abs} 个在这 504 人里一次都没出现
+  - 'Variants rare among 504 East Asians: {n}, of which {abs} never appeared in those 504 people'
+  n_rare:
+  - “没在 504 人里出现”不等于“东亚人没有”，只是样本小。这些变异大多在世界其他地方并不少见，也可能有个别是芯片测错。它们没有已知的健康含义。
+  - '''Not seen in 504 people'' does not mean ''absent in East Asians''; the sample is small. Most are not rare elsewhere in the world, and a few may be array errors. None has a known health meaning.'
+  c_fun:
+  - 趣味位点：性格、记忆、运动、长寿、睡眠。有研究提过，但看不出个人差别
+  - 'Fun sites: personality, memory, athletics, longevity, sleep. Mentioned in studies, but no visible effect on an individual'
+  c_prs:
+  - 多基因评分：把几十万个小效应位点加在一起，看你在 504 个东亚人里排第几
+  - 'Polygenic scores: hundreds of thousands of tiny effects added up, then ranked among 504 East Asians'
+  n_prs:
+  - 芯片只直接测了这些评分需要的约三分之一的位点，所以先用“基因型填补”把没测的位点根据人群规律推算出来（输入 {inp} 个位点，推算后按人群频率保留 {hq} 个变异），再打分。自检：故意遮住一部分测过的位点再推算，推对 {conc}%。百分位是“在 1000 Genomes 项目的 504 个东亚人里排第几”，不是在所有中国人里排第几；这 504 人是测序数据，你是推算数据，所以仍是近似。评分覆盖率
+    {c1}–{c2}%。<b>90 以上或 10 以下才值得留意，而且只是人群趋势，不是诊断。</b>
+  - 'The array directly measures only about a third of the sites these scores need, so missing sites were first ''imputed'' (inferred from population patterns; {inp} input sites, {hq} variants kept by population
+    frequency), then scored. Self-check: deliberately hiding some measured sites and re-inferring them was {conc}% correct. Percentiles mean ''rank among the 504 East Asians in the 1000 Genomes project'',
+    not among all Chinese; those 504 are sequenced while you are imputed, so it remains approximate. Score coverage {c1}–{c2}%. <b>Only values above 90 or below 10 deserve attention, and even then they
+    are population tendencies, not diagnoses.</b>'
+  c_prs_old:
+  - 附录：第一版只用直接测到的位点算的分，误差有多大
+  - 'Appendix: the first version''s scores from directly measured sites only, and how wrong they can be'
+  n_prs_old:
+  - 为了知道“只用三分之一位点”会错多少，我们让 504 个东亚人各算两次：完整评分和芯片子集评分。结果排名相关 {r1}–{r2}，一半人的百分位偏差在 {dm} 以内，但十分之一的人偏差超过 {d90}（最坏 {d90m}）。图中横线就是每个评分的这种误差范围。所以第一版里“糖尿病 91”“胃癌 0.4”这类结论不能采信。
+  - 'To see how wrong ''one third of the sites'' can be, each of the 504 East Asians was scored twice: with the full score and with the array subset. Rank correlation was {r1}–{r2}; half the people were
+    within {dm} percentile points, but one in ten was off by more than {d90} (worst {d90m}). The whiskers show that error range per score. This is why first-version claims such as ''diabetes 91'' or ''stomach
+    cancer 0.4'' cannot be trusted.'
+  sub_y:
+  - 从 O 到 O-F438 逐级下行 · 圆越大支持位点越多 · 名称按 ISOGG 2016，与 YFull 9.05 核对
+  - descending from O to O-F438 · bigger circle = more supporting sites · ISOGG 2016 names, checked against YFull 9.05
+  sub_pg:
+  - 1000 Genomes 项目 2,504 人 · {n} 个位点 · 一点 = 一个人 · {name}被投影进参考空间
+  - 1000 Genomes, 2,504 people · {n} sites · one dot = one person · the sample projected into the reference space
+trait_readings:
+  rs671:
+  - 你带一个“喝酒脸红”基因（ALDH2*2）。酒精变成的乙醛分解得慢，喝酒容易脸红、心跳快、难受。长期大量饮酒的人如果带这个基因，食管癌风险会更高。这是直接测出来的，很可靠。
+  - You carry one 'alcohol flush' variant (ALDH2*2). Your body clears acetaldehyde, the toxic by-product of alcohol, slowly, so drinking tends to cause flushing and discomfort. Heavy drinkers with this
+    variant have a higher oesophageal cancer risk. Directly measured, reliable.
+  rs1229984:
+  - 你把酒精转成乙醛的速度很快（ADH1B*2 纯合）。和上一条加在一起，喝酒后乙醛堆得更快，不舒服来得更早。东亚人大多是这个型。
+  - You convert alcohol to acetaldehyde quickly (ADH1B*2, two copies). Combined with the line above, acetaldehyde builds up fast after drinking. Most East Asians have this type.
+  rs3827760:
+  - 东亚人常见的“粗直头发”基因型。头发偏粗偏直、门牙内侧呈铲形的可能性大，但这只是趋势，不是必然。
+  - The East Asian 'thick straight hair' type. Thick straight hair and shovel-shaped incisors are more likely, but this is a tendency, not a certainty.
+  rs17822931:
+  - 干性耳垢，腋下体味轻。这个基因几乎决定耳垢类型，东亚人绝大多数如此。
+  - Dry earwax and little underarm odour. This gene almost fully determines earwax type; most East Asians have this.
+  rs4988235:
+  - 你没有欧洲人那种“成年后还能消化牛奶”的基因。成年后喝多了牛奶容易胀气、拉肚子，这在中国人里是常态。少量奶制品或酸奶、奶酪通常没问题。
+  - You lack the European 'keep digesting milk as an adult' variant. Larger amounts of milk may cause bloating or diarrhoea, which is the norm in China. Small amounts, yoghurt and cheese are usually fine.
+  rs182549:
+  - 和上一条一致。
+  - Consistent with the line above.
+  rs429358:
+  - APOE 基因型是 ε3/ε4：你带一个 ε4。ε4 是老年痴呆（阿尔茨海默病）最常见的风险基因之一，带一个会让风险比一般人高一些，但大多数带 ε4 的人一辈子不会得病，它不是“致病基因”。这两个位点都是直接测出的，基因型本身很可靠。
+  - 'Your APOE type is ε3/ε4: one copy of ε4. ε4 is the most common risk gene for late-onset Alzheimer''s disease; one copy raises the odds somewhat, but most people with ε4 never develop it, and it is
+    not a ''disease gene''. Both sites were measured directly, so the genotype itself is reliable.'
+  rs7412:
+  - 见上一条。
+  - See the line above.
+  rs1815739:
+  - 肌肉基因 ACTN3 一份正常、一份失活。研究说这和爆发力、耐力略有关系，但影响很小，看不出个人差别。
+  - One working and one inactive copy of the muscle gene ACTN3. Studies link it loosely to sprint versus endurance ability, but the effect is tiny and not visible in an individual.
+  rs1801133:
+  - MTHFR 677TT：叶酸代谢酶的活性大约只有常人的三成。北方汉族每四五个人就有一个是这个型。它本身不是病，也不需要因此吃叶酸；医学指南不建议为这个基因做常规检测。
+  - 'MTHFR 677TT: your folate-processing enzyme works at roughly 30% of normal. About one in four or five northern Han people have this. It is not a disease and is not a reason to take folate; medical guidelines
+    advise against routine testing for it.'
+  rs1801131:
+  - 正常型。
+  - Normal type.
+  rs762551:
+  - 咖啡因分解偏慢的型。可能咖啡喝晚了更影响睡眠，但个体差异很大，只是参考。
+  - The slower caffeine-clearing type. Late coffee may affect sleep more, but people vary a lot; treat as a hint only.
+  rs5751876:
+  - 常见型。有研究说另一种型的人喝咖啡更容易紧张，证据不强。
+  - Common type. Some studies link the other type to caffeine jitters; weak evidence.
+  rs4680:
+  - COMT 基因 Val/Val 型：大脑里分解多巴胺偏快。网上流传的“战士型/忧虑型”说法证据很弱，不要当真。
+  - 'COMT Val/Val: dopamine is broken down a little faster in the brain. The popular ''warrior/worrier'' story has weak evidence; do not take it seriously.'
+  rs6265:
+  - BDNF 常见型。和性格、记忆的关联在个人层面没有预测价值。
+  - Common BDNF type. Links to personality or memory have no predictive value for an individual.
+  rs1800497:
+  - 常见型。这个位点其实在 ANKK1 基因上，网上说的“多巴胺受体少”没有可靠依据。
+  - Common type. The site is actually in the ANKK1 gene; the 'fewer dopamine receptors' claim lacks solid support.
+  rs4244285:
+  - 没测到 CYP2C19*2。但这张芯片没有测 *17 等其他版本，所以不能说你的 CYP2C19 代谢“正常”，只能说测过的两个慢代谢版本都没有。
+  - CYP2C19*2 not found. The array does not test *17 and other versions, so this cannot be called 'normal' metabolism, only 'the two slow versions tested are absent'.
+  rs4986893:
+  - 没测到 CYP2C19*3。见上一条。
+  - CYP2C19*3 not found. See above.
+  rs1799853:
+  - 没测到 CYP2C9*2。同样不能据此说“代谢正常”。
+  - CYP2C9*2 not found. Again this does not prove 'normal' metabolism.
+  rs1057910:
+  - 没测到 CYP2C9*3。
+  - CYP2C9*3 not found.
+  rs9923231:
+  - VKORC1 是“华法林敏感”型：如果将来用华法林这种抗凝药，通常需要的剂量偏小。东亚人八成以上都是这个型。具体剂量要医生根据多项指标决定。
+  - 'VKORC1 ''warfarin-sensitive'' type: if you ever need the blood thinner warfarin, the usual dose tends to be lower. Over 80% of East Asians have this. The actual dose is a doctor''s decision based on
+    several factors.'
+  rs4149056:
+  - 没测到会增加他汀类药物肌肉副作用的常见变异。
+  - The common variant that raises the risk of muscle side-effects from statins was not found.
+  rs116855232:
+  - 重要：你带一个 NUDT15 变异。如果将来要用硫唑嘌呤、6-巯基嘌呤这类药（常用于免疫病、白血病、器官移植），起始剂量通常要减少，否则骨髓抑制风险高。请把这条告诉医生，用药前做正规检测确认。不要自己调药。
+  - 'Important: you carry one NUDT15 variant. If you ever need thiopurine drugs (azathioprine, 6-mercaptopurine; used for autoimmune disease, leukaemia, transplants), the starting dose is usually reduced
+    to avoid bone-marrow suppression. Tell your doctor and confirm with a clinical test before use. Never adjust medication yourself.'
+  rs1065852:
+  - 没测到 CYP2D6*10。但 CYP2D6 的完整判断需要测很多东西（包括基因拷贝数），一个位点说明不了代谢快慢。
+  - CYP2D6*10 not found. But CYP2D6 needs many measurements (including gene copy number); one site cannot tell how fast you metabolise.
+  rs9263726:
+  - 没带 HLA-B*58:01 的“标签”位点。这个 HLA 类型和痛风药别嘌醇的严重皮肤反应有关。标签不是真正的 HLA 分型，如果要用别嘌醇，医院会直接测。
+  - You do not carry the 'tag' for HLA-B*58:01, the type linked to severe skin reactions to the gout drug allopurinol. A tag is not true HLA typing; hospitals test it directly before prescribing.
+  rs7903146:
+  - 带一个 2 型糖尿病常见风险变异，风险比不带的人高三到四成。这是人群统计，个人风险主要还是看体重、饮食和运动。
+  - One copy of the most common type 2 diabetes risk variant, roughly 30–40% higher odds than non-carriers. A population statistic; personal risk depends far more on weight, diet and exercise.
+  rs9939609:
+  - FTO 肥胖基因是普通型。
+  - Common (lower-risk) type of the FTO obesity gene.
+  rs1801282:
+  - 普通型。
+  - Common type.
+  rs1333049:
+  - 带一个冠心病常见风险变异，效应小（约两三成）。
+  - One copy of a common coronary-disease risk variant; small effect (about 20–30%).
+  rs6983267:
+  - 带两个常见的肠癌、前列腺癌风险变异，效应小。
+  - Two copies of a common bowel/prostate cancer risk variant; small effect.
+  rs2187668:
+  - 没带乳糜泻（麸质不耐受）最主要的 HLA 标签。标签不等于 HLA 分型。
+  - You lack the main HLA tag for coeliac disease. A tag is not HLA typing.
+  rs7454108:
+  - 没带乳糜泻第二个 HLA 标签。
+  - You lack the second coeliac HLA tag.
+  rs2476601:
+  - 这个自身免疫病变异在东亚人里几乎不存在，你是正常型，符合预期。
+  - This autoimmune variant is almost absent in East Asians; you have the normal type, as expected.
+  rs1800562:
+  - 没带遗传性血色病（铁过载）的主要变异，东亚人几乎都没有。
+  - You lack the main haemochromatosis (iron overload) variant, which is almost absent in East Asians.
+  rs1799945:
+  - 没带 HFE H63D。
+  - HFE H63D not carried.
+  rs334:
+  - 芯片没测这个位点。
+  - Not on the array.
+  rs12913832:
+  - 棕色眼睛的基因型。
+  - Brown-eye genotype.
+  rs1426654:
+  - 肤色基因是东亚常见型（不是欧洲浅肤色型）。
+  - The East Asian skin-pigment type (not the European light-skin variant).
+  rs16891982:
+  - 同上。
+  - Same as above.
+  rs885479:
+  - MC1R 东亚常见型，对外貌影响很小。
+  - The common East Asian MC1R type; minor effect on appearance.
+  rs1805007:
+  - 没带红发变异。
+  - Red-hair variant not carried.
+  rs713598:
+  - PTC 苦味“不敏感”型（AVI/AVI）：决定这个味觉的三个位点你都是不敏感型，所以结论确定。像西兰花、苦瓜的某些苦味你可能感觉不明显。
+  - '''Non-taster'' for the bitter compound PTC (AVI/AVI): all three sites that decide this are the non-taster type, so the call is solid. Some bitterness in broccoli or bitter melon may seem mild to you.'
+  rs10427255:
+  - 看强光打喷嚏的倾向偏低。趣味性关联，证据一般。
+  - Low tendency to sneeze in bright light. A fun association with modest evidence.
+  rs601338:
+  - 正常。
+  - Normal.
+  rs1047781:
+  - 你是“分泌型”：某些血型物质会出现在唾液和肠道里。这和肠道菌群、诺如病毒易感性有些关系，但对日常生活没有实际影响。
+  - 'You are a ''secretor'': certain blood-group substances appear in saliva and the gut. Loosely linked to gut bacteria and norovirus susceptibility; no practical impact on daily life.'
+  rs8176719:
+  - 根据 ABO 血型的几个关键位点推测你是 A 型血（A/A）。芯片测这种缺失变异的准确度不算高，以医院验血为准。
+  - From the key ABO sites the prediction is blood group A (A/A). The array is not very accurate on this kind of deletion variant, so a hospital blood test is the final word.
+  rs8176746:
+  - 没有 B 型的标记，见上一条。
+  - No B-type marker; see above.
+  rs2814778:
+  - Duffy 血型阳性（普通型）。
+  - Duffy blood-group positive (common type).
+  rs1051730:
+  - 尼古丁依赖相关位点是普通型。
+  - Common type of a nicotine-dependence site.
+  rs11209026:
+  - 这个克罗恩病保护性变异在东亚人里几乎没有，你是普通型，符合预期。
+  - This protective Crohn's variant is almost absent in East Asians; common type, as expected.
+  rs5030868:
+  - 没带南方中国最常见的 G6PD 缺乏（蚕豆病）变异。但芯片没测其他几种，不能完全排除。
+  - You lack the commonest southern-Chinese G6PD (favism) variant. Other variants were not tested, so it cannot be fully excluded.
+  rs72554664:
+  - 芯片没测。
+  - Not on the array.
+  rs137852328:
+  - 芯片没测。
+  - Not on the array.
+  rs2802292:
+  - 没带 FOXO3 的“长寿”变异。这种关联很弱，带不带都说明不了寿命。
+  - You lack the FOXO3 'longevity' variant. The association is weak; it says nothing about lifespan either way.
+  rs2764264:
+  - 同上。
+  - Same as above.
+  rs5882:
+  - CETP 杂合。长寿关联证据弱。
+  - CETP heterozygous. Weak longevity association.
+  rs1801260:
+  - CLOCK 基因常见型，有研究说偏“早起型”，但证据不一致。
+  - Common CLOCK type; some studies call it 'morning-leaning', but findings are inconsistent.
+  rs73598374:
+  - ADA 常见型。
+  - Common ADA type.
+  rs4343:
+  - ACE 基因是 D/D 型（芯片直接测了那段插入缺失）。有研究说 D/D 偏力量型、血压略高，效应小，别当真。
+  - ACE D/D type (the array typed the insertion/deletion itself). Some studies link D/D to strength-type athletics and slightly higher blood pressure; small effects, not to be taken seriously.
+  rs17070145:
+  - KIBRA 杂合。有研究说和记忆力有关，重复研究结果不一致。
+  - KIBRA heterozygous. Some studies link it to memory; replications disagree.
+  rs6746030:
+  - 疼痛敏感度相关位点是普通型。
+  - Common type of a pain-sensitivity site.
+  rs4961:
+  - ADD1 是“盐敏感”型纯合，有研究说这类人少吃盐降压更明显，但各研究结果不一致，不能作为个人饮食建议。少吃盐对谁都有好处。
+  - ADD1 'salt-sensitive' type (two copies). Some studies say such people respond more to cutting salt, but results disagree, so this is not personal dietary advice. Less salt is good for everyone.
+  rs6152:
+  - 雄激素受体常见型。
+  - Common androgen-receptor type.
+  rs1160312:
+  - 脱发相关位点是普通型。
+  - Common type of a hair-loss site.
+  rs13266634:
+  - 带两个常见的糖尿病相关变异，效应小。
+  - Two copies of a common diabetes-related variant; small effect.
+  rs11591147:
+  - 没带天生低胆固醇的 PCSK9 变异（东亚人几乎都没有）。
+  - You lack the naturally-low-cholesterol PCSK9 variant (almost absent in East Asians).
+  rs4481887:
+  - 更可能闻不到吃芦笋后尿里的特殊气味。趣味性关联。
+  - More likely unable to smell 'asparagus urine'. A fun association.
+  rs12203592:
+  - 没带雀斑相关变异。
+  - Freckle variant not carried.
+pgx_readings:
+  NUDT15:
+  - 带一个 NUDT15 变异。将来若用硫唑嘌呤、6-巯基嘌呤这类药，起始剂量通常要减少。请告诉医生，用药前做正规检测（NUDT15 加 TPMT）确认。不要自己调药。
+  - One NUDT15 variant. If thiopurine drugs (azathioprine, 6-mercaptopurine) are ever prescribed, the starting dose is usually reduced. Tell your doctor and confirm with a clinical NUDT15 + TPMT test. Never
+    adjust medication yourself.
+  TPMT:
+  - TPMT 是和 NUDT15 一起看的另一个硫嘌呤药物基因。测过的三个变异都没有。
+  - TPMT is the other thiopurine gene, read together with NUDT15. None of the three tested variants were found.
+  VKORC1:
+  - 华法林敏感型：通常需要的剂量偏小。具体剂量由医生根据多项指标和凝血检查决定。
+  - 'Warfarin-sensitive type: the usual dose tends to be lower. The actual dose is set by a doctor from several factors and blood tests.'
+  CYP2C19:
+  - 测过的两个慢代谢版本（*2、*3）都没有。但芯片没测 *17 等版本，所以不能说“代谢正常”。这个基因影响氯吡格雷、部分胃药和抗抑郁药。
+  - The two slow versions tested (*2, *3) are absent. The array does not test *17 and others, so 'normal metabolism' cannot be claimed. This gene affects clopidogrel, some stomach drugs and antidepressants.
+  CYP2C9:
+  - 测过的 *2、*3 都没有。影响华法林和部分止痛药。
+  - Tested *2 and *3 are absent. Affects warfarin and some painkillers.
+  CYP2D6:
+  - 没测到 *10。但这个基因要完整判断需要测很多东西，一个位点说明不了。影响多种抗抑郁药、止痛药、他莫昔芬。
+  - '*10 not found. Full assessment of this gene needs many measurements; one site is not enough. Affects many antidepressants, painkillers and tamoxifen.'
+  CYP4F2:
+  - 普通型，华法林剂量的次要影响因素。
+  - Common type; a minor factor in warfarin dosing.
+  SLCO1B1:
+  - 没带增加他汀类药物肌肉副作用的常见变异。
+  - The common variant raising statin muscle side-effects is absent.
+  HLA-B*58:01:
+  - 没带和痛风药别嘌醇严重皮肤反应有关的 HLA 标签。这不是真正的 HLA 分型，用药前医院会直接测。
+  - You lack the tag for the HLA type linked to severe skin reactions to allopurinol. Not true HLA typing; hospitals test it directly before prescribing.
+  HLA-B*15:02:
+  - 和卡马西平（一种抗癫痫药）严重皮肤反应有关的 HLA 类型，芯片上两个标签位点都是普通型，但本次没有独立核实标签的可靠性，所以不下结论。
+  - 'The HLA type linked to severe skin reactions to carbamazepine (an epilepsy drug): both tag sites are the common type, but tag reliability was not independently verified here, so no conclusion is drawn.'
+  DPYD:
+  - 影响氟尿嘧啶类化疗药毒性的几个关键变异都没有（其中一个芯片没测）。之前列出的 rs1801159 属于正常功能变异，不需要在意。
+  - The key variants that make fluorouracil-type chemotherapy toxic are absent (one not tested). The previously listed rs1801159 is a normal-function variant and can be ignored.
+  UGT1A1:
+  - 没带 *6；带一个 *28 的标签。这种组合（*1/*28）不属于需要调整伊立替康化疗剂量的类型。不能据此说你有 Gilbert 综合征（一种无害的胆红素偏高体质）。
+  - '*6 absent; one copy of the *28 tag. This combination (*1/*28) does not require dose changes for irinotecan chemotherapy. It does not establish Gilbert syndrome (a harmless tendency to higher bilirubin).'
+  ALDH2:
+  - “喝酒脸红”基因（*1/*2）。另外，含服的硝酸甘油（心绞痛急救药）在这类人身上效果会差一些。
+  - The 'alcohol flush' gene (*1/*2). Also, sublingual nitroglycerin (for angina) works less well in people with this type.
+  G6PD:
+  - 没带南方中国最常见的 G6PD 缺乏（蚕豆病）变异 Canton；Kaiping、Union 两个位点芯片没测，不能完全排除。
+  - The commonest southern-Chinese G6PD (favism) variant, Canton, is absent; the Kaiping and Union sites are not on the array, so deficiency cannot be fully excluded.
+pgx_coverage:
+  NUDT15:
+  - 测了最关键的 R139C 位点
+  - The key R139C site tested
+  TPMT:
+  - 测了 *2、*3B、*3C
+  - '*2, *3B, *3C tested'
+  VKORC1:
+  - 测了决定性位点 −1639
+  - The defining −1639 site tested
+  CYP2C19:
+  - 测了 *2、*3；没测 *17
+  - '*2, *3 tested; *17 not tested'
+  CYP2C9:
+  - 测了 *2、*3
+  - '*2, *3 tested'
+  CYP2D6:
+  - 只测了 *10 一个位点
+  - Only the *10 site tested
+  CYP4F2:
+  - 测了 V433M
+  - V433M tested
+  SLCO1B1:
+  - 测了主要位点 521T>C
+  - The main 521T>C site tested
+  HLA-B*58:01:
+  - 标签位点，不是 HLA 分型
+  - Tag site, not HLA typing
+  HLA-B*15:02:
+  - 标签位点，未核实
+  - Tag sites, unverified
+  DPYD:
+  - 测了 *2A、D949V、HapB3、*5；没测 *13
+  - '*2A, D949V, HapB3, *5 tested; *13 not tested'
+  UGT1A1:
+  - 测了 *6；*28 用标签位点
+  - '*6 tested; *28 via a tag site'
+  ALDH2:
+  - 测了决定性位点 rs671
+  - The defining rs671 site tested
+  G6PD:
+  - 测了 Canton；Kaiping、Union 未测
+  - Canton tested; Kaiping, Union not tested

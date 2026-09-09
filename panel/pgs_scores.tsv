@@ -1,0 +1,32 @@
+pgs_id	group	label_zh	label_en	source_note
+PGS018727	disease	2型糖尿病	Type 2 diabetes	Taiwan Biobank, Chen 2025
+PGS005143	disease	冠心病	Coronary artery disease	Korean/EAS, Jung 2025
+PGS002725	disease	缺血性脑卒中	Ischaemic stroke	EAS, GIGASTROKE Mishra 2022
+PGS019214	disease	房颤	Atrial fibrillation	Taiwan Biobank, Chen 2025
+PGS019915	disease	收缩压	Systolic blood pressure	Taiwan Biobank, Chen 2025
+PGS019130	disease	高血压	Hypertension	Taiwan Biobank, Chen 2025
+PGS004646	disease	LDL 胆固醇	LDL cholesterol	multi-ancestry incl. EAS, Zhang 2024
+PGS019908	disease	BMI	BMI	Taiwan Biobank, Chen 2025
+PGS002803	disease	身高	Height	EAS, Yengo 2022
+PGS018826	disease	痛风	Gout	Taiwan Biobank, Chen 2025
+PGS019446	disease	慢性肾病 III 期	Chronic kidney disease III	Taiwan Biobank, Chen 2025
+PGS018909	disease	阿尔茨海默病	Alzheimer's disease	Taiwan Biobank, Chen 2025
+PGS019045	disease	开角型青光眼	Open-angle glaucoma	Taiwan Biobank, Chen 2025
+PGS002358	disease	哮喘	Asthma	EAS, Weissbrod 2022
+PGS018563	disease	前列腺癌	Prostate cancer	Taiwan Biobank, Chen 2025
+PGS018489	disease	结直肠癌	Colorectal cancer	Taiwan Biobank, Chen 2025
+PGS018484	disease	胃癌	Gastric cancer	Taiwan Biobank, Chen 2025
+PGS018503	disease	肝癌	Liver cancer	Taiwan Biobank, Chen 2025
+PGS018479	disease	食管癌	Oesophageal cancer	Taiwan Biobank, Chen 2025
+PGS019918	biomarker	血尿酸	Serum uric acid	Taiwan Biobank, Chen 2025
+PGS019912	biomarker	糖化血红蛋白 HbA1c	HbA1c	Taiwan Biobank, Chen 2025
+PGS004661	biomarker	甘油三酯	Triglycerides	multi-ancestry incl. EAS, Zhang 2024
+PGS004631	biomarker	HDL 胆固醇	HDL cholesterol	multi-ancestry incl. EAS, Zhang 2024
+PGS004676	biomarker	总胆固醇	Total cholesterol	multi-ancestry incl. EAS, Zhang 2024
+PGS019862	biomarker	总胆红素	Total bilirubin	Taiwan Biobank, Chen 2025
+PGS019843	biomarker	血红蛋白	Haemoglobin	Taiwan Biobank, Chen 2025
+PGS019837	biomarker	ALT 谷丙转氨酶	ALT	Taiwan Biobank, Chen 2025
+PGS019851	biomarker	血小板计数	Platelet count	Taiwan Biobank, Chen 2025
+PGS019919	biomarker	白细胞计数	White blood cell count	Taiwan Biobank, Chen 2025
+PGS019932	biomarker	失眠	Insomnia	EAS, Wyss 2026
+PGS018939	biomarker	抑郁症	Depression	Taiwan Biobank, Chen 2025
