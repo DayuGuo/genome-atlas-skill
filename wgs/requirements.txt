@@ -1,0 +1,10 @@
+pandas>=2.0
+numpy>=1.24
+scipy>=1.10
+pyarrow>=14
+pysam>=0.22
+cyvcf2>=0.30
+requests>=2.31
+pyyaml>=6.0
+pyliftover>=0.4
+matplotlib>=3.7

@@ -1,0 +1,30 @@
+system	rsid	variant	meaning
+ABO	rs8176719	O01 frameshift (261delG)	deletion present → O allele
+ABO	rs8176746	B 796C>A (Leu266Met)	alt → B allele
+ABO	rs8176747	B 803G>C (Gly268Ala)	alt → B allele
+ABO	rs41302905	O02 802G>A	alt → O02 allele
+ABO	rs1053878	A2 467C>T (Pro156Leu)	alt → A2 allele
+Kidd (JK)	rs1058396	SLC14A1 838G>A (Asp280Asn)	ref=JK*A, alt=JK*B
+Duffy (FY)	rs12075	DARC 125G>A (Gly42Asp)	ref=FY*A, alt=FY*B
+Duffy (FY)	rs2814778	DARC GATA -67T>C	alt/alt = Fy(a-b-), African-specific
+MNS	rs7682260	GYPA M/N	M/N antigens
+MNS	rs7683365	GYPA M/N	M/N antigens
+MNS	rs7686660	GYPB S/s	ref=S, alt=s
+Kell	rs8176058	KEL 578C>T (Thr193Met)	alt = K (KEL*01)
+Kell	rs8176038	KEL Kp(a/b)	alt = Kp(a)
+Kell	rs8176059	KEL Js(a/b)	alt = Js(a)
+Secretor	rs601338	FUT2 428G>A (Trp143*)	alt/alt = non-secretor (European type)
+Secretor	rs1047781	FUT2 385A>T (Ile129Phe)	alt = weak/non-secretor (East Asian type)
+Lewis	rs28362459	FUT3 59T>G	Lewis-negative allele
+Lewis	rs3745635	FUT3 508G>A	Lewis-negative allele
+Diego	rs2285644	SLC4A1 2561T>C (Leu854Pro)	alt = DI*A
+Lutheran	rs28399653	BCAM 230G>A (Arg77His)	alt = LU*A
+Colton	rs28362692	AQP1 134C>T (Ala45Val)	alt = CO*B
+Dombrock	rs11276	ART4 793A>G (Asn265Asp)	ref=DO*A, alt=DO*B
+Yt	rs1799805	ACHE 1057C>A (His353Asn)	alt = YT*B
+Scianna	rs56025238	ERMAP 169G>A	alt = SC*2
+Kidd null	rs78242949	SLC14A1 IVS5-1g>a	East Asian JK-null
+Vel	rs566629828	SMIM1 64_80del	del/del = Vel-negative
+Xg	rs311103	XG regulatory	hemizygous in males
+H (Bombay)	rs782960936	FUT1 inactivating	rare
+Gerbich	rs144775535	GYPC exon 3 deletion	

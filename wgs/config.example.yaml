@@ -1,0 +1,37 @@
+# Copy to config.yaml and edit. config.yaml and work/ are git-ignored: personal data never enters the repo.
+
+sample_id: SAMPLE            # ASCII, no spaces; written into every VCF and plink file
+name_zh: 样本                # display name in the Chinese report
+name_en: Sample              # display name in the English report
+sex: male                    # male | female (drives X ploidy and the sex-consistency check)
+
+# --- input. Give reads (CRAM or BAM, coordinate-sorted and indexed). FASTQ needs setup/01_align.sh first.
+reads: work/data/raw/SAMPLE.cram
+# fastq1: work/data/raw/SAMPLE_R1.fastq.gz
+# fastq2: work/data/raw/SAMPLE_R2.fastq.gz
+vendor_vcf: ""               # optional: a VCF delivered alongside the reads. Empty = call from the reads.
+y_reads: ""                  # optional: a separate Y-only BAM if the provider supplied one
+
+work_dir: work
+ref_dir: work/data/ref
+tools_dir: work/tools
+threads: 8
+mem_gb: 30
+build: GRCh37                # the only build the pipeline supports
+
+# --- callable mask. Everything outside it is reported as "no call", never as reference.
+callable_min_depth: 8
+callable_min_mapq: 20
+
+# --- reference populations (1000 Genomes labels). Defaults suit an East Asian sample; change for others.
+ref_superpop: EAS            # percentiles are "among the N individuals of this super-population"
+ref_subpops: [CHB, CHS]      # second percentile column
+axis_pops: [CHS, CHB]        # per-chromosome axis index: 0 = first, 1 = second
+local_ancestry_a: [CHB, JPT]      # local-ancestry source panel A
+local_ancestry_b: [CDX, KHV]      # local-ancestry source panel B
+local_ancestry_control: [CEU, GBR, GIH, PJL]   # unrelated panels, included only to measure the noise floor
+local_ancestry_labels: [NorthEA, SouthEA]
+# ancient-DNA panel (optional). Leave empty to skip the AADR steps.
+aadr_modern: [Han, Japanese, Korean, She, Miao, Tujia, Dai, Yi, Naxi, Tu, Xibo, Oroqen, Hezhen, Daur,
+              Mongola, Tibetan, Kinh_Vietnamese, Thai, Cambodian, Ami, Atayal, Zhuang, Dong, Ulchi, CHB, CHS, CDX]
+aadr_ancient_prefix: [China_, Mongolia_, Taiwan_, Vietnam_, Japan_, Korea_, Russia_DevilsCave, Laos_, Thailand_]

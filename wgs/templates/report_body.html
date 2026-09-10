@@ -1,0 +1,179 @@
+<style>
+  .tiers{display:grid;grid-template-columns:1fr 1fr 1fr;gap:26px;margin:18px 0 6px}
+  .tier h4{font-family:var(--num);font-weight:600;font-size:11px;letter-spacing:.2em;color:var(--muted);border-bottom:1px solid var(--ink);padding-bottom:6px;margin-bottom:8px}
+  .tier.t1 h4{color:var(--ink)} .tier p{font-size:11.5px;line-height:1.7;color:var(--lab)} .tier.t1 p{color:var(--ink)}
+  .callout{border-left:2px solid var(--ink);padding:6px 14px;margin:14px 0;font-size:11.5px;line-height:1.7;color:var(--lab);max-width:78ch}
+  .callout b{color:var(--ink)}
+  .finding{display:grid;grid-template-columns:150px 1fr;gap:0 22px;padding:14px 0;border-bottom:1px dotted var(--faint)}
+  .finding:last-child{border-bottom:0}
+  .finding .g{font-family:var(--num);font-weight:700;font-size:20px;line-height:1.1;letter-spacing:.02em}
+  .finding .g small{display:block;font-size:9.5px;font-weight:600;letter-spacing:.12em;color:var(--muted);margin-top:4px;text-transform:uppercase}
+  .finding .b{font-size:11.5px;line-height:1.7;color:var(--lab)} .finding .b b{color:var(--ink)}
+  .finding .act{margin-top:6px;font-size:11px;color:var(--ink);font-weight:600}
+  .stamp{display:inline-block;font-family:var(--num);font-size:9px;font-weight:600;letter-spacing:.14em;padding:1px 7px;border:1px solid var(--ink);color:var(--ink);border-radius:3px;margin-left:8px;vertical-align:middle;text-transform:uppercase}
+  .stamp.hot{background:var(--ink);color:var(--bg)}
+  .hlagrid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 26px;margin:10px 0 4px}
+  .hlagrid div{border-top:1px solid var(--quiet);padding-top:6px}
+  .hlagrid .k{font-size:9px;font-weight:700;letter-spacing:.14em;color:var(--muted)} .hlagrid .v{font-family:var(--num);font-weight:600;font-size:14px;letter-spacing:.04em;margin-top:2px}
+  .hlagrid .v em{font-style:normal;color:var(--data)}
+  .lvl{display:inline-block;font-family:var(--num);font-size:9px;font-weight:600;letter-spacing:.1em;padding:1px 6px;border:1px solid var(--faint);color:var(--muted);border-radius:3px;white-space:nowrap}
+  @media(max-width:820px){.tiers{grid-template-columns:1fr}.finding{grid-template-columns:1fr}.hlagrid{grid-template-columns:1fr 1fr}}
+</style>
+<div class="sheet">
+  <div class="spine"><div class="t" data-i18n="spine"></div><div class="b" data-i18n="spine_b"></div></div>
+  <div class="content">
+    <div class="tophead"><span class="site" data-i18n="site"></span><span class="sep">|</span><span class="tag" data-i18n="tag"></span><button class="lang" id="langbtn" type="button" aria-label="Switch language"></button></div>
+    <p class="lede" data-i18n="lede"></p>
+    <div class="claim" data-i18n="tier_h" style="font-size:14px;margin-top:22px"></div>
+    <div class="tiers">
+      <div class="tier t1"><h4 data-i18n="tier1"></h4><p data-i18n="tier1_b"></p></div>
+      <div class="tier"><h4 data-i18n="tier2"></h4><p data-i18n="tier2_b"></p></div>
+      <div class="tier"><h4 data-i18n="tier3"></h4><p data-i18n="tier3_b"></p></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">00</span><span class="t" data-i18n="s0"></span></div>
+    <div class="stats">
+      <div class="kpi"><div class="v" id="kpi_depth"></div><div class="r" data-i18n="k1r"></div><div class="l" data-i18n="k1l"></div></div>
+      <div class="kpi"><div class="v" id="kpi_var"></div><div class="r" data-i18n="k2r"></div><div class="l" data-i18n="k2l"></div></div>
+      <div class="kpi"><div class="v" id="kpi_call"></div><div class="r" data-i18n="k3r"></div><div class="l" data-i18n="k3l"></div></div>
+      <div class="kpi"><div class="v" id="kpi_titv"></div><div class="r" data-i18n="k4r"></div><div class="l" data-i18n="k4l"></div></div>
+    </div>
+    <div class="claim" style="margin-top:30px" data-i18n="c_circos"></div>
+    <div class="sub" data-i18n="sub_circos"></div>
+    <div class="fig"><svg id="circos" viewBox="0 0 860 860" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_circos"></div>
+    <p class="note" data-i18n="n_circos"></p>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_chrom"></div>
+    <div class="sub" data-i18n="sub_chrom"></div><div class="fig"><svg id="chromdepth" viewBox="0 0 900 352" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_chrom"></p>
+    <div class="claim" style="margin-top:28px" data-i18n="c_spec"></div>
+    <div class="sub" data-i18n="sub_spec"></div><div class="fig"><svg id="spectrum" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_spec"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">01</span><span class="t" data-i18n="s1"></span></div>
+    <div class="duo w">
+      <div><div class="claim" data-i18n="c_y"></div><div class="sub" data-i18n="sub_y"></div><div class="fig"><svg id="ychain" viewBox="0 0 520 300" preserveAspectRatio="xMidYMid meet"></svg></div><p class="note" data-i18n="n_y"></p></div>
+      <div><div class="claim" data-i18n="c_mt"></div><div class="sub" data-i18n="sub_mt"></div><div class="fig"><svg id="mtstrip" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid meet"></svg></div><p class="note" data-i18n="n_mt"></p></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">02</span><span class="t" data-i18n="s2"></span></div>
+    <div class="claim" data-i18n="c_pca"></div>
+    <div class="legend"><span><i></i><em data-i18n="lg_eas" style="font-style:normal"></em></span><span><i class="fd"></i><em data-i18n="lg_other" style="font-style:normal"></em></span><span><i class="me"></i>${NAME()}</span></div>
+    <div class="duo">
+      <div><div class="sub" data-i18n="sub_pg"></div><div class="fig"><svg id="pcaglobal" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_pg"></div></div>
+      <div><div class="sub" data-i18n="sub_pe"></div><div class="fig"><svg id="pcaeas" viewBox="0 0 420 340" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_pe"></div></div>
+    </div>
+    <p class="note" data-i18n="n_pca"></p>
+
+    <div class="claim" style="margin-top:34px" data-i18n="c_la"></div>
+    <div class="sub" data-i18n="sub_la"></div>
+    <div class="stats" id="k_la"></div>
+    <div class="legend"><span><i style="background:var(--ancn)"></i><em data-i18n="lg_n" style="font-style:normal"></em></span><span><i style="background:var(--ancs)"></i><em data-i18n="lg_s" style="font-style:normal"></em></span><span><i class="fd"></i><em data-i18n="lg_noise" style="font-style:normal"></em></span></div>
+    <div class="fig"><svg id="painting" viewBox="0 0 900 500" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_la"></p>
+    <div class="fig" style="margin-top:18px"><svg id="calib" viewBox="0 0 900 170" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_calib"></div>
+    <p class="note" data-i18n="n_calib"></p>
+
+    <div class="claim" style="margin-top:34px" data-i18n="c_anc"></div>
+    <div class="sub" data-i18n="sub_anc"></div>
+    <div class="duo w">
+      <div><div class="fig"><svg id="hopca" viewBox="0 0 520 470" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_hopca"></div></div>
+      <div><div class="fig"><svg id="timedist" viewBox="0 0 420 470" preserveAspectRatio="xMidYMid meet"></svg></div><div class="srcline" data-i18n="src_timedist"></div></div>
+    </div>
+    <p class="note" data-i18n="n_anc"></p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="th_apop"></th><th data-i18n="th_an"></th><th data-i18n="th_adate"></th><th data-i18n="th_ad"></th></tr></thead><tbody id="tb_anc"></tbody></table></div>
+
+    <div class="claim" style="margin-top:34px" data-i18n="c_arch"></div>
+    <div class="sub" data-i18n="sub_arch"></div>
+    <div class="stats" id="k_arch"></div>
+    <div class="fig"><svg id="archaic" viewBox="0 0 900 340" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_arch"></div>
+    <p class="note" data-i18n="n_arch"></p>
+    <div class="claim" style="margin-top:26px" data-i18n="c_afam"></div>
+    <div class="sub" data-i18n="sub_afam"></div>
+    <div class="fig"><svg id="afam" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_afam"></div>
+    <p class="note" data-i18n="n_afam"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">03</span><span class="t" data-i18n="s3"></span></div>
+    <div class="claim" data-i18n="c_find"></div>
+    <p class="note" data-i18n="n_find"></p>
+    <div id="findings"></div>
+    <div class="claim" style="margin-top:30px" data-i18n="c_phase"></div>
+    <div class="sub" data-i18n="sub_phase"></div>
+    <div class="stats" id="k_phase"></div>
+    <p class="note" data-i18n="n_phase"></p>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_cv"></div>
+    <div class="sub" data-i18n="sub_cv"></div><div class="fig"><svg id="cvbars" viewBox="0 0 900 190" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_cv"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">04</span><span class="t" data-i18n="s4"></span></div>
+    <div class="claim" data-i18n="c_pgx"></div>
+    <p class="note" data-i18n="n_pgx"></p>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="th_gene"></th><th data-i18n="th_dip"></th><th data-i18n="th_ph"></th><th data-i18n="th_read"></th><th data-i18n="th_src"></th></tr></thead><tbody id="pgx"></tbody></table></div>
+    <div class="claim" style="margin-top:30px" data-i18n="c_hla"></div>
+    <div class="hlagrid" id="hla"></div>
+    <p class="note" data-i18n="n_hla"></p>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_hlad"></div>
+    <div class="sub" data-i18n="sub_hlad"></div>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="th_cond"></th><th data-i18n="th_req"></th><th data-i18n="th_carry"></th><th data-i18n="th_hnote"></th></tr></thead><tbody id="tb_hlad"></tbody></table></div>
+    <p class="note" data-i18n="n_hlad"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">05</span><span class="t" data-i18n="s5"></span></div>
+    <div class="claim" data-i18n="c_prs"></div>
+    <div class="legend"><span><i class="me"></i><em data-i18n="lg_wgs" style="font-style:normal"></em></span><span><i style="background:transparent;border:1.4px solid var(--data)"></i><em data-i18n="lg_han" style="font-style:normal"></em></span></div>
+    <div class="sub" data-i18n="sub_prs"></div><div class="fig"><svg id="prs" viewBox="0 0 900 700" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_prs"></p>
+
+    <div class="claim" style="margin-top:34px" data-i18n="c_beh"></div>
+    <div class="sub" data-i18n="sub_beh"></div>
+    <div class="legend"><span><i style="background:var(--ancn)"></i><em data-i18n="lg_eas2" style="font-style:normal"></em></span><span><i style="background:var(--ancs)"></i><em data-i18n="lg_eur2" style="font-style:normal"></em></span></div>
+    <div class="fig"><svg id="behaviour" viewBox="0 0 900 430" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <div class="srcline" data-i18n="src_beh"></div>
+    <p class="note" data-i18n="n_beh"></p>
+    <div class="callout" data-i18n="cal_beh"></div>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_cand"></div>
+    <div class="sub" data-i18n="sub_cand"></div>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="th_cgene"></th><th data-i18n="th_cvar"></th><th data-i18n="th_cgeno"></th><th data-i18n="th_cclaim"></th><th data-i18n="th_cevi"></th></tr></thead><tbody id="tb_cand"></tbody></table></div>
+    <p class="note" data-i18n="n_cand"></p>
+
+    <div class="secthead"><span class="line"></span><span class="k">06</span><span class="t" data-i18n="s6"></span></div>
+    <div class="duo w">
+      <div><div class="claim" data-i18n="c_cnv"></div><div class="sub" data-i18n="sub_cnv"></div><div class="fig"><svg id="cnv" viewBox="0 0 520 330" preserveAspectRatio="xMidYMid meet"></svg></div><p class="note" data-i18n="n_cnv"></p></div>
+      <div><div class="claim" data-i18n="c_str"></div><div class="sub" data-i18n="sub_str"></div><div class="fig"><svg id="str" viewBox="0 0 400 330" preserveAspectRatio="xMidYMid meet"></svg></div><p class="note" data-i18n="n_str"></p></div>
+    </div>
+
+    <div class="secthead"><span class="line"></span><span class="k">07</span><span class="t" data-i18n="s7"></span></div>
+    <div class="claim" data-i18n="c_roh"></div>
+    <div class="sub" data-i18n="sub_roh"></div><div class="fig"><svg id="roh" viewBox="0 0 900 300" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_roh"></p>
+    <div class="claim" style="margin-top:26px" data-i18n="c_blood"></div>
+    <div class="sub" data-i18n="sub_blood"></div>
+    <div class="tablewrap"><table><thead><tr><th data-i18n="th_sys"></th><th data-i18n="th_bgeno"></th><th data-i18n="th_bph"></th><th data-i18n="th_bev"></th></tr></thead><tbody id="tb_blood"></tbody></table></div>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_kir"></div>
+    <div class="sub" data-i18n="sub_kir"></div>
+    <div class="fig"><svg id="kir" viewBox="0 0 900 200" preserveAspectRatio="xMidYMid meet"></svg></div>
+    <p class="note" data-i18n="n_kir"></p>
+
+    <div class="claim" style="margin-top:30px" data-i18n="c_som"></div>
+    <div class="sub" data-i18n="sub_som"></div>
+    <div class="stats" id="k_som"></div>
+    <p class="note" data-i18n="n_som"></p>
+
+    <div class="claim" style="margin-top:26px" data-i18n="c_misc"></div>
+    <div class="hlagrid" id="misc"></div>
+
+    <div class="secthead"><span class="line"></span><span class="k">08</span><span class="t" data-i18n="s8"></span></div>
+    <div class="claim" data-i18n="c_meth"></div>
+    <p class="note" data-i18n="meth" style="max-width:86ch"></p>
+    <p class="note" data-i18n="limits" style="max-width:86ch"></p>
+    <div class="disclaimer" data-i18n="disc"></div>
+    <div class="foot"><span data-i18n="foot1"></span><span data-i18n="foot2"></span></div>
+  </div>
+</div>

@@ -1,63 +1,56 @@
-# Genome Atlas · 个人基因组芯片数据分析 skill
+# Genome Atlas
 
-[English](README.en.md)
+把一个人的基因数据变成一份**经过审计的、可复现的**中英双语单文件 HTML 报告。仓库里有两条流水线：
 
-把一份消费级基因检测导出文件（WeGene / 23andMe 格式，GRCh37）变成一份**经审计、可复现、中英双语**的单文件 HTML 报告。为 Claude Code、Codex 等 AI 编程工具设计：`SKILL.md` 告诉工具怎么跑、怎么写结论、哪些话不能说。
+| | 输入 | 目录 | 示例报告 |
+|---|---|---|---|
+| **芯片版** | WeGene / 23andMe 风格导出，约 60 万位点、15 MB | [`array/`](array) | [看报告](https://dayuguo.github.io/genome-atlas-skill/array/example/report.html) |
+| **全基因组版** | FASTQ / BAM / CRAM，30× | [`wgs/`](wgs) | [看报告](https://dayuguo.github.io/genome-atlas-skill/wgs/example/report.html) |
 
-示例报告：**https://dayuguo.github.io/genome-atlas-skill/**（在线预览；源文件 [`example/report.html`](example/report.html)，一位东亚男性样本，经本人同意公开）。
+落地页：<https://dayuguo.github.io/genome-atlas-skill/>
 
-## 它做什么
+## 两者的关系
 
-| 模块 | 方法 | 输出 |
-|---|---|---|
-| QC 与对齐 | 检出率、杂合率、性别一致性、与 1000G 逐位点比对链方向与等位基因 | 零翻转零冲突才继续 |
-| 父系 / 母系 | ISOGG 树下行 + YFull 核对；haplogrep3（带覆盖范围） | Y / mtDNA 单倍群及支持位点数 |
-| 祖源 | 1000G 参考建空间、样本投影；HGDP 区域精细 PCA（自动 liftover） | 最近参考人群、kNN |
-| 性状 / 药物基因组 | 76 个位点面板，Ensembl 链校验，证据分级 A–D，CPIC 口径 | 表格 + 通俗解读 |
-| ClinVar | 坐标 + 等位基因匹配 | 覆盖范围内的记录 |
-| ROH | 纯合片段扫描 | 近亲提示 |
-| 多基因评分 | Beagle 填补 → 参考 MAF 过滤 → 与 504 名参考同位点集打分；子集误差实测 | 百分位 + 误差 |
-| 报告 | Lieflat 风格模板，所有数字来自结果文件，文案由分析者按规则撰写 | `work/report/report.html` |
+同一套设计思路，不同的输入，**约定不通用**。芯片版的"没测到不等于没有"、子集评分的误差修正，在全基因组上是错的；
+全基因组版的可调用掩膜、坐标转换前先填参考纯合，在芯片上没有意义。各自的 `SKILL.md` 写清了适用与不适用。
+
+## 它们做什么
+
+**两者都有**：质控 · Y 与 mtDNA 单倍群 · 1000 Genomes 祖源主成分与投影 · ClinVar 交叉 · 纯合片段 ·
+多基因评分（同位点集给参考人群打分，百分位才有意义）· 中英双语单文件报告
+
+**只有全基因组版**：可调用掩膜 · 局部祖源与留出校准 · 古代 DNA 投影 · 星号等位基因药物基因组（含拷贝数）·
+HLA 分型与疾病/药物关联 · 结构变异与拷贝数 · 重复扩增 · 古老人类渗入片段 · 读段与统计相位 ·
+十四个血型系统 · KIR · 血液体细胞信号 · 96 类突变谱
+
+## 它们不做什么
+
+不做医学诊断，不给用药剂量，不推断性格、智力或族群归属。报告里每条读数都带证据等级（A/B/C/D）和限制说明；
+涉及用药的每一句都带"用药前经临床级检测确认"。
 
 ## 快速开始
 
 ```bash
-git clone <this repo> && cd genome-atlas-skill
-cp config.example.yaml config.yaml   # 填写样本 ID、显示名、性别、输入文件路径
-pip install -r requirements.txt
-bash setup/download_references.sh    # ≈45 GB；plink2 x86_64 自行下载，ARM64 见 setup/build_plink2_arm64.sh
-bash run_all.sh                      # 跑到第 19 步停下，等你写 work/report_text.yaml
-python3 scripts/18_html_report_v2.py
+git clone https://github.com/DayuGuo/genome-atlas-skill.git
+cd genome-atlas-skill/array     # 或 cd genome-atlas-skill/wgs
+cp config.example.yaml config.yaml   # 填样本、性别、输入路径、参考人群
+# 按各自 README 与 SKILL.md 装工具、下参考数据，然后
+bash run_all.sh
 ```
 
-用 AI 工具时：把本仓库作为 skill 加载（Claude Code：放入 `.claude/skills/genome-atlas/`；Codex：按其 skills 目录约定），然后说"用 genome-atlas 分析我的 xxx.txt"。工具会按 `SKILL.md` 执行并撰写文案。
+`config.yaml` 与 `work/` 都在 `.gitignore` 里。**个人数据只出现在 work/ 下，永远不进仓库。**
 
-## 必读的规则
+## 给 AI agent 用
 
-- **个人数据永远只在 `work/`**（已 gitignore）。不要把 `config.yaml`、`work/` 或含基因型的文件提交。
-- "没测到" ≠ "没有"：芯片只覆盖约 60 万个常见位点。
-- 药物基因组只写"检出/未检出的等位基因"；任何用药决定需临床级检测确认。
-- PRS 只报填补后结果并附实测误差；百分位相对于 1000G 的参考人群。
-- 行为、认知、运动、长寿类位点只能写"部分研究提过，个人看不出"。
+每个目录下的 `SKILL.md` 是给 agent 的完整契约：跑什么、按什么顺序、怎么写结论、哪些话不能写、踩过哪些坑。
+先读它，再动手。写结论的规则不是建议，是审计出来的硬约束。
 
-细则见 `SKILL.md`、`docs/EVIDENCE_LEVELS.md`、`docs/AUDIT_CHECKLIST.md`；方法学见 `docs/METHODS.md`。
+## 示例报告
 
-## 目录
-
-```
-SKILL.md                 给 AI 工具的操作规范（先读这个）
-config.example.yaml      配置模板
-run_all.sh               一键流水线
-scripts/                 01–18 分析脚本 + audit_* 审计脚本 + query.py 交互查询
-panel/                   位点面板（性状、证据等级、PGx、PGS 评分列表、英文名）
-templates/               报告模板与通用文案（Lieflat 风格，PolyForm Noncommercial）
-docs/                    方法学、证据等级、审计清单
-setup/                   参考数据下载、ARM64 plink2 编译
-example/                 示例报告与示例文案
-```
+两份示例来自同一位东亚男性的真实数据，本人同意公开。**只用来看格式和写法**，其中每条结论都属于那个样本，
+不要沿用。仓库不含任何原始数据。
 
 ## 许可
 
-代码 MIT。`templates/` 改编自 [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts)，沿用其 PolyForm Noncommercial 1.0.0 许可（见 `THIRD_PARTY_NOTICES.md`）。参考数据与工具各有许可，不在本仓库内分发。
-
-本项目仅供研究、教育与个人探索，不构成医学诊断或用药建议。
+代码 MIT。两个 `templates/` 沿用 [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts)
+的报告版式，按 PolyForm Noncommercial 授权。参考数据各有引用要求，见 [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md)。

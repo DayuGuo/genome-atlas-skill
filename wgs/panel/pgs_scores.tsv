@@ -1,0 +1,48 @@
+pgs	group	trait_zh	trait_en	panel	source
+PGS002358	disease	Asthma	Asthma	EAS	Weissbrod O
+PGS002725	disease	Ischemic stroke	Ischemic stroke	EAS	Mishra A
+PGS002803	disease	Height	Height	EAS	Yengo L
+PGS004631	disease	HDL cholesterol	HDL cholesterol	EAS	Zhang J
+PGS004646	disease	LDL cholesterol	LDL cholesterol	EAS	Zhang J
+PGS004661	disease	Log triglycerides	Log triglycerides	EAS	Zhang J
+PGS004676	disease	Total cholesterol	Total cholesterol	EAS	Zhang J
+PGS005143	disease	Coronary artery disease	Coronary artery disease	EAS	Jung HU
+PGS018479	disease	Esophageal cancer	Esophageal cancer	EAS	Chen HH
+PGS018484	disease	Cancer of stomach	Cancer of stomach	EAS	Chen HH
+PGS018489	disease	Colorectal cancer	Colorectal cancer	EAS	Chen HH
+PGS018503	disease	Cancer of liver and intrahepatic bile duct	Cancer of liver and intrahepatic bile duct	EAS	Chen HH
+PGS018563	disease	Prostate cancer	Prostate cancer	EAS	Chen HH
+PGS018727	disease	Type 2 diabetes (T2D)	Type 2 diabetes (T2D)	EAS	Chen HH
+PGS018826	disease	Gout	Gout	EAS	Chen HH
+PGS018909	disease	Alzheimers disease	Alzheimers disease	EAS	Chen HH
+PGS018939	disease	Depression	Depression	EAS	Chen HH
+PGS019045	disease	Open angle glaucoma	Open angle glaucoma	EAS	Chen HH
+PGS019130	disease	Hypertension	Hypertension	EAS	Chen HH
+PGS019214	disease	Atrial fibrillation	Atrial fibrillation	EAS	Chen HH
+PGS019446	disease	Chronic Kidney Disease Stage III	Chronic Kidney Disease Stage III	EAS	Chen HH
+PGS019837	disease	Serum glutamate pyruvate transaminase	Serum glutamate pyruvate transaminase	EAS	Chen HH
+PGS019843	disease	Hemoglobin	Hemoglobin	EAS	Chen HH
+PGS019851	disease	Platelet count	Platelet count	EAS	Chen HH
+PGS019862	disease	Total bilirubin	Total bilirubin	EAS	Chen HH
+PGS019908	disease	Body mass index (BMI)	Body mass index (BMI)	EAS	Chen HH
+PGS019912	disease	Glycated hemoglobin	Glycated hemoglobin	EAS	Chen HH
+PGS019915	disease	Systolic blood pressure	Systolic blood pressure	EAS	Chen HH
+PGS019918	disease	Uric acid, blood	Uric acid, blood	EAS	Chen HH
+PGS019919	disease	White blood cell count	White blood cell count	EAS	Chen HH
+PGS019932	disease	Insomnia	Insomnia	EAS	Wyss AB
+PGS018941	behaviour	广泛性焦虑障碍	Generalised anxiety disorder	EAS	Taiwan Biobank, Chen 2025
+PGS018957	behaviour	酒精相关障碍	Alcohol-related disorders	EAS	Taiwan Biobank, Chen 2025
+PGS018962	behaviour	酒精依赖	Alcoholism	EAS	Taiwan Biobank, Chen 2025
+PGS018976	behaviour	器质性/持续性失眠	Organic or persistent insomnia	EAS	Taiwan Biobank, Chen 2025
+PGS018971	behaviour	睡眠相关运动障碍	Sleep-related movement disorders	EAS	Taiwan Biobank, Chen 2025
+PGS018932	behaviour	轻度认知障碍	Mild cognitive impairment	EAS	Taiwan Biobank, Chen 2025
+PGS018912	behaviour	老年性痴呆	Senile dementia	EAS	Taiwan Biobank, Chen 2025
+PGS003359	behaviour	开始吸烟	Smoking initiation	EAS	GSCAN, EAS, Saunders 2022
+PGS003367	behaviour	每日吸烟量	Cigarettes per day	EAS	GSCAN, EAS, Saunders 2022
+PGS003371	behaviour	戒烟成功	Smoking cessation	EAS	GSCAN, EAS, Saunders 2022
+PGS019938	behaviour	白日嗜睡	Excessive daytime sleepiness	EAS	EAS, Wyss 2025
+PGS002342	behaviour	神经质（大五人格）	Neuroticism	EUR	UK Biobank, European, Weissbrod 2022
+PGS002318	behaviour	早起型/晚睡型	Chronotype	EUR	UK Biobank, European, Weissbrod 2022
+PGS004427	behaviour	流体智力测验分	Fluid intelligence score	EUR	European, Jung 2024
+PGS003518	behaviour	总体幸福感	General happiness	EUR	European, Ding 2023
+PGS002828	behaviour	饮酒量	Alcohol consumption	EUR	European, Ma 2023

@@ -1,0 +1,19 @@
+gene	rsid	variant_zh	variant_en	claim_zh	claim_en	evidence_zh	evidence_en
+COMT	rs4680	Val158Met	Val158Met	warrior/worrier 说法	the warrior/worrier story	前额叶多巴胺代谢速度；对认知与疼痛的效应量极小，大规模研究基本不重复	prefrontal dopamine turnover; effects on cognition and pain are tiny and largely fail to replicate at scale
+BDNF	rs6265	Val66Met	Val66Met	记忆与神经可塑性	memory and neuroplasticity	候选基因时代的明星位点，全基因组研究中效应接近零	a star of the candidate-gene era whose genome-wide effect is close to zero
+ANKK1/DRD2	rs1800497	Taq1A	Taq1A	奖赏与成瘾	reward and addiction	位点在 ANKK1 而非 DRD2；受体密度的说法证据不足	the variant sits in ANKK1, not DRD2; the receptor-density story is not well supported
+OXTR	rs53576	共情/亲社会	empathy / prosociality	催产素受体	oxytocin receptor	社会行为关联在大样本中未能重复	the social-behaviour associations did not replicate in large samples
+MAOA	rs909525	单胺氧化酶附近的标记 (X 连锁)	a marker near MAOA (X-linked)	'战士基因' 说法	the warrior gene story	真正的功能变异是启动子 uVNTR，不是这个 SNP；男性只有一条 X	the functional variant is the promoter uVNTR, not this SNP; males carry one X
+HTR2A	rs6313	5-羟色胺受体	serotonin 2A receptor	焦虑/抑郁	anxiety and depression	效应量极小	a very small effect
+SLC6A4	rs25531	5-HTTLPR 附近的 SNP	SNP next to 5-HTTLPR	血清素转运体	serotonin transporter	经典 5-HTTLPR 是 43 bp 插入缺失，短读长测不准	the classic 5-HTTLPR is a 43 bp indel that short reads cannot type reliably
+CADM2	rs13084531	风险偏好与冲动	risk tolerance and impulsivity	全基因组显著	genome-wide significant	单个位点解释的方差 <0.1%	a single locus explains under 0.1% of the variance
+DRD4	rs1800955	新奇寻求	novelty seeking	启动子 -521C/T	promoter -521C/T	经典关联未能重复；功能变异是外显子 III 的 VNTR	the classic association did not replicate; the functional variant is the exon III VNTR
+FTO	rs9939609	食欲与冲动进食	appetite and impulsive eating	BMI 主效应位点	a leading BMI locus	东亚人群中效应弱于欧洲	the effect is weaker in East Asians than in Europeans
+PER2	rs934945	昼夜节律	circadian rhythm	早起/晚睡	morning or evening type	小效应	a small effect
+CLOCK	rs1801260	昼夜节律 3'UTR	circadian rhythm, 3' UTR	晚睡倾向	evening preference	关联不一致	the association is inconsistent
+ADORA2A	rs5751876	咖啡因引起的焦虑	caffeine-induced anxiety	腺苷受体	adenosine receptor	小效应，且受摄入量混杂	small, and confounded by how much coffee people drink
+CYP1A2	rs762551	咖啡因代谢速度	caffeine metabolism	*1F	*1F	中等效应，但受吸烟等诱导因素影响	a moderate effect, but induction by smoking and other factors interferes
+ALDH2	rs671	乙醛代谢	acetaldehyde metabolism	饮酒行为的最强单基因决定因素	the strongest single-gene determinant of drinking behaviour	这是少数真正大效应的行为相关位点	one of the few genuinely large effects on behaviour
+ADH1B	rs1229984	乙醇代谢速度	ethanol metabolism	饮酒行为	drinking behaviour	东亚人群中的强效应位点	a strong effect locus in East Asians
+TPH2	rs4570625	色氨酸羟化酶 2	tryptophan hydroxylase 2	情绪调节	mood regulation	小效应	a small effect
+NPSR1	rs324981	神经肽 S 受体	neuropeptide S receptor	短睡眠/焦虑	short sleep and anxiety	小效应	a small effect

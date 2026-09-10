@@ -1,11 +1,19 @@
+# personal data never enters this repository
 work/
 config.yaml
+*.cram
+*.crai
+*.bam
+*.bai
+*.fastq
+*.fastq.gz
+*.vcf
+*.vcf.gz
 *.pgen
 *.pvar
 *.psam
-*.vcf
-*.vcf.gz
 *.parquet
 *.duckdb
 __pycache__/
-work/config.local.yaml
+*.pyc
+.DS_Store

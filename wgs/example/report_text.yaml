@@ -1,0 +1,771 @@
+# Report copy. Each value is [中文, English] unless noted.
+# Copy to work/report_text.yaml and rewrite every line for your own sample.
+# The example is a real East Asian male sample: use it for format and tone, never for its conclusions.
+# Braces are placeholders filled from work/wgs/**; never type a number here.
+
+ui:
+  spine:
+  - 基因组图鉴
+  - GENOME ATLAS
+  spine_b:
+  - DAYU · WHOLE GENOME 30× · GRCH37 · 2026-09
+  - DAYU · WHOLE GENOME 30× · GRCH37 · 2026-09
+  site:
+  - '{NAME_EN} Genome'
+  - '{NAME_EN} Genome'
+  tag:
+  - 男 · 1994 年生 · 全基因组测序 30× · 2026-09-10
+  - Male · born 1994 · whole-genome sequencing 30× · 2026-09-10
+  toggle:
+  - EN
+  - 中文
+  lede:
+  - 这份图鉴建立在<b>整个基因组</b>上：{depth}× 平均深度，{pass} 个通过质控的变异。它回答的问题从祖源与父母系，到需要知道的变异、用药基因、基因缺失和重复序列长度。
+  - 'This atlas rests on the <b>whole genome</b>: {depth}× mean depth, {pass} variants passing quality control. It runs from ancestry and parental lines to the variants worth knowing, drug genes, deleted genes and repeat lengths.'
+  tier_h:
+  - 先看结论：哪些可信，哪些只是参考
+  - 'The short version: what is solid and what is only a hint'
+  tier1:
+  - 很可靠
+  - SOLID
+  tier2:
+  - 比较可靠
+  - FAIRLY SOLID
+  tier3:
+  - 仅供参考
+  - HINTS ONLY
+  tier1_b:
+  - 测序质量好（{depth}×，Ti/Tv {titv}）。男性，汉族，偏北。父系 O-Y25189，母系 D4h1c。CFTR 5T 纯合、ATP7B 携带者、CYP2A6 全缺失、HLA-B*13:01：四条直接读段可见的结论。ALDH2 脸红型、APOE ε3/ε4、NUDT15 中间代谢、CYP3A5 非表达者。血型 A 型 RhD 阳性。38 个重复序列疾病位点全部正常。SMN1 两份。
+  - 'Good sequencing ({depth}×, Ti/Tv {titv}). Male, Han Chinese, northern-leaning. Paternal line O-Y25189, maternal D4h1c. CFTR 5T homozygous, ATP7B carrier, CYP2A6 fully deleted, HLA-B*13:01: four findings visible directly in the reads. ALDH2 flush type, APOE ε3/ε4, NUDT15 intermediate, CYP3A5 non-expresser. Blood group A, RhD positive. All 38 repeat-expansion loci normal. Two copies of SMN1.'
+  tier2_b:
+  - HLA 其余位点的二位分辨率分型。GSTM1、LCE3B/C 纯合缺失，GSTT1、UGT2B17、CFHR3-1 杂合缺失。无 α 地贫缺失。没有父母近亲的迹象。
+  - Two-field HLA types at the other loci. GSTM1 and LCE3B/C homozygously deleted; GSTT1, UGT2B17, CFHR3-1 one copy. No α-thalassaemia deletion. No sign of parental relatedness.
+  tier3_b:
+  - 多基因风险评分（现在覆盖 96–100% 的位点，但仍是人群统计）；MAPT 等意义未明变异；罕见杂合功能丧失变异；祖源在汉族内部的精细位置。
+  - Polygenic scores (now covering 96–100% of their sites, still population statistics); variants of uncertain significance such as MAPT; rare heterozygous loss-of-function variants; fine position within the Han spectrum.
+  s0:
+  - 数据本身
+  - THE DATA
+  s1:
+  - 父系 与 母系
+  - FATHER'S LINE & MOTHER'S LINE
+  s2:
+  - 祖 源
+  - ANCESTRY
+  s3:
+  - 需要知道的变异
+  - VARIANTS WORTH KNOWING
+  s4:
+  - 用药相关基因
+  - GENES & MEDICINES
+  s5:
+  - 多基因评分
+  - POLYGENIC SCORES
+  s6:
+  - 拷贝数 与 重复序列
+  - COPY NUMBER & REPEATS
+  s7:
+  - 其它
+  - THE REST
+  s8:
+  - 方法 与 局限
+  - METHODS & LIMITS
+  k1r:
+  - 常染色体平均深度 · X {x}× · Y {y}× · 线粒体 {mt}×
+  - autosomal mean depth · X {x}× · Y {y}× · mitochondria {mt}×
+  k1l:
+  - mean depth · MGI T7 · 150 bp paired
+  - mean depth · MGI T7 · 150 bp paired
+  k2r:
+  - 通过质控的变异 · SNV {snv} · 插入缺失 {indel}
+  - variants passing QC · SNV {snv} · indels {indel}
+  k2l:
+  - PASS variants · Sentieon DNAscope
+  - PASS variants · Sentieon DNAscope
+  k3r:
+  - 可调用区域（比对质量 ≥20、深度 ≥8）
+  - callable genome (MAPQ ≥20, depth ≥8)
+  k3l:
+  - callable · of 3.10 Gb
+  - callable · of 3.10 Gb
+  k4r:
+  - 转换/颠换比，30× 全基因组的典型值是 2.0–2.1
+  - transition/transversion ratio; 2.0–2.1 is typical for 30× WGS
+  k4l:
+  - Ti/Tv · PASS SNVs
+  - Ti/Tv · PASS SNVs
+  c_circos:
+  - 一张图里的整个基因组
+  - The whole genome in one figure
+  sub_circos:
+  - 22 条常染色体首尾相接排成一圈 · 从外到内四层：变异密度、局部祖源、古老人类片段、纯合区
+  - 'the 22 autosomes laid end to end in a circle · four rings from the outside in: variant density, local ancestry, archaic segments, homozygous runs'
+  src_circos:
+  - 外圈刻度每 50 Mb · 短竖线 = 着丝粒 · 引出线标注确认的纯合基因缺失
+  - ticks every 50 Mb · short bar = centromere · leader lines mark confirmed homozygous gene deletions
+  n_circos:
+  - 这张图是全书的目录：后面每一节讲的都是其中一环。密度环的起伏来自重组率与基因密度，着丝粒附近的低谷是可比对性的限制而非生物学。祖源环画的是两条单倍型，底色为北方东亚成分，橙色段为南方东亚。古老片段环与纯合区环都很稀疏，这本身就是结论：没有提示父母近亲的长纯合片段，古老人类成分零散分布在整个基因组上。
+  - 'This figure is the table of contents: every later section expands one of its rings. The density ring rises and falls with recombination rate and gene density, and the dips near centromeres are a mappability limit rather than biology. The ancestry ring carries both haplotypes, with the northern East Asian component as the base colour and southern stretches in orange. The archaic and homozygosity rings are both sparse, which is itself the finding: no long homozygous runs pointing to related parents, and archaic ancestry scattered in short pieces across the genome.'
+  c_chrom:
+  - 每条染色体的测序深度和变异密度
+  - Sequencing depth and variant density on each chromosome
+  sub_chrom:
+  - 左：平均深度 · 右：每 Mb 的 PASS 变异数 · 浅色 = X / Y / 线粒体
+  - 'left: mean depth · right: PASS variants per Mb · light = X / Y / mitochondria'
+  n_chrom:
+  - X 的深度是常染色体的一半、Y 有读段：男性。Y 的平均深度低是因为它大半是不可比对的重复序列，能唯一比对的区域实际有 10–26×。线粒体 4,850× 足以看到低比例的异质性。
+  - 'The X sits at half the autosomal depth and the Y has reads: male. The Y''s low average comes from its largely unmappable repeats; the uniquely mappable regions run at 10–26×. Mitochondria at 4,850× are deep enough to see low-level heteroplasmy.'
+  c_y:
+  - 父系：Y 染色体属于 {yterm}
+  - 'Father''s line: the Y chromosome belongs to {yterm}'
+  sub_y:
+  - 从 O-F438 沿 YFull {ver} 树逐级下行 · 圆越大支持位点越多 · 直接读 CRAM 读段
+  - descending from O-F438 on the YFull {ver} tree · bigger circle = more supporting sites · read straight from the CRAM
+  n_y:
+  - Y 染色体只从父亲传给儿子，记录的是父系一条线。O-M117 → F8 → F438 这段主干在汉族尤其北方汉族里很常见；F438 之下 Y17728、F1754、F2137、A16636、Y25189 逐级全部衍生态，兄弟支系全部祖先态。O-Y25189 是 YFull 树上的叶节点，估计形成于约 {yformed} 年前，属于 O-M117 之下在北方汉族中常见的一支。要再往下分，需要更多同支系的样本，可以把 Y 数据提交 YFull。
+  - The Y chromosome passes only from father to son, so it records one paternal line. The trunk O-M117 → F8 → F438 is common among Han Chinese, especially in the north; under F438, Y17728, F1754, F2137, A16636 and Y25189 are all derived step by step, with every sister branch ancestral. O-Y25189 is a leaf on the YFull tree, formed roughly {yformed} years ago, a lineage under O-M117 common among northern Han. Going further needs more samples from the same branch; the Y data can be submitted to YFull.
+  c_mt:
+  - 母系：线粒体属于 {mthg}（可信度 {mtq}）
+  - 'Mother''s line: mitochondria belong to {mthg} (confidence {mtq})'
+  sub_mt:
+  - 16,569 个位置全部测到 · 实心 = 支系定义位点 · 空心 = 私有变异 · PhyloTree 17.2
+  - all 16,569 positions covered · filled = branch-defining · hollow = private · PhyloTree 17.2
+  n_mt:
+  - 线粒体只从母亲传下来，记录的是母系一条线；D4 是东亚最常见的母系支系之一。16,569 个位置全部测到，{mtn} 个支系定义位点命中，{mtp} 个私有变异。异质性（同一个人体内两种线粒体序列并存）只有 m.16093T>C 一处，占 90%，是已知的高变位点，没有健康含义。私有变异中的 m.3308T>C 改变 ND1 的起始密码子，在多个单倍群中是常见多态，一般视为良性。
+  - 'Mitochondria pass only from the mother, one maternal line; D4 is among the commonest maternal branches in East Asia. All 16,569 positions are covered: {mtn} branch-defining sites found, {mtp} private variants. Heteroplasmy (two mitochondrial sequences coexisting in one person) appears only at m.16093T>C, at 90%, a known hypervariable site with no health meaning. Among the private variants m.3308T>C alters the ND1 start codon; it is a common polymorphism across several haplogroups and generally considered benign.'
+  c_pca:
+  - 和全世界 2,504 个人放在一起看：东亚，汉族，北京汉与南方汉之间偏北
+  - 'Placed among 2,504 people worldwide: East Asian, Han, between Beijing and southern Han leaning north'
+  lg_eas:
+  - 东亚人
+  - East Asians
+  lg_other:
+  - 其他大洲的人
+  - people from other continents
+  sub_pg:
+  - 1000 Genomes 2,504 人 · {ng} 个 LD 修剪位点 · 一点 = 一个人 · 大宇被投影进参考空间
+  - 1000 Genomes, 2,504 people · {ng} LD-pruned sites · one dot = one person · {NAME_EN} projected into the reference space
+  sub_pe:
+  - 东亚 504 人 · {ne} 个位点 · CHB 北京汉 · CHS 南方汉 · CDX 傣 · JPT 日本 · KHV 越南京
+  - 504 East Asians · {ne} sites · CHB Beijing Han · CHS southern Han · CDX Dai · JPT Japanese · KHV Kinh
+  src_pg:
+  - 最近的人群质心（PC1–4 距离）{nearg}，几乎并列 · 最近的 15 个人：{knng}
+  - 'nearest group centroids (PC1–4 distance) {nearg}, a near tie · 15 nearest people: {knng}'
+  src_pe:
+  - 最近的人群 {near} · 最近的 15 个人：{knn}
+  - 'nearest group {near} · 15 nearest people: {knn}'
+  n_pca:
+  - 用的是完整的基因型集：在 1000 Genomes 的 8,094 万个位点上，没测到变异且深度足够的位点显式记为参考纯合，再做 LD 修剪后投影。“偏北”只是在北京汉与南方汉两个样本群之间的相对位置，不是籍贯。
+  - 'Built from the complete genotype set: at all 80.9 million 1000 Genomes sites, positions with no variant and adequate depth are written explicitly as homozygous reference, then LD-pruned and projected. ''Northern-leaning'' is only a position between the Beijing and southern Han samples, not a place of origin.'
+  c_find:
+  - 全基因组里值得知道的变异：一条纯合、一个携带者、一处缺失、一个 HLA
+  - 'Variants worth knowing across the genome: one homozygote, one carrier, one deletion, one HLA type'
+  n_find:
+  - 筛查范围：{cvn} 个有 ClinVar 记录的 PASS 变异（含插入缺失）、ACMG 建议报告的 81 个基因、{lof} 个蛋白编码功能丧失变异、Delly 结构变异。ACMG 81 基因中没有致病变异。罕见（频率 <1%）的功能丧失变异 {lofr} 个，其中纯合 {lofh} 个全部位于重复序列区，视为伪影。
+  - 'Screened: {cvn} PASS variants with a ClinVar record (indels included), the 81 genes the ACMG recommends reporting, {lof} protein-coding loss-of-function variants, Delly structural variants. No pathogenic variant in the ACMG 81. {lofr} rare (<1%) loss-of-function variants, of which the {lofh} homozygous ones all sit in repeats and are treated as artefacts.'
+  c_cv:
+  - 和 ClinVar（{cvd} 版）比对：{cvn} 个位点有记录
+  - 'Checked against ClinVar ({cvd}): {cvn} sites have a record'
+  sub_cv:
+  - 按 ClinVar 分类计数 · 只统计 PASS 变异
+  - counts by ClinVar class · PASS variants only
+  n_cv:
+  - 绝大多数是良性。“致病/可能致病”一栏里非冲突且有评审的只有 CFTR 那一条；另外三条是无评审的旧记录（疟疾易感 NCR3、CDKN2B 保护性等位基因、Xg 血型），不是疾病。被质控过滤掉的变异里也查了一遍：CFTR 外显子 10 末位的 c.1392G>T 只有 5/35 读段支持、全部来自假基因的错误比对，过滤正确。
+  - 'The great majority are benign. In the pathogenic / likely pathogenic row only the CFTR entry is reviewed and non-conflicting; the other three are old unreviewed records (NCR3 malaria susceptibility, a protective CDKN2B allele, the Xg blood group), not diseases. The filtered-out variants were checked too: CFTR c.1392G>T at the last base of exon 10 had 5 of 35 reads, all mis-mapped from a pseudogene; the filter was right.'
+  c_la:
+  - 把每条染色体拆成北方与南方两种来源
+  - Every chromosome split into northern and southern origins
+  sub_la:
+  - 用 1000 Genomes 的北京汉+日本作北方参考、傣族+京族作南方参考 · 欧洲与南亚两个面板只用来量噪声 · FLARE 0.6
+  - Beijing Han + Japanese as the northern reference, Dai + Kinh as the southern one; European and South Asian panels included only to measure the noise · FLARE 0.6
+  lg_n:
+  - 北方东亚
+  - northern East Asian
+  lg_s:
+  - 南方东亚
+  - southern East Asian
+  lg_noise:
+  - 欧洲 / 南亚（噪声）
+  - European / South Asian (noise)
+  n_la:
+  - 南方成分不是均匀铺开，而是集中在少数长片段：最长一段在 18 号染色体 30.4–37.0 Mb（6.6 Mb），另有 8、10、4、3、20 号染色体上五段超过 3 Mb。片段越长说明流入越近，几 Mb 对应大约几十代。欧洲与南亚两个面板合计只拿到 {noise}%，这就是方法的噪声底，南方成分 {south}% 远在其上。
+  - 'The southern component is not spread evenly but sits in a few long stretches: the longest on chromosome 18 at 30.4-37.0 Mb (6.6 Mb), with five more above 3 Mb on chromosomes 8, 10, 4, 3 and 20. Longer segments mean more recent arrival, a few Mb corresponding to some tens of generations. The European and South Asian panels together take only {noise}%, the method''s noise floor, and the southern share of {south}% sits far above it.'
+  src_calib:
+  - 把 20 名北京汉与 20 名南方汉从参考面板移出后用同一方法打分（1、2、6、22 号染色体）
+  - 20 Beijing Han and 20 southern Han held out of the panel and scored the same way, on chromosomes 1, 2, 6 and 22
+  n_calib:
+  - 单独一个百分比没有意义，需要参照。用同样的面板给参考个体打分：北京汉平均 {chb}% 北方成分，南方汉 {chs}%。在同样这几条染色体上大宇是 {dayucal}%，比北京汉的平均值高 {sdchb} 个标准差。也就是说在“北方—南方”这条轴上，他比典型的北京汉样本更靠北。
+  - A percentage means nothing without a yardstick. Scoring reference individuals through the same panels gives the Beijing Han a mean northern share of {chb}% and the southern Han {chs}%. On those same chromosomes {NAME_EN} comes out at {dayucal}%, which is {sdchb} standard deviations above the Beijing Han mean; on the north-south axis he sits further north than a typical Beijing Han sample.
+  c_anc:
+  - 和四千年前黄河流域的人群最像
+  - Closest to people who lived in the Yellow River valley four thousand years ago
+  sub_anc:
+  - AADR Human Origins 面板 · 1,311 名现代东亚人建主成分空间 · 299 名古代个体投影 · 13.0 万个位点
+  - AADR Human Origins panel · principal components built on 1,311 present-day East Asians · 299 ancient individuals projected · 130,012 markers
+  src_hopca:
+  - 空心方块 = 古代个体 · 汉族样本按省份标注
+  - open squares = ancient individuals · Han samples labelled by province
+  src_timedist:
+  - 纵轴 = 该古代人群到大宇的距离 · 横轴 = 年代，越靠右越古老
+  - 'vertical: distance from that ancient group to {NAME_EN} · horizontal: age, older to the right'
+  n_anc:
+  - 最近的现代人群是河南、山东、山西的汉族样本，三者之间的差距小于各自组内的离散度，无法进一步区分；与广东汉的距离则是组内离散度的七倍，区分清楚。最近的古代人群按年代排开是一条斜线：仰韶（约 6,950 年前）0.022，龙山（约 4,000 年前）0.010，商周（约 2,700 年前）0.007。距离随年代单调缩小，说明中原人群自新石器晚期以来连续，同时北方成分持续汇入。这个结论与上面的局部祖源互相独立地印证。
+  - 'The nearest present-day groups are the Han samples from Henan, Shandong and Shanxi; the gaps between those three are smaller than the spread within each, so they cannot be separated further, while the distance to Guangdong Han is seven times that spread and clearly separates them. Sorted by age the nearest ancient groups fall on a line: Yangshao (about 6,950 years ago) at 0.022, Longshan (about 4,000 years ago) at 0.010, Shang and Zhou (about 2,700 years ago) at 0.007. The monotone decline says the central plains population has been continuous since the late Neolithic while northern ancestry kept flowing in, which is the same conclusion the local ancestry reaches independently.'
+  th_apop:
+  - 古代人群
+  - ancient group
+  th_an:
+  - 人数
+  - n
+  th_adate:
+  - 距今年数
+  - years BP
+  th_ad:
+  - 距离
+  - distance
+  c_arch:
+  - 身上还留着尼安德特人的片段
+  - Neanderthal segments still in the genome
+  sub_arch:
+  - 以 Browning 等 2018 年在北京汉与南方汉中检出的 2,194 个渗入片段为查询集 · 加高 = 两条染色体都带
+  - the 2,194 introgressed segments Browning and colleagues detected in Beijing and southern Han serve as the query set · taller = present on both chromosomes
+  src_arch:
+  - 绿色 = 尼安德特 · 浅蓝 = 丹尼索瓦 · 右侧数字 = 该染色体的片段数
+  - green = Neanderthal · light blue = Denisovan · the number on the right is that chromosome's segment count
+  n_arch:
+  - 尼安德特片段 {neamb} Mb，丹尼索瓦只有 {denmb} Mb，这个比例是东亚大陆人群的典型模式，丹尼索瓦成分要到大洋洲人群才显著上升。{archn} 段中只有 13 段纯合，即父母双方在同一位置传下了同一段古老序列。最长的一段在 4 号染色体 125.7–132.6 Mb。这里统计的是片段跨度而非古老等位基因比例，所以数字大于通常引用的“东亚人约 2%”。
+  - Neanderthal segments account for {neamb} Mb against only {denmb} Mb of Denisovan, the usual pattern for mainland East Asia; the Denisovan share rises substantially only in Oceanian populations. Of the {archn} segments just 13 are homozygous, meaning both parents passed on the same archaic stretch at the same place. The longest sits on chromosome 4 at 125.7-132.6 Mb. What is counted here is segment span rather than the fraction of archaic alleles, so the figure runs larger than the roughly 2% usually quoted for East Asians.
+  c_phase:
+  - 把父母给的两条染色体分开，回答两个具体问题
+  - Separating the two parental chromosomes, and two questions it answers
+  sub_phase:
+  - 同一条读段若同时盖住两个杂合位点，就能确定它们是否在同一条染色体上 · WhatsHap 2.8 直接读 CRAM
+  - when one read spans two heterozygous sites it settles whether they sit on the same chromosome · WhatsHap 2.8 reading the CRAM directly
+  n_phase:
+  - <b>UGT1A1</b> 的 *80 与 *28 落在同一个相位块内且方向一致，说明它们在<b>同一条</b>染色体上，另一条是正常的 *1——这正是 Gilbert 型胆红素代谢的标准构型，与总胆红素评分第 93 百分位一致。<b>FUT3</b>（Lewis 血型）的两个失活变异同样同链，因此另一条染色体的 FUT3 完整，血型为 Le(a−b+) 而不是 Lewis 阴性。读段相位化只能跨越读段能覆盖的距离，要跨过整条染色体需要借助人群参考做统计相位，上面的祖源涂色就建立在统计相位之上。
+  - The <b>UGT1A1</b> variants *80 and *28 fall inside one phase block with the same orientation, so they sit on the <b>same</b> chromosome and the other carries a normal *1. That is the standard configuration behind Gilbert-type bilirubin handling, and it matches the 93rd-percentile bilirubin score. The two inactivating <b>FUT3</b> variants behind the Lewis blood group are likewise on one chromosome, leaving the other FUT3 copy intact, so the type is Le(a-b+) rather than Lewis-negative. Read-backed phasing reaches only as far as reads can span; crossing a whole chromosome needs statistical phasing against a population reference, which is what the ancestry painting above is built on.
+  c_spec:
+  - '{snvn} 个替换的形状'
+  - The shape of {snvn} substitutions
+  sub_spec:
+  - 每个单碱基替换按“替换类型 + 前后各一个碱基”分成 96 类 · 这是生殖系突变过程的指纹，也是检查测序偏差的镜子
+  - every single-base substitution sorted into 96 classes by type and flanking bases · a fingerprint of the germline mutation process and a mirror for sequencing bias
+  n_spec:
+  - C>T 与 T>C 合计约三分之二，最高的几根柱子全部落在 CpG 位点的 C>T 上（合计 {cpg}%）。这来自甲基化胞嘧啶的自发脱氨，是人类生殖系突变最稳定的特征。谱型平滑、没有单一类别异常突出，说明这批数据没有明显的建库或测序偏差；若存在氧化损伤（C>A 升高）或脱氨伪影，会在这张图上立刻显形。
+  - C>T and T>C together make up about two thirds, and the tallest bars all fall on C>T at CpG sites, {cpg}% in total, from spontaneous deamination of methylated cytosine, the most stable feature of human germline mutation. The spectrum is smooth with no single class standing out, so the data carry no obvious library or sequencing bias; oxidative damage, which shows up as excess C>A, or deamination artefacts would be visible here immediately.
+  c_blood:
+  - 十四个血型系统
+  - Fourteen blood-group systems
+  sub_blood:
+  - 位点坐标由 1000 Genomes 的 rsID 表解析，等位基因方向逐个用 Ensembl 核对
+  - marker coordinates resolved from the 1000 Genomes rsID table, each allele's orientation checked in Ensembl
+  th_sys:
+  - 系统
+  - system
+  th_bgeno:
+  - 基因型
+  - genotype
+  th_bph:
+  - 表型
+  - phenotype
+  th_bev:
+  - 依据
+  - evidence
+  c_kir:
+  - KIR：自然杀伤细胞的受体基因
+  - 'KIR: the natural killer cell receptor genes'
+  sub_kir:
+  - 这一基因区的特别之处是不同人携带的基因数目本来就不同 · T1K 1.0 + IPD-KIR
+  - what makes this region unusual is that people differ in which genes they carry at all · T1K 1.0 with IPD-KIR
+  n_kir:
+  - 大宇是 AA 单倍型：只有 KIR2DS4 一个活化性受体，其余全是抑制性受体。配体方面两个 HLA-C 等位基因都属 C1 组，KIR2DL3 因此有配体；两个 HLA-B 中 B*13:01 提供 Bw4 表位供 KIR3DL1 识别。AA 加 C1/C1 在东亚常见，整体偏抑制性。这些组合在文献中与感染、妊娠和移植结局有人群水平的关联，不作个体预测。
+  - '{NAME_EN} has the AA haplotype: a single activating receptor, KIR2DS4, and inhibitory receptors otherwise. On the ligand side both HLA-C alleles belong to group C1, so KIR2DL3 has its ligand, and among the two HLA-B alleles B*13:01 supplies the Bw4 epitope that KIR3DL1 reads. AA together with C1/C1 is common in East Asia and tilts the balance towards inhibition. These combinations carry population-level associations with infection, pregnancy and transplant outcomes; they are not individual predictions.'
+  c_som:
+  - 血液本身的状态
+  - The state of the blood itself
+  sub_som:
+  - 测序用的是血液，所以这份数据也记录了白细胞自己积累的变化
+  - the sequencing was done on blood, so the data also record what these white blood cells have accumulated on their own
+  n_som:
+  - 克隆性造血指某个造血干细胞获得驱动突变后扩增出一群后代细胞，随年龄增长越来越常见，40 岁以下不到 2%。这里检查了 DNMT3A、JAK2、TP53 等 19 个最常见热点，没有任何一条支持读段；20 个相关基因内也没有变异等位基因比例在 5–35% 之间的编码变异。30× 深度的检出下限约为 10%，更小的克隆本来就看不到。端粒长度无法估计：6.52 亿条读段里只有 {telk7} 条带 7 个以上端粒重复，836 万条未比对读段中只有 3 条，说明交付流程把端粒重复读段滤掉了。
+  - 'Clonal haematopoiesis is what happens when one blood stem cell acquires a driver mutation and expands into a family of descendants; it becomes common with age and affects under 2% of people below forty. Nineteen of the commonest hotspots across DNMT3A, JAK2, TP53 and others were checked and not one supporting read appeared, nor did any coding variant with a variant allele fraction between 5% and 35% turn up in the twenty associated genes. At 30x the detection limit is roughly 10%, so smaller clones would be invisible in any case. Telomere length cannot be estimated: only {telk7} of 652 million reads carry seven or more telomeric repeats and only 3 of 8.36 million unmapped reads do, so the delivery pipeline stripped telomeric repeat reads.'
+  c_pgx:
+  - 用药相关基因：从整段基因读出星号等位基因，包括拷贝数
+  - 'Medicines: star alleles read from whole genes, copy number included'
+  n_pgx:
+  - 双倍型由 PharmCAT 3.4（先把 GRCh37 上的参考纯合显式填好再转换到 GRCh38，否则 CYP3A5 会被误报成 *1/*1）、Cyrius（CYP2D6 含拷贝数）、Delly + 深度（CYP2A6 缺失）和 T1K（HLA）给出完整双倍型。
+  - Diplotypes are called with PharmCAT 3.4 (homozygous-reference sites filled explicitly on GRCh37 before lift-over to GRCh38; without that step CYP3A5 comes out as *1/*1), Cyrius (CYP2D6 with copy number), Delly plus depth (the CYP2A6 deletion) and T1K (HLA).
+  th_gene:
+  - 基因
+  - Gene
+  th_dip:
+  - 双倍型
+  - Diplotype
+  th_ph:
+  - 表型
+  - Phenotype
+  th_read:
+  - 这意味着什么
+  - What it means
+  th_src:
+  - 来源
+  - Source
+  c_hla:
+  - HLA 分型（T1K，二位分辨率）
+  - HLA types (T1K, two-field)
+  n_hla:
+  - 蓝色 = 有用药警示的等位基因。A*02:07、B*54:01、DRB1*04:05、DQB1*04:01 都是东亚常见型；DRB1*04:05 和 A*24:02 在东亚人群中与 1 型糖尿病、类风湿关节炎的风险相关，属于人群统计。短读长 WGS 的 HLA 分型准确度高但不是临床级。
+  - Blue = allele with a prescribing alert. A*02:07, B*54:01, DRB1*04:05 and DQB1*04:01 are all common in East Asia; DRB1*04:05 and A*24:02 associate with type 1 diabetes and rheumatoid arthritis risk in East Asian cohorts, at population level. HLA typing from short-read WGS is accurate but not clinical grade.
+  c_hlad:
+  - 这套 HLA 分型对应哪些疾病与药物关联
+  - What these HLA types mean for disease and drug risk
+  sub_hlad:
+  - 逐条核对已知的 HLA 关联 · 阴性结论与阳性结论同样有用
+  - checked allele by allele against established HLA associations · the negatives matter as much as the positives
+  th_cond:
+  - 条目
+  - condition
+  th_req:
+  - 需要携带的等位基因
+  - allele required
+  th_carry:
+  - 是否携带
+  - carried
+  th_hnote:
+  - 说明
+  - note
+  n_hlad:
+  - <b>几个有分量的阴性结论。</b>乳糜泻患者中超过 99% 携带 DQ2 或 DQ8，两者皆无基本可以排除这个诊断方向。发作性睡病 1 型患者几乎全部携带 DQB1*06:02，未携带同样是很强的阴性。强直性脊柱炎的 B*27、白塞病的 B*51 也都不携带。<b>阳性的几条要谨慎读。</b>DRB1*04:05 与 DQB1*04:01 是东亚人群 1 型糖尿病与类风湿关节炎的风险单倍型，报道的比值比在 3 到 6 之间，这是人群水平的风险提升，绝大多数携带者一生不发病。药物方面只有 B*13:01 需要行动，用氨苯砜前应做临床级筛查。
+  - '<b>Several negatives carry weight.</b> More than 99% of coeliac patients carry DQ2 or DQ8; having neither largely rules that direction out. Nearly every type 1 narcolepsy patient carries DQB1*06:02, so its absence is a strong negative too, as is the absence of B*27 for ankylosing spondylitis and B*51 for Behçet disease. <b>The positives need care.</b> DRB1*04:05 with DQB1*04:01 is the East Asian risk haplotype for type 1 diabetes and rheumatoid arthritis, with reported odds ratios between 3 and 6; that is a population-level shift and the great majority of carriers never develop either disease. On the drug side only B*13:01 calls for action: screen before dapsone.'
+  c_afam:
+  - 这些片段落在哪些基因上
+  - Which genes those segments landed on
+  sub_afam:
+  - 把 191 段渗入片段与 19,430 个蛋白编码基因取交集，再按基因家族归类
+  - intersecting the 191 introgressed segments with 19,430 protein-coding genes and grouping by family
+  src_afam:
+  - 条长 = 该家族落在片段内的基因比例 · 右侧 = 片段内基因数 / 家族总基因数
+  - bar = share of that family inside a segment · right = genes inside / genes in the family
+  n_afam:
+  - 片段总共覆盖 752 个基因，与随机打乱片段位置的期望（751 个）几乎一样，所以<b>不是基因多</b>，而是<b>落在哪些基因上</b>值得看。I 型干扰素基因簇的 10 个基因<b>全部</b>在片段内，HLA 二类区 19 个基因中有 13 个，TLR1/6/10 三个模式识别受体、表皮分化复合体的 15 个基因也在其中。免疫、皮肤屏障、嗅觉，正是文献里反复报道的古老人类渗入热点。一种解释是这些片段带来的等位基因在早期现代人迁出非洲后适应新环境时有用，因而被保留下来；另一种解释是这些区域本身重组率低、片段更易整段留存。两者可能都对。
+  - The segments cover 752 genes against 751 expected when their positions are shuffled at random, so the point is <b>not that they carry many genes</b> but <b>which genes they carry</b>. All ten type I interferon genes sit inside a segment, as do 13 of the 19 HLA class II genes, the pattern-recognition receptors TLR1, TLR6 and TLR10, and fifteen genes of the epidermal differentiation complex. Immunity, skin barrier and olfaction are exactly the introgression hotspots reported again and again in the literature. One reading is that these alleles were useful as early modern humans met new pathogens and climates outside Africa and were therefore retained; another is that these regions simply recombine less, so segments survive intact. Both are probably true.
+  c_beh:
+  - 行为与精神类评分，以及它们能说明什么
+  - Behavioural and psychiatric scores, and what they can actually say
+  sub_beh:
+  - 11 个在东亚人群中训练的评分与 5 个在欧洲人群中训练的评分放在一起 · 参考人群同为 504 名东亚人
+  - 11 scores trained in East Asians alongside 5 trained in Europeans · the same 504 East Asian reference in both cases
+  lg_eas2:
+  - 东亚人群训练
+  - trained in East Asians
+  lg_eur2:
+  - 欧洲人群训练（仅作对照）
+  - trained in Europeans (for contrast only)
+  src_beh:
+  - 右侧数字 = 百分位 / 评分位点的覆盖率
+  - 'right: percentile / share of the score''s variants covered'
+  n_beh:
+  - 东亚训练的评分里，认知相关的两项最高（轻度认知障碍 97、老年性痴呆 97），与前面阿尔茨海默病评分的 98 一致，主要由 APOE ε4 驱动，三者本质上在说同一件事。广泛性焦虑 84 偏高。酒精相关的两项都很低（酒精依赖 6.5，酒精相关障碍 10），戒烟成功 4.6 偏低但样本解释力有限。
+  - Among the East Asian scores the two cognitive ones sit highest (mild cognitive impairment 97, senile dementia 97), matching the Alzheimer's score of 98 seen earlier; all three are driven largely by APOE ε4 and are essentially restating one fact. Generalised anxiety at 84 is on the high side. Both alcohol scores sit low (alcoholism 6.5, alcohol-related disorders 10).
+  cal_beh:
+  - <b>为什么欧洲训练的评分不能直接用。</b>看酒精这一对：东亚训练的“酒精依赖”把大宇放在第 6.5 百分位，欧洲训练的“饮酒量”却放在第 91 百分位，方向完全相反。原因很具体——东亚评分里权重最大的四个位点全部落在 ALDH2 基因区（占总权重 2%），也就是那个让人喝酒脸红的基因；欧洲评分在 ALDH2 区<b>一个位点都没有</b>，因为 rs671 在欧洲人群中几乎不存在，GWAS 根本发现不了它。同一个人、同一份基因组，换一个训练人群，结论就翻过来了。这不是评分算错了，而是它们本来就只在训练人群里有效。
+  - '<b>Why the European-trained scores cannot simply be reused.</b> Look at the alcohol pair: the East-Asian-trained alcoholism score puts {NAME_EN} at the 6.5th percentile while the European-trained drinking score puts him at the 91st, pointing in opposite directions. The reason is concrete. The four largest weights in the East Asian score all fall in the ALDH2 region, the gene behind the alcohol flush, and that region carries 2% of the score''s total weight. The European score has <b>no variant at all</b> in the ALDH2 region, because rs671 is essentially absent in Europeans and no European study could ever find it. Same person, same genome, and swapping the training population flips the answer. The scores are not miscalculated; they were only ever valid inside the population that produced them.'
+  c_cand:
+  - 经典的“性格基因”
+  - The classic personality genes
+  sub_cand:
+  - 这些位点在二十年前的候选基因研究中出名，全基因组时代大多没能重复
+  - these variants became famous in candidate-gene studies twenty years ago; most did not survive the genome-wide era
+  th_cgene:
+  - 基因
+  - gene
+  th_cvar:
+  - 位点
+  - variant
+  th_cgeno:
+  - 你的型
+  - genotype
+  th_cclaim:
+  - 流行说法
+  - the popular claim
+  th_cevi:
+  - 证据实际支持什么
+  - what the evidence supports
+  n_cand:
+  - 把这些位点列出来，是为了说明它们<b>不能</b>用来推断性格。候选基因时代的做法是先猜一个基因，再在几百人里找关联，这种设计几乎必然产生假阳性；当样本量涨到几十万时，COMT、BDNF、DRD2 这些位点对人格量表的效应基本归零。真正稳健的规律是另一类：单个常见位点对复杂行为的效应极小，需要成千上万个位点相加才能解释几个百分点的差异。这个表里唯一例外是 ALDH2 与 ADH1B，它们对饮酒行为的效应确实很大，因为作用机制是直接的代谢反应而不是心理特质。5-HTTLPR 与 MAOA 的 uVNTR 是重复序列而非单碱基变异，150 bp 的短读长无法可靠定型，此处不作判读。
+  - 'These are listed to show why they <b>cannot</b> be used to read personality. The candidate-gene approach picked a gene by intuition and looked for an association in a few hundred people, a design almost guaranteed to produce false positives; once sample sizes reached the hundreds of thousands, the effects of COMT, BDNF and DRD2 on personality scales fell essentially to zero. The robust regularity is the opposite one: any single common variant moves complex behaviour very little, and it takes thousands of variants added together to explain a few percent of the variation. The one exception in this table is ALDH2 and ADH1B, whose effects on drinking are genuinely large because the mechanism is a direct metabolic reaction rather than a psychological trait. The famous 5-HTTLPR and MAOA uVNTR are repeat polymorphisms rather than single-base changes and cannot be typed reliably from 150 bp reads, so no call is made here.'
+  c_prs:
+  - 多基因评分：把几十万个小效应位点加在一起，看你在 504 个东亚人里排第几
+  - 'Polygenic scores: hundreds of thousands of tiny effects added up, then ranked among 504 East Asians'
+  lg_wgs:
+  - 东亚 504 人中的百分位
+  - percentile among 504 East Asians
+  lg_han:
+  - 汉族 208 人中
+  - among 208 Han
+  sub_prs:
+  - 31 个评分 · PGS Catalog 东亚人群模型 · 位点直接测出，覆盖 96–100% · 右侧数字 = 百分位 / 位点覆盖率
+  - '31 scores · PGS Catalog East Asian models · sites typed directly, 96–100% covered · right: percentile / site coverage'
+  n_prs:
+  - 评分位点直接测出，参考人群是 1000 Genomes 的 504 名东亚人（空心圆为其中 208 名汉族）。排在高位的是阿尔茨海默病（98，APOE ε4 贡献大）、收缩压/高血压（97/95）、甘油三酯和胆红素（93，后者与 UGT1A1 *28 一致）、痛风（89）；排在低位的是 HDL 胆固醇（4）、青光眼（7）、胃癌（9）。这些是人群统计：说明的是相对位置，不预测个人是否发病，也不能替代体检指标。
+  - 'Score sites are typed directly; the reference is the 504 East Asians of 1000 Genomes (hollow circle: the 208 Han among them). High: Alzheimer''s (98, driven largely by APOE ε4), systolic pressure / hypertension (97/95), triglycerides and bilirubin (93; the latter matches UGT1A1 *28), gout (89). Low: HDL cholesterol (4), glaucoma (7), stomach cancer (9). These are population statistics: relative positions, not a prediction of illness, and no substitute for measured values.'
+  c_cnv:
+  - 基因缺失：{sv} 个结构变异里值得看的几个
+  - 'Gene deletions: the few that matter among {sv} structural variants'
+  sub_cnv:
+  - 读段深度 / 全基因组平均 · 0 = 两份都缺失 · 0.5 = 缺一份 · 1 = 正常
+  - read depth / genome average · 0 = both copies missing · 0.5 = one missing · 1 = normal
+  n_cnv:
+  - GSTM1 与 LCE3B/C 两份都缺失，在东亚约一半人如此（GSTM1 null 与某些致癌物解毒有关；LCE3B/C 缺失是银屑病的常见风险等位基因）。GSTT1、UGT2B17 各缺一份。CFHR3-CFHR1 缺一份，是老年黄斑变性的保护性等位基因。HBA 两份齐全：没有 α 地中海贫血缺失。RHD 两份：RhD 阳性。
+  - 'GSTM1 and LCE3B/C are missing on both chromosomes, as in about half of East Asians (GSTM1 null relates to detoxifying some carcinogens; the LCE3B/C deletion is a common psoriasis risk allele). GSTT1 and UGT2B17 each lack one copy. CFHR3-CFHR1 lacks one copy, a protective allele for macular degeneration. Both HBA copies present: no α-thalassaemia deletion. Two RHD copies: RhD positive.'
+  c_str:
+  - 重复序列扩增病：38 个位点全部正常
+  - 'Repeat-expansion diseases: all 38 loci normal'
+  sub_str:
+  - 最长等位基因相对致病阈值 · 亨廷顿舞蹈症、脆性 X、脊髓小脑共济失调、肌强直性营养不良、C9orf72 等
+  - longest allele relative to the pathogenic threshold · Huntington's, fragile X, spinocerebellar ataxias, myotonic dystrophy, C9orf72 and others
+  n_str:
+  - HTT 17/17、FMR1 27、ATXN3 11/23、TBP 34/35（正常 ≤40）、ATXN2 22/22。重复长度由跨越读段与配对读段联合估计，接近阈值时才需要毛细管电泳复核。
+  - HTT 17/17, FMR1 27, ATXN3 11/23, TBP 34/35 (normal ≤40), ATXN2 22/22. Repeat lengths are estimated from spanning and paired reads; capillary electrophoresis is only needed when a result approaches the threshold.
+  c_roh:
+  - 近亲检查：{rohn} 段 ≥1 Mb 的纯合区，合计 {rohmb} Mb，最长 {rohmax} Mb，没有父母近亲的迹象
+  - 'Relatedness: {rohn} homozygous runs ≥1 Mb, {rohmb} Mb in total, longest {rohmax} Mb; no sign of parental relatedness'
+  sub_roh:
+  - 22 条常染色体 · 补全基因型集 + 1000G 东亚频率 · bcftools roh
+  - 22 autosomes · complete genotype set + 1000G East Asian frequencies · bcftools roh
+  n_roh:
+  - 最长的一段在 3p21，是已知的低重组热点，不是近亲信号。父母为表亲时通常会出现多段 >10 Mb 的纯合区。
+  - The longest run sits at 3p21, a known low-recombination hotspot rather than a relatedness signal. First-cousin parents typically leave several runs longer than 10 Mb.
+  c_misc:
+  - 其它
+  - The rest
+  c_meth:
+  - 用了什么数据和工具，哪些地方要小心
+  - Data, tools, and where to be careful
+  meth:
+  - <b>数据</b> WeGene 全基因组测序交付件：CRAM 27 GB、VCF、Y BAM，MD5 核对通过；MGI T7 双 lane，Sentieon bwa + DNAscope，GRCh37。<b>流程</b> samtools/bcftools 1.22、mosdepth（可调用区）、bcftools norm（左对齐、拆分多等位）、plink2（1000G PCA 投影、PRS）、bcftools csq + Ensembl 87 GFF3（功能注释）、ClinVar {cvd}、gnomAD v2.1.1（频率）、Delly 1.7（结构变异）+ 1 kb 窗口深度重定基因型、ExpansionHunter 5（STR）、SMNCopyNumberCaller、PharmCAT 3.4 + Picard LiftoverVcf、Cyrius 1.1、T1K 1.0 + IPD-IMGT/HLA、haplogrep3 3.2、YFull 14.05 树 + ybrowse 位点表。<b>关键约定</b> VCF 只含变异位点，所有与参考人群的比较都先用可调用掩膜（MAPQ≥20、深度≥8）把参考纯合显式填好；X 染色体（含 PAR）与线粒体从 CRAM 重新调用。脚本在 scripts/wgs/，全部输出在 wgs/。
+  - '<b>Data</b> WeGene whole-genome delivery: 27 GB CRAM, VCF, Y BAM, MD5 verified; MGI T7 two lanes, Sentieon bwa + DNAscope, GRCh37. <b>Pipeline</b> samtools/bcftools 1.22, mosdepth (callable regions), bcftools norm (left-aligned, split multiallelics), plink2 (1000G PCA projection, PRS), bcftools csq + Ensembl 87 GFF3 (consequences), ClinVar {cvd}, gnomAD v2.1.1 (frequencies), Delly 1.7 (structural variants) re-genotyped by 1 kb depth windows, ExpansionHunter 5 (STRs), SMNCopyNumberCaller, PharmCAT 3.4 + Picard LiftoverVcf, Cyrius 1.1, T1K 1.0 + IPD-IMGT/HLA, haplogrep3 3.2, YFull 14.05 tree + ybrowse SNP index. <b>Key convention</b> the VCF lists variant sites only, so every comparison with a reference panel first writes homozygous reference explicitly inside the callable mask (MAPQ≥20, depth≥8); the X (PAR included) and the mitochondrion were re-called from the CRAM. Scripts in scripts/wgs/, all outputs in wgs/.'
+  limits:
+  - <b>局限</b> 单样本 30× 短读长：HLA、CYP2D6 复杂重排、SMN 的结果准确但不是临床级；Y 平均深度低但支系定义位点处 9–26×。PharmCAT 有 94 个位点因跨版本插入缺失无法转换而缺失，主要在 RYR1、G6PD、CYP2D6。功能丧失变异的频率过滤依赖 gnomAD v2.1.1 与 1000G，后者对插入缺失覆盖差。多基因评分参考人群只有 504 人。
+  - '<b>Limits</b> single-sample 30× short reads: HLA, complex CYP2D6 rearrangements and SMN results are accurate but not clinical grade; the Y is shallow on average yet 9–26× at branch-defining sites. PharmCAT lacks 94 positions whose indels do not lift over between builds, mostly in RYR1, G6PD and CYP2D6. Frequency filtering of loss-of-function variants relies on gnomAD v2.1.1 and 1000G, and the latter covers indels poorly. The polygenic reference population is only 504 people.'
+  disc:
+  - 本页来自消费级全基因组测序和公开数据库，用于个人了解和学习，不是医学诊断，也不是用药建议。CFTR、ATP7B、HLA-B*13:01 三项若要用于任何医疗决定，须在有资质的实验室复核。凡涉及用药或疾病的内容，行动前请找医生。
+  - This page comes from consumer whole-genome sequencing and public databases, for personal interest and learning; it is neither a diagnosis nor medication advice. The CFTR, ATP7B and HLA-B*13:01 findings must be confirmed in an accredited laboratory before any medical decision. Talk to a doctor before acting on anything about medicines or disease.
+  foot1:
+  - DAYU GENOME · WHOLE GENOME
+  - DAYU GENOME · WHOLE GENOME
+  foot2:
+  - scripts/wgs/ · wgs/RESULTS.md
+  - scripts/wgs/ · wgs/RESULTS.md
+findings:
+- gene: CFTR
+  gt_zh: TG12-5T / TG12-5T
+  gt_en: TG12-5T / TG12-5T
+  tag_zh: 纯合 · 2 星
+  tag_en: homozygous · 2-star
+  hot: true
+  zh: ClinVar 把它记作 c.1210-11T>G（致病/可能致病，多家实验室一致）。读段显示这其实就是著名的 <b>5T 等位基因</b>并带 TG12 背景：19 条跨越该区的读段里 16 条是 TG12-T5，没有一条是参考的 TG11-T7。5T 是一种<b>外显率不完全的轻型 CFTR 变异</b>，纯合者与先天性双侧输精管缺如（男性不育的一种）、特发性胰腺炎、支气管扩张相关，但多数纯合者一生无症状。gnomAD 东亚等位基因频率约 2–3%。
+  en: 'ClinVar records it as c.1210-11T>G (pathogenic / likely pathogenic, several labs agree). The reads show it is the well-known <b>5T allele</b> on a TG12 background: 16 of 19 reads crossing the site carry TG12-T5, none carry the reference TG11-T7. 5T is a <b>mild CFTR variant with incomplete penetrance</b>; homozygotes have raised rates of congenital absence of the vas deferens (a cause of male infertility), idiopathic pancreatitis and bronchiectasis, yet most stay symptom-free. gnomAD East Asian allele frequency about 2–3%.'
+  act_zh: 如有生育计划：先做精液分析；配偶做 CFTR 携带者筛查。反复胰腺炎或慢性鼻窦/肺部症状时告知医生。临床使用前需临床级复核。
+  act_en: 'If planning children: a semen analysis first, and CFTR carrier screening for a partner. Mention it if recurrent pancreatitis or chronic sinus/lung symptoms arise. Confirm in a clinical lab before acting.'
+- gene: ATP7B
+  gt_zh: p.Asn1270Ser 杂合
+  gt_en: p.Asn1270Ser heterozygous
+  tag_zh: 携带者
+  tag_en: carrier
+  hot: true
+  zh: 威尔逊病（铜代谢障碍，常染色体隐性）的已知致病变异，ClinVar 24 家实验室判为致病。<b>只有一份</b>，本人不发病；这个基因里没有第二个致病变异。gnomAD 东亚频率 0.02%。
+  en: An established Wilson disease (copper storage disorder, autosomal recessive) mutation; 24 ClinVar labs call it pathogenic. <b>One copy only</b>, so a carrier, not affected; no second pathogenic variant in the gene. gnomAD East Asian frequency 0.02%.
+  act_zh: 生育前配偶可做 ATP7B 携带者筛查；若双方都是携带者，子女有 1/4 风险。
+  act_en: A partner can be screened for ATP7B before having children; if both are carriers each child has a 1-in-4 risk.
+- gene: CYP2A6
+  gt_zh: '*4 / *4 · 全基因缺失'
+  gt_en: '*4 / *4 · whole-gene deletion'
+  tag_zh: 拷贝数 0
+  tag_en: zero copies
+  hot: false
+  zh: 基因所在的 32 kb 区域没有任何读段，两侧深度正常：两份 CYP2A6 都缺失。这是尼古丁的主要代谢酶，缺失者尼古丁清除极慢；也影响替加氟、来曲唑等药物。东亚 *4 等位基因频率约 15–20%，纯合并不罕见。
+  en: 'No reads at all across the 32 kb gene while both flanks are at normal depth: both copies of CYP2A6 are gone. It is the main nicotine-clearing enzyme, so nicotine is cleared very slowly; tegafur and letrozole are also affected. The *4 allele runs at about 15–20% in East Asians, so homozygotes are not rare.'
+  act_zh: ''
+  act_en: ''
+- gene: HLA-B
+  gt_zh: B*13:01 / B*54:01
+  gt_en: B*13:01 / B*54:01
+  tag_zh: 用药警示
+  tag_en: drug alert
+  hot: false
+  zh: <b>HLA-B*13:01</b> 与氨苯砜超敏综合征强相关（中国人群比值比约 20），用氨苯砜（麻风、疱疹样皮炎、某些皮肤病）前应做此筛查。没有 B*58:01（别嘌醇）、B*15:02 / A*31:01（卡马西平）、B*57:01（阿巴卡韦），5 个风险等位基因的标签 SNP 也全为参考型。
+  en: <b>HLA-B*13:01</b> is strongly linked to dapsone hypersensitivity syndrome (odds ratio around 20 in Chinese cohorts); screening is advised before dapsone (leprosy, dermatitis herpetiformis, some skin conditions). No B*58:01 (allopurinol), B*15:02 / A*31:01 (carbamazepine) or B*57:01 (abacavir); the tag SNPs of all five risk alleles are reference as well.
+  act_zh: 临床使用前以临床级 HLA 分型确认。
+  act_en: Confirm with clinical-grade HLA typing before use.
+- gene: MAPT
+  gt_zh: p.Arg5His 杂合
+  gt_en: p.Arg5His heterozygous
+  tag_zh: 意义未明
+  tag_en: uncertain
+  hot: false
+  zh: 额颞叶痴呆文献报道过一次，ClinVar 分类冲突（致病 1 / 可能致病 1 / 未明 1），gnomAD 东亚频率 0.08%。按意义未明处理，不据此推断风险。
+  en: Reported once in frontotemporal dementia literature; ClinVar classifications conflict (1 pathogenic / 1 likely / 1 uncertain), gnomAD East Asian frequency 0.08%. Treated as a variant of uncertain significance; no risk inferred.
+  act_zh: ''
+  act_en: ''
+- gene: UGT1A1
+  gt_zh: '*1 / *80+*28'
+  gt_en: '*1 / *80+*28'
+  tag_zh: Gilbert 易感
+  tag_en: Gilbert-prone
+  hot: false
+  zh: 启动子 TA7（*28）与 *80 同在一条链上，是 Gilbert 综合征（轻度间歇性胆红素升高，无害）的常见基础。多基因评分里总胆红素也在第 93 百分位，两者一致。伊立替康、阿扎那韦用药时相关。
+  en: Promoter TA7 (*28) together with *80 on one chromosome, the common basis of Gilbert syndrome (mild intermittent bilirubin rises, harmless). The bilirubin polygenic score sits at the 93rd percentile, consistent with this. Relevant for irinotecan and atazanavir.
+  act_zh: ''
+  act_en: ''
+pgx:
+- gene: CYP2A6
+  dip: '*4/*4'
+  ph_zh: 代谢缺陷
+  ph_en: Poor metaboliser
+  zh: 尼古丁清除极慢；替加氟、来曲唑等剂量需关注
+  en: Very slow nicotine clearance; watch tegafur, letrozole
+  src: Delly + depth
+- gene: CYP3A5
+  dip: '*3/*3'
+  ph_zh: 非表达者
+  ph_en: Non-expresser
+  zh: 他克莫司按标准起始剂量（东亚最常见型）
+  en: Standard tacrolimus starting dose (commonest East Asian type)
+  src: PharmCAT 3.4
+- gene: CYP2D6
+  dip: '{cyp2d6}'
+  ph_zh: 正常代谢（活性 1.25）
+  ph_en: Normal metaboliser (activity 1.25)
+  zh: 可待因、曲马多、多种抗抑郁药按常规
+  en: Codeine, tramadol, many antidepressants as usual
+  src: Cyrius 1.1
+- gene: CYP2C19
+  dip: '*1/*1'
+  ph_zh: 正常代谢
+  ph_en: Normal metaboliser
+  zh: 氯吡格雷、质子泵抑制剂常规剂量；未携带东亚常见的 *2/*3
+  en: Clopidogrel and proton-pump inhibitors as usual; no *2/*3
+  src: PharmCAT 3.4
+- gene: CYP2C9 · VKORC1
+  dip: '*1/*1 · −1639 A/A'
+  ph_zh: 华法林敏感
+  ph_en: Warfarin-sensitive
+  zh: VKORC1 A/A 需较低起始剂量；具体在临床算法内决定
+  en: VKORC1 A/A calls for a lower starting dose, set inside a clinical algorithm
+  src: PharmCAT 3.4
+- gene: NUDT15
+  dip: '*1/*3'
+  ph_zh: 中间代谢
+  ph_en: Intermediate
+  zh: 硫唑嘌呤 / 6-巯基嘌呤起始剂量减至 50–80%
+  en: Start azathioprine / 6-MP at 50–80% of the usual dose
+  src: PharmCAT 3.4
+- gene: TPMT
+  dip: '*1/*1'
+  ph_zh: 正常代谢
+  ph_en: Normal metaboliser
+  zh: —
+  en: —
+  src: PharmCAT 3.4
+- gene: UGT1A1
+  dip: '*1/*80+*28'
+  ph_zh: 中间代谢
+  ph_en: Intermediate
+  zh: 伊立替康高剂量时警惕中性粒细胞减少；阿扎那韦黄疸风险
+  en: Watch neutropenia on high-dose irinotecan; jaundice risk on atazanavir
+  src: PharmCAT 3.4
+- gene: DPYD
+  dip: '*1/*5'
+  ph_zh: 正常代谢
+  ph_en: Normal metaboliser
+  zh: 氟尿嘧啶、卡培他滨常规剂量
+  en: Fluorouracil and capecitabine as usual
+  src: PharmCAT 3.4
+- gene: SLCO1B1
+  dip: '*37/*37'
+  ph_zh: 功能正常
+  ph_en: Normal function
+  zh: 他汀类肌病风险不因此增加
+  en: No added statin myopathy risk from this gene
+  src: PharmCAT 3.4
+- gene: ABCG2
+  dip: rs2231142 G/T
+  ph_zh: 功能下降
+  ph_en: Decreased function
+  zh: 瑞舒伐他汀暴露升高，剂量宜 ≤20 mg
+  en: Higher rosuvastatin exposure; keep the dose ≤20 mg
+  src: PharmCAT 3.4
+- gene: NAT2
+  dip: '*4/*6'
+  ph_zh: 中间乙酰化
+  ph_en: Intermediate acetylator
+  zh: 异烟肼常规剂量
+  en: Isoniazid as usual
+  src: PharmCAT 3.4
+- gene: CYP2B6
+  dip: '*1/*1'
+  ph_zh: 正常代谢
+  ph_en: Normal metaboliser
+  zh: 依非韦伦常规剂量
+  en: Efavirenz as usual
+  src: PharmCAT 3.4
+- gene: G6PD
+  dip: B/B
+  ph_zh: 正常
+  ph_en: Normal
+  zh: 未见 Canton、Kaiping 等东亚常见缺乏型；19 个 PharmCAT 位点在坐标转换中丢失，以现有位点为准
+  en: No Canton, Kaiping or other common East Asian deficiency alleles; 19 PharmCAT positions were lost in lift-over, so this rests on the sites present
+  src: PharmCAT 3.4
+- gene: ALDH2
+  dip: rs671 G/A
+  ph_zh: '*1/*2'
+  ph_en: '*1/*2'
+  zh: 饮酒脸红型；饮酒相关食管癌风险升高
+  en: Alcohol-flush type; higher alcohol-related oesophageal cancer risk
+  src: WGS PASS
+blood:
+- sys_zh: ABO
+  sys_en: ABO
+  geno_zh: A/A
+  geno_en: A/A
+  ph_zh: A 型
+  ph_en: group A
+  ev_zh: 无 261delG（O 等位基因），无 B 定义变异；A2 的 1061delC 在 31× 深度下缺失，故为 A1
+  ev_en: no 261delG (the O allele) and no B-defining variants; the A2 marker 1061delC is absent at 31x depth, so A1
+- sys_zh: Rh
+  sys_en: Rh
+  geno_zh: RHD ×2
+  geno_en: RHD ×2
+  ph_zh: D 阳性
+  ph_en: D positive
+  ev_zh: RHD 基因区读段深度为全基因组平均的 1.02 倍
+  ev_en: read depth across RHD is 1.02x the genome average
+- sys_zh: MNS
+  sys_en: MNS
+  geno_zh: M/N
+  geno_en: M/N
+  ph_zh: MN 型
+  ph_en: MN
+  ev_zh: GYPA rs7682260 杂合（c.59T>C，Leu20Ser）；S/s 位点未能可靠定位
+  ev_en: GYPA rs7682260 heterozygous (c.59T>C, Leu20Ser); the S/s marker could not be placed reliably
+- sys_zh: Kidd
+  sys_en: Kidd
+  geno_zh: JK*B/JK*B
+  geno_en: JK*B/JK*B
+  ph_zh: Jk(a−b+)
+  ph_en: Jk(a-b+)
+  ev_zh: rs1058396 纯合变异型（SLC14A1 Asp280Asn）；东亚等位基因频率 0.53
+  ev_en: rs1058396 homozygous alt (SLC14A1 Asp280Asn); East Asian allele frequency 0.53
+- sys_zh: Duffy
+  sys_en: Duffy
+  geno_zh: FY*A/FY*A
+  geno_en: FY*A/FY*A
+  ph_zh: Fy(a+b−)
+  ph_en: Fy(a+b-)
+  ev_zh: rs12075 参考型（Gly42）；非洲型 GATA 沉默变异不存在
+  ev_en: rs12075 reference (Gly42); the African GATA silencing variant is absent
+- sys_zh: Kell
+  sys_en: Kell
+  geno_zh: k/k
+  geno_en: k/k
+  ph_zh: K− k+
+  ph_en: K- k+
+  ev_zh: rs8176058 参考型（Thr193）；Kp(a)、Js(a) 均阴性
+  ev_en: rs8176058 reference (Thr193); Kp(a) and Js(a) negative
+- sys_zh: Diego
+  sys_en: Diego
+  geno_zh: DI*B/DI*B
+  geno_en: DI*B/DI*B
+  ph_zh: Di(a−b+)
+  ph_en: Di(a-b+)
+  ev_zh: rs2285644 参考型（SLC4A1 Pro854）；Di(a) 在汉族约 3–5%
+  ev_en: rs2285644 reference (SLC4A1 Pro854); Di(a) runs at 3-5% in Han Chinese
+- sys_zh: Dombrock
+  sys_en: Dombrock
+  geno_zh: DO*B/DO*B
+  geno_en: DO*B/DO*B
+  ph_zh: Do(a−b+)
+  ph_en: Do(a-b+)
+  ev_zh: rs11276 参考型（ART4 Asp265）
+  ev_en: rs11276 reference (ART4 Asp265)
+- sys_zh: Colton
+  sys_en: Colton
+  geno_zh: CO*A/CO*A
+  geno_en: CO*A/CO*A
+  ph_zh: Co(a+b−)
+  ph_en: Co(a+b-)
+  ev_zh: rs28362692 参考型（AQP1 Ala45）
+  ev_en: rs28362692 reference (AQP1 Ala45)
+- sys_zh: Lutheran
+  sys_en: Lutheran
+  geno_zh: LU*B/LU*B
+  geno_en: LU*B/LU*B
+  ph_zh: Lu(a−b+)
+  ph_en: Lu(a-b+)
+  ev_zh: rs28399653 参考型（BCAM Arg77）
+  ev_en: rs28399653 reference (BCAM Arg77)
+- sys_zh: Yt
+  sys_en: Yt
+  geno_zh: YT*A/YT*A
+  geno_en: YT*A/YT*A
+  ph_zh: Yt(a+b−)
+  ph_en: Yt(a+b-)
+  ev_zh: rs1799805 参考型（ACHE His353）
+  ev_en: rs1799805 reference (ACHE His353)
+- sys_zh: Scianna
+  sys_en: Scianna
+  geno_zh: SC*1/SC*1
+  geno_en: SC*1/SC*1
+  ph_zh: Sc1+
+  ph_en: Sc1+
+  ev_zh: rs56025238 参考型
+  ev_en: rs56025238 reference
+- sys_zh: 分泌型 FUT2
+  sys_en: Secretor (FUT2)
+  geno_zh: Se/Se-weak
+  geno_en: Se/Se-weak
+  ph_zh: 分泌型
+  ph_en: secretor
+  ev_zh: 欧洲型无效等位基因 rs601338 不存在；东亚弱分泌等位基因 rs1047781（Ile129Phe）杂合
+  ev_en: the European null allele rs601338 is absent; one copy of the East Asian weak allele rs1047781 (Ile129Phe)
+- sys_zh: Lewis FUT3
+  sys_en: Lewis (FUT3)
+  geno_zh: le59 + le508 同链
+  geno_en: le59 + le508 in cis
+  ph_zh: Le(a−b+)
+  ph_en: Le(a-b+)
+  ev_zh: 两个失活变异都是杂合，统计相位显示它们在同一条染色体上，另一条染色体的 FUT3 完整
+  ev_en: both inactivating variants are heterozygous and statistical phasing puts them on the same chromosome, leaving the other FUT3 copy intact
+prs_names:
+  Asthma: 哮喘
+  Ischemic stroke: 缺血性卒中
+  Height: 身高
+  HDL cholesterol: HDL 胆固醇
+  LDL cholesterol: LDL 胆固醇
+  Log triglycerides: 甘油三酯
+  Total cholesterol: 总胆固醇
+  Coronary artery disease: 冠心病
+  Esophageal cancer: 食管癌
+  Cancer of stomach: 胃癌
+  Colorectal cancer: 结直肠癌
+  Cancer of liver and intrahepatic bile duct: 肝癌
+  Prostate cancer: 前列腺癌
+  Type 2 diabetes (T2D): 2 型糖尿病
+  Gout: 痛风
+  Alzheimers disease: 阿尔茨海默病
+  Depression: 抑郁症
+  Open angle glaucoma: 开角型青光眼
+  Hypertension: 高血压
+  Atrial fibrillation: 房颤
+  Chronic Kidney Disease Stage III: 慢性肾病 III 期
+  Serum glutamate pyruvate transaminase: 谷丙转氨酶
+  Hemoglobin: 血红蛋白
+  Platelet count: 血小板计数
+  Total bilirubin: 总胆红素
+  Body mass index (BMI): 体重指数
+  Glycated hemoglobin: 糖化血红蛋白
+  Systolic blood pressure: 收缩压
+  Uric acid, blood: 血尿酸
+  White blood cell count: 白细胞计数
+  Insomnia: 失眠

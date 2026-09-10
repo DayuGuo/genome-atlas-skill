@@ -1,5 +1,125 @@
 <!doctype html>
-<html lang="zh-Hans"><head><meta charset="utf-8"><title>Genome Atlas</title>
-<meta http-equiv="refresh" content="0; url=example/report.html">
-<link rel="canonical" href="example/report.html"></head>
-<body style="font-family:sans-serif;padding:40px">正在打开示例报告… <a href="example/report.html">example/report.html</a> · <a href="https://github.com/DayuGuo/genome-atlas-skill">源码</a></body></html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genome Atlas</title>
+<meta name="description" content="Two audited, reproducible pipelines that turn one person's genotyping array or whole-genome sequencing into a bilingual HTML report.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg:#F7F2EB; --ink:#081F5C; --muted:rgba(8,31,92,.62); --lab:rgba(8,31,92,.76);
+    --faint:rgba(8,31,92,.34); --rule:rgba(8,31,92,.16); --card:rgba(255,255,255,.55);
+    --data:#334EAC; --accent:#eb6834;
+    --num:'Oswald','Noto Sans SC',sans-serif; --cn:'Noto Sans SC','Inter',sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      color-scheme: dark;
+      --bg:#081F5C; --ink:#EDEFF1; --muted:rgba(237,239,241,.64); --lab:rgba(237,239,241,.78);
+      --faint:rgba(237,239,241,.36); --rule:rgba(237,239,241,.18); --card:rgba(255,255,255,.05);
+      --data:#809EC6; --accent:#d95926;
+    }
+  }
+  :root[data-theme="dark"]{
+    color-scheme: dark;
+    --bg:#081F5C; --ink:#EDEFF1; --muted:rgba(237,239,241,.64); --lab:rgba(237,239,241,.78);
+    --faint:rgba(237,239,241,.36); --rule:rgba(237,239,241,.18); --card:rgba(255,255,255,.05);
+    --data:#809EC6; --accent:#d95926;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--ink);font-family:'Inter','Noto Sans SC',sans-serif;
+       -webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums lining-nums;
+       line-height:1.6;padding:0 24px 72px}
+  .wrap{max-width:940px;margin:0 auto}
+  a{color:inherit}
+  header{padding:64px 0 22px;border-bottom:1px solid var(--ink)}
+  h1{font-family:var(--cn);font-weight:900;font-size:clamp(30px,5vw,50px);line-height:1.06;letter-spacing:.01em}
+  .sub{font-family:var(--num);font-size:11px;font-weight:600;letter-spacing:.16em;color:var(--muted);
+       text-transform:uppercase;margin-top:12px}
+  .lede{font-size:15px;line-height:1.8;color:var(--lab);max-width:62ch;margin-top:26px}
+  .lede b{color:var(--ink);font-weight:600}
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}
+  .card{border:1px solid var(--rule);background:var(--card);border-radius:4px;padding:24px 24px 20px;
+        display:flex;flex-direction:column;gap:12px}
+  .card .k{font-family:var(--num);font-size:10px;font-weight:600;letter-spacing:.16em;color:var(--faint);text-transform:uppercase}
+  .card h2{font-family:var(--cn);font-weight:700;font-size:19px;line-height:1.3}
+  .card h2 em{font-style:normal;display:block;font-family:var(--num);font-weight:500;font-size:12px;
+              letter-spacing:.1em;color:var(--muted);text-transform:uppercase;margin-top:5px}
+  .card p{font-size:13px;line-height:1.75;color:var(--lab);flex:1}
+  .card ul{list-style:none;font-size:12px;color:var(--muted);line-height:1.9}
+  .card ul li::before{content:"·";margin-right:8px;color:var(--faint)}
+  .links{display:flex;gap:10px;flex-wrap:wrap;margin-top:4px}
+  .btn{font-family:var(--num);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+       border:1px solid var(--ink);color:var(--ink);padding:7px 14px;border-radius:99px;text-decoration:none;white-space:nowrap}
+  .btn:hover,.btn:focus-visible{background:var(--ink);color:var(--bg);outline:none}
+  .btn.ghost{border-color:var(--rule);color:var(--muted)}
+  .btn.ghost:hover,.btn.ghost:focus-visible{background:transparent;border-color:var(--ink);color:var(--ink)}
+  .note{margin-top:44px;border-left:2px solid var(--accent);padding:12px 18px;font-size:12.5px;
+        line-height:1.8;color:var(--lab);max-width:72ch}
+  .note b{color:var(--ink)}
+  footer{margin-top:48px;border-top:1px solid var(--rule);padding-top:16px;display:flex;
+         justify-content:space-between;gap:16px;flex-wrap:wrap;
+         font-family:var(--num);font-size:10px;font-weight:600;letter-spacing:.12em;color:var(--faint);text-transform:uppercase}
+  @media(max-width:760px){.cards{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>基因组图鉴<br><span style="font-family:var(--num);font-weight:600;font-size:.52em;letter-spacing:.14em">GENOME ATLAS</span></h1>
+    <div class="sub">Two audited pipelines · 中文 / English report · GRCh37</div>
+  </header>
+
+  <p class="lede">把一个人的基因数据变成一份<b>经过审计的、可复现的</b>中英双语报告。两条流水线：一条读消费级芯片导出的
+  基因型表，一条读原始测序数据。脚本负责数字，写结论的规则写在 <code>SKILL.md</code> 里，每条读数都带证据等级。
+  <b>不做医学诊断，不给用药剂量。</b></p>
+
+  <div class="cards">
+    <div class="card">
+      <div class="k">01 · array</div>
+      <h2>芯片版<em>genotyping array</em></h2>
+      <p>输入 WeGene / 23andMe 风格的导出文件，约 60 万个位点、15 MB。覆盖质控、父母系单倍群、祖源主成分、
+         性状与药物位点、ClinVar 交叉、纯合片段，以及经过误差实测的填补后多基因评分。</p>
+      <ul>
+        <li>1000G 与 HGDP 两套祖源参考</li>
+        <li>Beagle 填补 + 遮蔽自检</li>
+        <li>子集评分误差实测，不当作结果</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="array/example/report.html">看示例报告</a>
+        <a class="btn ghost" href="https://github.com/DayuGuo/genome-atlas-skill/tree/main/array">源码</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="k">02 · whole genome</div>
+      <h2>全基因组版<em>WGS · FASTQ / BAM / CRAM</em></h2>
+      <p>输入 30× 原始测序数据。除芯片版的全部内容外，还有局部祖源与留出校准、古代 DNA 投影、星号等位基因药物
+         基因组、HLA 分型与疾病关联、结构变异与拷贝数、重复扩增、古老人类渗入片段、相位、血液体细胞信号。</p>
+      <ul>
+        <li>可调用掩膜：缺失与参考纯合分得清</li>
+        <li>局部祖源必须与留出校准一起读</li>
+        <li>行为类评分标注训练人群</li>
+      </ul>
+      <div class="links">
+        <a class="btn" href="wgs/example/report.html">看示例报告</a>
+        <a class="btn ghost" href="https://github.com/DayuGuo/genome-atlas-skill/tree/main/wgs">源码</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="note"><b>关于示例报告。</b>两份示例都来自同一位东亚男性的真实数据，本人同意公开。它们只用来看格式和写法，
+  其中的每一条结论都属于那个样本，不要沿用。仓库里<b>不含任何原始数据</b>：读段、基因型表、中间文件与配置全部在
+  <code>work/</code> 下，已被 <code>.gitignore</code> 排除。</div>
+
+  <footer>
+    <span>MIT · templates PolyForm Noncommercial</span>
+    <span><a href="https://github.com/DayuGuo/genome-atlas-skill">github.com/DayuGuo/genome-atlas-skill</a></span>
+  </footer>
+</div>
+</body>
+</html>

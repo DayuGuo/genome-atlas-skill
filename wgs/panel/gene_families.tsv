@@ -1,0 +1,15 @@
+family_zh	family_en	regex
+I 型干扰素 IFNA/IFNB/IFNW	Type I interferons	^IFN(A\d|B1|W1|E)$
+角蛋白 KRT	Keratins	^KRT
+角蛋白关联蛋白 KRTAP	Keratin-associated proteins	^KRTAP
+表皮分化复合体 SPRR/LCE/S100A/LOR	Epidermal differentiation complex	^(SPRR|LCE|S100A|LOR|IVL|FLG)
+嗅觉受体 OR	Olfactory receptors	^OR\d
+HLA	HLA	^HLA-
+锌指 ZNF	Zinc fingers	^ZNF
+溶质载体 SLC	Solute carriers	^SLC
+解整合素金属蛋白酶 ADAMTS	ADAMTS proteases	^ADAMTS
+Toll 样受体 TLR	Toll-like receptors	^TLR
+防御素 DEF	Defensins	^DEF
+补体 C1-C9/CFH	Complement	^(C[1-9][A-Z]*$|CFH)
+细胞色素 P450 CYP	Cytochrome P450	^CYP
+谷胱甘肽转移酶 GST	Glutathione transferases	^GST

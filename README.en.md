@@ -1,53 +1,63 @@
-# Genome Atlas · an agent skill for consumer genotyping-array data
+# Genome Atlas
 
-[中文](README.md)
+Turn one person's genetic data into an **audited, reproducible**, bilingual (中文/English) single-file HTML
+report. Two pipelines live here:
 
-Turns a consumer genotyping export (WeGene / 23andMe format, GRCh37) into an **audited, reproducible, bilingual
-(中文/English)** single-file HTML report. Built for AI coding tools (Claude Code, Codex): `SKILL.md` tells the
-agent how to run the pipeline, how to write conclusions, and what it must not say.
+| | Input | Directory | Example report |
+|---|---|---|---|
+| **Array** | WeGene / 23andMe-style export, ~600k sites, 15 MB | [`array/`](array) | [open](https://dayuguo.github.io/genome-atlas-skill/array/example/report.html) |
+| **Whole genome** | FASTQ / BAM / CRAM at 30× | [`wgs/`](wgs) | [open](https://dayuguo.github.io/genome-atlas-skill/wgs/example/report.html) |
 
-Example report: **https://dayuguo.github.io/genome-atlas-skill/** (live preview; source [`example/report.html`](example/report.html), an East Asian male sample, published with consent).
+Landing page: <https://dayuguo.github.io/genome-atlas-skill/>
 
-## What it does
+## How the two relate
 
-| Module | Method | Output |
-|---|---|---|
-| QC & harmonization | call rate, heterozygosity, sex consistency, site-by-site strand/allele check against 1000G | proceed only with zero flips and zero conflicts |
-| Paternal / maternal lines | ISOGG-tree descent cross-checked with YFull; haplogrep3 with coverage ranges | Y / mtDNA haplogroups with supporting-site counts |
-| Ancestry | PCA space from 1000G, sample projected; HGDP regional PCA (automatic liftover) | nearest reference groups, kNN |
-| Traits / pharmacogenomics | 76-site panel, Ensembl strand check, evidence grades A–D, CPIC conventions | tables + plain-language readings |
-| ClinVar | position + allele matching | overlaps within array coverage |
-| ROH | homozygosity scan | relatedness hint |
-| Polygenic scores | Beagle imputation → reference-MAF filter → scored with 504 reference people on the same variant set; measured subset error | percentiles with error |
-| Report | Lieflat-style template, every number from result files, prose written by the analyst under the rules | `work/report/report.html` |
+Same design, different input, **conventions do not carry over**. The array rule that "not found ≠ absent" and
+its subset-score error correction are wrong on whole-genome data; the whole-genome callable mask and its
+fill-before-lift-over step mean nothing on an array. Each `SKILL.md` states what its pipeline is and is not for.
+
+## What they do
+
+**Both**: quality control · Y and mtDNA haplogroups · 1000 Genomes ancestry PCA and projection ·
+ClinVar overlap · runs of homozygosity · polygenic scores (the reference population is scored on the identical
+variant set, so a percentile means something) · a bilingual single-file report
+
+**Whole genome only**: callable mask · local ancestry with held-out calibration · ancient-DNA projection ·
+star-allele pharmacogenomics including copy number · HLA typing with disease and drug associations ·
+structural variants and copy number · repeat expansions · archaic introgressed segments · read-backed and
+statistical phasing · fourteen blood-group systems · KIR · somatic signals in blood · 96-context mutation spectrum
+
+## What they do not do
+
+No diagnosis, no dosing, no inference about personality, intelligence or ethnic origin. Every reading in the
+report carries an evidence grade (A/B/C/D) and its limits; anything touching medication carries
+"confirm with clinical-grade testing before acting".
 
 ## Quick start
 
 ```bash
-git clone <this repo> && cd genome-atlas-skill
-cp config.example.yaml config.yaml   # sample id, display names, sex, input path
-pip install -r requirements.txt
-bash setup/download_references.sh    # ≈45 GB; plink2: download an x86_64 binary, or build on ARM64 with setup/build_plink2_arm64.sh
-bash run_all.sh                      # stops at step 19 until you write work/report_text.yaml
-python3 scripts/18_html_report_v2.py
+git clone https://github.com/DayuGuo/genome-atlas-skill.git
+cd genome-atlas-skill/array     # or cd genome-atlas-skill/wgs
+cp config.example.yaml config.yaml
+# install tools and download references per that directory's README and SKILL.md, then
+bash run_all.sh
 ```
 
-With an AI tool: load this repository as a skill (Claude Code: `.claude/skills/genome-atlas/`; Codex: its skills
-directory), then say "analyse my xxx.txt with genome-atlas".
+`config.yaml` and `work/` are git-ignored. **Personal data lives only under work/ and never enters the repository.**
 
-## Rules that matter
+## For AI agents
 
-- Personal data lives only in `work/` (git-ignored). Never commit `config.yaml`, `work/`, or any genotype file.
-- "Not detected" ≠ "absent": the array covers ~600k common sites.
-- Pharmacogenomics reports alleles detected/not detected, never a phenotype the array cannot support; any dosing decision needs clinical-grade testing.
-- PRS: imputed results only, with measured error; percentiles are relative to the 1000G reference group.
-- Behaviour, cognition, athletics, longevity: "reported in some studies, no visible effect on an individual".
+The `SKILL.md` in each directory is the full contract: what to run, in what order, how to write the
+conclusions, what must never be written, and every trap already hit. Read it before touching anything.
+The writing rules are not suggestions; they came out of an audit.
 
-See `SKILL.md`, `docs/EVIDENCE_LEVELS.md`, `docs/AUDIT_CHECKLIST.md`, `docs/METHODS.md`.
+## Example reports
 
-## License
-Code: MIT. `templates/` is adapted from [Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts) and
-keeps its PolyForm Noncommercial 1.0.0 license (see `THIRD_PARTY_NOTICES.md`). Reference data and tools have their
-own licenses and are not redistributed here.
+Both examples come from one East Asian male's real data, published with his consent. **They are there for
+format and tone only** — every conclusion in them belongs to that sample. The repository contains no raw data.
 
-For research, education and personal curiosity only; not a medical diagnosis or medication advice.
+## Licence
+
+Code is MIT. Both `templates/` directories follow the report layout of
+[Lieflat Charts](https://github.com/larashero3-dotcom/lieflat-charts) and carry PolyForm Noncommercial.
+Reference data each carry their own citation requirements: see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
