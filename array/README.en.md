@@ -6,7 +6,7 @@ Turns a consumer genotyping export (WeGene / 23andMe format, GRCh37) into an **a
 (中文/English)** single-file HTML report. Built for AI coding tools (Claude Code, Codex): `SKILL.md` tells the
 agent how to run the pipeline, how to write conclusions, and what it must not say.
 
-Example report: **https://dayuguo.github.io/genome-atlas-skill/** (live preview; source [`example/report.html`](example/report.html), an East Asian male sample, published with consent).
+Example report: **https://dayuguo.github.io/genome-atlas-skill/** (live preview; source [`example/report.html`](example/report.html), an East Asian sample, published with consent, name and sex removed).
 
 ## What it does
 

@@ -4,7 +4,7 @@
 
 把一份消费级基因检测导出文件（WeGene / 23andMe 格式，GRCh37）变成一份**经审计、可复现、中英双语**的单文件 HTML 报告。为 Claude Code、Codex 等 AI 编程工具设计：`SKILL.md` 告诉工具怎么跑、怎么写结论、哪些话不能说。
 
-示例报告：**https://dayuguo.github.io/genome-atlas-skill/**（在线预览；源文件 [`example/report.html`](example/report.html)，一位东亚男性样本，经本人同意公开）。
+示例报告：**https://dayuguo.github.io/genome-atlas-skill/**（在线预览；源文件 [`example/report.html`](example/report.html)，一位东亚样本，经本人同意公开，已去掉姓名与性别）。
 
 ## 它做什么
 

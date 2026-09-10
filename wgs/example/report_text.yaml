@@ -1,6 +1,6 @@
 # Report copy. Each value is [中文, English] unless noted.
 # Copy to work/report_text.yaml and rewrite every line for your own sample.
-# The example is a real East Asian male sample: use it for format and tone, never for its conclusions.
+# The example is a real East Asian sample: use it for format and tone, never for its conclusions.
 # Braces are placeholders filled from work/wgs/**; never type a number here.
 
 ui:
@@ -8,14 +8,14 @@ ui:
   - 基因组图鉴
   - GENOME ATLAS
   spine_b:
-  - DAYU · WHOLE GENOME 30× · GRCH37 · 2026-09
-  - DAYU · WHOLE GENOME 30× · GRCH37 · 2026-09
+  - 样本 A · 全基因组 30× · GRCH37
+  - SAMPLE A · WHOLE GENOME 30× · GRCH37
   site:
-  - '{NAME_EN} Genome'
-  - '{NAME_EN} Genome'
+  - '{name_en} Genome'
+  - '{name_en} Genome'
   tag:
-  - 男 · 1994 年生 · 全基因组测序 30× · 2026-09-10
-  - Male · born 1994 · whole-genome sequencing 30× · 2026-09-10
+  - 全基因组测序 30× · 东亚参考人群
+  - Whole-genome sequencing at 30× · East Asian reference
   toggle:
   - EN
   - 中文
@@ -35,8 +35,8 @@ ui:
   - 仅供参考
   - HINTS ONLY
   tier1_b:
-  - 测序质量好（{depth}×，Ti/Tv {titv}）。男性，汉族，偏北。父系 O-Y25189，母系 D4h1c。CFTR 5T 纯合、ATP7B 携带者、CYP2A6 全缺失、HLA-B*13:01：四条直接读段可见的结论。ALDH2 脸红型、APOE ε3/ε4、NUDT15 中间代谢、CYP3A5 非表达者。血型 A 型 RhD 阳性。38 个重复序列疾病位点全部正常。SMN1 两份。
-  - 'Good sequencing ({depth}×, Ti/Tv {titv}). Male, Han Chinese, northern-leaning. Paternal line O-Y25189, maternal D4h1c. CFTR 5T homozygous, ATP7B carrier, CYP2A6 fully deleted, HLA-B*13:01: four findings visible directly in the reads. ALDH2 flush type, APOE ε3/ε4, NUDT15 intermediate, CYP3A5 non-expresser. Blood group A, RhD positive. All 38 repeat-expansion loci normal. Two copies of SMN1.'
+  - 测序质量好（{depth}×，Ti/Tv {titv}）。汉族，偏北。父系 O-Y25189，母系 D4h1c。CFTR 5T 纯合、ATP7B 携带者、CYP2A6 全缺失、HLA-B*13:01：四条直接读段可见的结论。ALDH2 脸红型、APOE ε3/ε4、NUDT15 中间代谢、CYP3A5 非表达者。血型 A 型 RhD 阳性。38 个重复序列疾病位点全部正常。SMN1 两份。
+  - 'Good sequencing ({depth}×, Ti/Tv {titv}). Han Chinese, northern-leaning. Paternal line O-Y25189, maternal D4h1c. CFTR 5T homozygous, ATP7B carrier, CYP2A6 fully deleted, HLA-B*13:01: four findings visible directly in the reads. ALDH2 flush type, APOE ε3/ε4, NUDT15 intermediate, CYP3A5 non-expresser. Blood group A, RhD positive. All 38 repeat-expansion loci normal. Two copies of SMN1.'
   tier2_b:
   - HLA 其余位点的二位分辨率分型。GSTM1、LCE3B/C 纯合缺失，GSTT1、UGT2B17、CFHR3-1 杂合缺失。无 α 地贫缺失。没有父母近亲的迹象。
   - Two-field HLA types at the other loci. GSTM1 and LCE3B/C homozygously deleted; GSTT1, UGT2B17, CFHR3-1 one copy. No α-thalassaemia deletion. No sign of parental relatedness.
@@ -113,8 +113,8 @@ ui:
   - 左：平均深度 · 右：每 Mb 的 PASS 变异数 · 浅色 = X / Y / 线粒体
   - 'left: mean depth · right: PASS variants per Mb · light = X / Y / mitochondria'
   n_chrom:
-  - X 的深度是常染色体的一半、Y 有读段：男性。Y 的平均深度低是因为它大半是不可比对的重复序列，能唯一比对的区域实际有 10–26×。线粒体 4,850× 足以看到低比例的异质性。
-  - 'The X sits at half the autosomal depth and the Y has reads: male. The Y''s low average comes from its largely unmappable repeats; the uniquely mappable regions run at 10–26×. Mitochondria at 4,850× are deep enough to see low-level heteroplasmy.'
+  - X 的深度约为常染色体的一半，Y 有读段。Y 的平均深度低是因为它大半是不可比对的重复序列，能唯一比对的区域实际有 10–26×。线粒体 4,850× 足以看到低比例的异质性。
+  - 'The X sits at about half the autosomal depth and the Y carries reads. The Y''s low average comes from its largely unmappable repeats; the uniquely mappable regions run at 10–26×. Mitochondria at 4,850× are deep enough to see low-level heteroplasmy.'
   c_y:
   - 父系：Y 染色体属于 {yterm}
   - 'Father''s line: the Y chromosome belongs to {yterm}'
@@ -143,8 +143,8 @@ ui:
   - 其他大洲的人
   - people from other continents
   sub_pg:
-  - 1000 Genomes 2,504 人 · {ng} 个 LD 修剪位点 · 一点 = 一个人 · 大宇被投影进参考空间
-  - 1000 Genomes, 2,504 people · {ng} LD-pruned sites · one dot = one person · {NAME_EN} projected into the reference space
+  - 1000 Genomes 2,504 人 · {ng} 个 LD 修剪位点 · 一点 = 一个人 · 样本被投影进参考空间
+  - 1000 Genomes, 2,504 people · {ng} LD-pruned sites · one dot = one person · {name_en} projected into the reference space
   sub_pe:
   - 东亚 504 人 · {ne} 个位点 · CHB 北京汉 · CHS 南方汉 · CDX 傣 · JPT 日本 · KHV 越南京
   - 504 East Asians · {ne} sites · CHB Beijing Han · CHS southern Han · CDX Dai · JPT Japanese · KHV Kinh
@@ -194,8 +194,8 @@ ui:
   - 把 20 名北京汉与 20 名南方汉从参考面板移出后用同一方法打分（1、2、6、22 号染色体）
   - 20 Beijing Han and 20 southern Han held out of the panel and scored the same way, on chromosomes 1, 2, 6 and 22
   n_calib:
-  - 单独一个百分比没有意义，需要参照。用同样的面板给参考个体打分：北京汉平均 {chb}% 北方成分，南方汉 {chs}%。在同样这几条染色体上大宇是 {dayucal}%，比北京汉的平均值高 {sdchb} 个标准差。也就是说在“北方—南方”这条轴上，他比典型的北京汉样本更靠北。
-  - A percentage means nothing without a yardstick. Scoring reference individuals through the same panels gives the Beijing Han a mean northern share of {chb}% and the southern Han {chs}%. On those same chromosomes {NAME_EN} comes out at {dayucal}%, which is {sdchb} standard deviations above the Beijing Han mean; on the north-south axis he sits further north than a typical Beijing Han sample.
+  - 单独一个百分比没有意义，需要参照。用同样的面板给参考个体打分：北京汉平均 {chb}% 北方成分，南方汉 {chs}%。在同样这几条染色体上样本是 {dayucal}%，比北京汉的平均值高 {sdchb} 个标准差。也就是说在“北方—南方”这条轴上，该样本比典型的北京汉样本更靠北。
+  - A percentage means nothing without a yardstick. Scoring reference individuals through the same panels gives the Beijing Han a mean northern share of {chb}% and the southern Han {chs}%. On those same chromosomes {name_en} comes out at {dayucal}%, which is {sdchb} standard deviations above the Beijing Han mean; on the north-south axis the sample sits further north than a typical Beijing Han sample.
   c_anc:
   - 和四千年前黄河流域的人群最像
   - Closest to people who lived in the Yellow River valley four thousand years ago
@@ -206,8 +206,8 @@ ui:
   - 空心方块 = 古代个体 · 汉族样本按省份标注
   - open squares = ancient individuals · Han samples labelled by province
   src_timedist:
-  - 纵轴 = 该古代人群到大宇的距离 · 横轴 = 年代，越靠右越古老
-  - 'vertical: distance from that ancient group to {NAME_EN} · horizontal: age, older to the right'
+  - 纵轴 = 该古代人群到样本的距离 · 横轴 = 年代，越靠右越古老
+  - 'vertical: distance from that ancient group to {name_en} · horizontal: age, older to the right'
   n_anc:
   - 最近的现代人群是河南、山东、山西的汉族样本，三者之间的差距小于各自组内的离散度，无法进一步区分；与广东汉的距离则是组内离散度的七倍，区分清楚。最近的古代人群按年代排开是一条斜线：仰韶（约 6,950 年前）0.022，龙山（约 4,000 年前）0.010，商周（约 2,700 年前）0.007。距离随年代单调缩小，说明中原人群自新石器晚期以来连续，同时北方成分持续汇入。这个结论与上面的局部祖源互相独立地印证。
   - 'The nearest present-day groups are the Han samples from Henan, Shandong and Shanxi; the gaps between those three are smaller than the spread within each, so they cannot be separated further, while the distance to Guangdong Han is seven times that spread and clearly separates them. Sorted by age the nearest ancient groups fall on a line: Yangshao (about 6,950 years ago) at 0.022, Longshan (about 4,000 years ago) at 0.010, Shang and Zhou (about 2,700 years ago) at 0.007. The monotone decline says the central plains population has been continuous since the late Neolithic while northern ancestry kept flowing in, which is the same conclusion the local ancestry reaches independently.'
@@ -278,8 +278,8 @@ ui:
   - 这一基因区的特别之处是不同人携带的基因数目本来就不同 · T1K 1.0 + IPD-KIR
   - what makes this region unusual is that people differ in which genes they carry at all · T1K 1.0 with IPD-KIR
   n_kir:
-  - 大宇是 AA 单倍型：只有 KIR2DS4 一个活化性受体，其余全是抑制性受体。配体方面两个 HLA-C 等位基因都属 C1 组，KIR2DL3 因此有配体；两个 HLA-B 中 B*13:01 提供 Bw4 表位供 KIR3DL1 识别。AA 加 C1/C1 在东亚常见，整体偏抑制性。这些组合在文献中与感染、妊娠和移植结局有人群水平的关联，不作个体预测。
-  - '{NAME_EN} has the AA haplotype: a single activating receptor, KIR2DS4, and inhibitory receptors otherwise. On the ligand side both HLA-C alleles belong to group C1, so KIR2DL3 has its ligand, and among the two HLA-B alleles B*13:01 supplies the Bw4 epitope that KIR3DL1 reads. AA together with C1/C1 is common in East Asia and tilts the balance towards inhibition. These combinations carry population-level associations with infection, pregnancy and transplant outcomes; they are not individual predictions.'
+  - 样本是 AA 单倍型：只有 KIR2DS4 一个活化性受体，其余全是抑制性受体。配体方面两个 HLA-C 等位基因都属 C1 组，KIR2DL3 因此有配体；两个 HLA-B 中 B*13:01 提供 Bw4 表位供 KIR3DL1 识别。AA 加 C1/C1 在东亚常见，整体偏抑制性。这些组合在文献中与感染、妊娠和移植结局有人群水平的关联，不作个体预测。
+  - '{name_en} has the AA haplotype: a single activating receptor, KIR2DS4, and inhibitory receptors otherwise. On the ligand side both HLA-C alleles belong to group C1, so KIR2DL3 has its ligand, and among the two HLA-B alleles B*13:01 supplies the Bw4 epitope that KIR3DL1 reads. AA together with C1/C1 is common in East Asia and tilts the balance towards inhibition. These combinations carry population-level associations with infection, pregnancy and transplant outcomes; they are not individual predictions.'
   c_som:
   - 血液本身的状态
   - The state of the blood itself
@@ -368,8 +368,8 @@ ui:
   - 东亚训练的评分里，认知相关的两项最高（轻度认知障碍 97、老年性痴呆 97），与前面阿尔茨海默病评分的 98 一致，主要由 APOE ε4 驱动，三者本质上在说同一件事。广泛性焦虑 84 偏高。酒精相关的两项都很低（酒精依赖 6.5，酒精相关障碍 10），戒烟成功 4.6 偏低但样本解释力有限。
   - Among the East Asian scores the two cognitive ones sit highest (mild cognitive impairment 97, senile dementia 97), matching the Alzheimer's score of 98 seen earlier; all three are driven largely by APOE ε4 and are essentially restating one fact. Generalised anxiety at 84 is on the high side. Both alcohol scores sit low (alcoholism 6.5, alcohol-related disorders 10).
   cal_beh:
-  - <b>为什么欧洲训练的评分不能直接用。</b>看酒精这一对：东亚训练的“酒精依赖”把大宇放在第 6.5 百分位，欧洲训练的“饮酒量”却放在第 91 百分位，方向完全相反。原因很具体——东亚评分里权重最大的四个位点全部落在 ALDH2 基因区（占总权重 2%），也就是那个让人喝酒脸红的基因；欧洲评分在 ALDH2 区<b>一个位点都没有</b>，因为 rs671 在欧洲人群中几乎不存在，GWAS 根本发现不了它。同一个人、同一份基因组，换一个训练人群，结论就翻过来了。这不是评分算错了，而是它们本来就只在训练人群里有效。
-  - '<b>Why the European-trained scores cannot simply be reused.</b> Look at the alcohol pair: the East-Asian-trained alcoholism score puts {NAME_EN} at the 6.5th percentile while the European-trained drinking score puts him at the 91st, pointing in opposite directions. The reason is concrete. The four largest weights in the East Asian score all fall in the ALDH2 region, the gene behind the alcohol flush, and that region carries 2% of the score''s total weight. The European score has <b>no variant at all</b> in the ALDH2 region, because rs671 is essentially absent in Europeans and no European study could ever find it. Same person, same genome, and swapping the training population flips the answer. The scores are not miscalculated; they were only ever valid inside the population that produced them.'
+  - <b>为什么欧洲训练的评分不能直接用。</b>看酒精这一对：东亚训练的“酒精依赖”把样本放在第 6.5 百分位，欧洲训练的“饮酒量”却放在第 91 百分位，方向完全相反。原因很具体——东亚评分里权重最大的四个位点全部落在 ALDH2 基因区（占总权重 2%），也就是那个让人喝酒脸红的基因；欧洲评分在 ALDH2 区<b>一个位点都没有</b>，因为 rs671 在欧洲人群中几乎不存在，GWAS 根本发现不了它。同一个人、同一份基因组，换一个训练人群，结论就翻过来了。这不是评分算错了，而是它们本来就只在训练人群里有效。
+  - '<b>Why the European-trained scores cannot simply be reused.</b> Look at the alcohol pair: the East-Asian-trained alcoholism score puts {name_en} at the 6.5th percentile while the European-trained drinking score puts him at the 91st, pointing in opposite directions. The reason is concrete. The four largest weights in the East Asian score all fall in the ALDH2 region, the gene behind the alcohol flush, and that region carries 2% of the score''s total weight. The European score has <b>no variant at all</b> in the ALDH2 region, because rs671 is essentially absent in Europeans and no European study could ever find it. Same person, same genome, and swapping the training population flips the answer. The scores are not miscalculated; they were only ever valid inside the population that produced them.'
   c_cand:
   - 经典的“性格基因”
   - The classic personality genes
@@ -452,8 +452,8 @@ ui:
   - 本页来自消费级全基因组测序和公开数据库，用于个人了解和学习，不是医学诊断，也不是用药建议。CFTR、ATP7B、HLA-B*13:01 三项若要用于任何医疗决定，须在有资质的实验室复核。凡涉及用药或疾病的内容，行动前请找医生。
   - This page comes from consumer whole-genome sequencing and public databases, for personal interest and learning; it is neither a diagnosis nor medication advice. The CFTR, ATP7B and HLA-B*13:01 findings must be confirmed in an accredited laboratory before any medical decision. Talk to a doctor before acting on anything about medicines or disease.
   foot1:
-  - DAYU GENOME · WHOLE GENOME
-  - DAYU GENOME · WHOLE GENOME
+  - GENOME ATLAS · WHOLE GENOME
+  - GENOME ATLAS · WHOLE GENOME
   foot2:
   - scripts/wgs/ · wgs/RESULTS.md
   - scripts/wgs/ · wgs/RESULTS.md

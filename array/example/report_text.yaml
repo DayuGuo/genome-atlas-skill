@@ -1,6 +1,6 @@
 _comment: Narrative text for the report. Written by the analyst/agent AFTER reading the result files. Each value is [Chinese, English]. Placeholders in {braces} are filled from report_data.json.
-name_zh: 大宇
-name_en: Dayu
+name_zh: 样本 A
+name_en: Sample A
 y:
   terminal: O-F438
   isogg_name: O2a2b1a1a1
@@ -28,11 +28,11 @@ mt:
   - 'Private: 146C, 3308C, 7673G, 9300A, 16093C, 16172C (3308C is reported in some D4h1 sub-branches)'
 text:
   tag:
-  - 男 · 1994 年生 · WeGene 基因检测芯片 · 修订版 2026-09-08
-  - Male · born 1994 · WeGene genotyping array · revised 2026-09-08
+  - WeGene 基因检测芯片 · 东亚参考人群
+  - WeGene genotyping array · East Asian reference
   tier1_b:
-  - 检测数据质量好（{sites} 个位点，成功率 {cr}%）。是男性。祖源是东亚人，在汉族里偏北方。带一个“喝酒脸红”基因（ALDH2）。带一个影响硫嘌呤类药物剂量的基因变异（NUDT15），将来用这类药前要告诉医生。APOE 基因型是 ε3/ε4。
-  - Good data quality ({sites} sites, {cr}% call rate). Male. East Asian ancestry, on the northern side of the Han spectrum. One 'alcohol flush' variant (ALDH2). One NUDT15 variant that affects thiopurine
+  - 检测数据质量好（{sites} 个位点，成功率 {cr}%）。祖源是东亚人，在汉族里偏北方。带一个“喝酒脸红”基因（ALDH2）。带一个影响硫嘌呤类药物剂量的基因变异（NUDT15），将来用这类药前要告诉医生。APOE 基因型是 ε3/ε4。
+  - Good data quality ({sites} sites, {cr}% call rate). East Asian ancestry, on the northern side of the Han spectrum. One 'alcohol flush' variant (ALDH2). One NUDT15 variant that affects thiopurine
     drug dosing; tell a doctor before using such drugs. APOE type ε3/ε4.
   tier2_b:
   - 父系（Y 染色体）属于 O-F438 这一支；母系（线粒体）属于 D4h1，这两个都是东亚常见支系。血型推测为 A 型。PTC 苦味“不敏感”型。没有看到父母近亲的迹象。华法林“敏感型”。
@@ -90,7 +90,7 @@ text:
   - 母亲那边的 X 染色体：也是东亚人，再细分不了
   - 'The X chromosome from your mother: also East Asian, cannot be split finer'
   n_x:
-  - 男性的 X 染色体全部来自母亲。用 4,044 个位点只够回答“哪个大洲”，北京汉、南方汉、日本人分不开。
+  - 样本的 X 染色体全部来自母亲。用 4,044 个位点只够回答“哪个大洲”，北京汉、南方汉、日本人分不开。
   - A man's X comes entirely from his mother. With 4,044 sites it can only answer 'which continent'; Beijing Han, southern Han and Japanese cannot be told apart.
   c_rare:
   - 在 504 个东亚人里少见的变异：{n} 个，其中 {abs} 个在这 504 人里一次都没出现

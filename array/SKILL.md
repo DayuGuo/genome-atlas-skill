@@ -53,7 +53,7 @@ bash setup/download_references.sh           # 1000G phase3 (plink2 bundle + VCF)
 
 ## 第三步：写结论（这是你的工作，脚本不替你写）
 
-复制 `example/report_text.yaml` 到 `work/report_text.yaml`，**逐句重写**。示例是一位东亚男性样本的真实文案，只用来看格式和语气，不能沿用其结论。每个值是 `[中文, English]`。
+复制 `example/report_text.yaml` 到 `work/report_text.yaml`，**逐句重写**。示例是一位东亚样本的真实文案，只用来看格式和语气，不能沿用其结论。每个值是 `[中文, English]`。
 
 必须遵守的写法（来自审计，违反即返工）：
 

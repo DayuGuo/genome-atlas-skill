@@ -53,8 +53,9 @@ The writing rules are not suggestions; they came out of an audit.
 
 ## Example reports
 
-Both examples come from one East Asian male's real data, published with his consent. **They are there for
-format and tone only** — every conclusion in them belongs to that sample. The repository contains no raw data.
+Both examples come from one East Asian sample's real data, published with that person's consent; the name, sex
+and test date have been removed from the reports. **They are there for format and tone only** — every conclusion
+in them belongs to that sample. The repository contains no raw data.
 
 ## Licence
 
